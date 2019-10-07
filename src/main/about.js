@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Donations from './components/donations';
 
 class AboutPage extends Component {
 
@@ -20,10 +21,7 @@ class AboutPage extends Component {
           <p>the book me CTA and button</p>
         </section>
 
-        <section class="donations">
-          <p>donation section goes here.</p>
-          <p>create a donations component and insert it here.</p>
-        </section>
+        <Donations />
       </div>
     )
   }

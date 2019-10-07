@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Donations from './components/donations';
 
 class HomePage extends Component {
 
@@ -18,10 +19,7 @@ class HomePage extends Component {
           clicking on them should take user to the post.</p>
         </section>
 
-        <section class="donations">
-          <p>donation section goes here.</p>
-          <p>create a donations component and insert it here.</p>
-        </section>
+        <Donations />
       </div>
     )
   }
