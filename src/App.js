@@ -6,8 +6,7 @@ import HomePage from './main/home';
 import ContactPage from './main/contact';
 import BookPage from './main/book';
 import Footer from './footer/footer';
-import Nav from './nav/navigation';
-import { Router, Switch, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
   return (
@@ -16,12 +15,22 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-
-        <Nav />
-
+        <Router>
+        <ul class="navigation">
+          <li><Link to="/">home</Link></li>
+          <li><Link to="/about_me">about me</Link></li>
+          <li><Link to="/contact">contact</Link></li>
+          <li><Link to="/booking">booking</Link></li>
+        </ul>
         <main>
-
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/about_me" component={AboutPage} />
+              <Route path="/contact" component={ContactPage} />
+              <Route path="/booking" component={BookPage} />
+            </Switch>
         </main>
+        </Router>
 
         <Footer />
 
