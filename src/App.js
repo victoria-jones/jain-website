@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AboutPage from './main/about';
@@ -10,30 +10,44 @@ import Nav from './nav/navigation';
 import Footer from './footer/footer';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "Sarah Jain"
+    };
+    this.updateTitle = this.updateTitle.bind(this);
+  }
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-        <Router>
-          <Nav />
-          <main>
-              <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/about_me" component={AboutPage} />
-                <Route path="/contact" component={ContactPage} />
-                <Route path="/booking" component={BookPage} />
-                <Route component={Error404} />
-              </Switch>
-          </main>
-        </Router>
 
-        <Footer />
+  updateTitle(newTitle){
+    this.setState({title: newTitle});
+  }
+  render() {
+    return (
+      <div className="App">
 
-    </div>
-  );
+        <header className="App-header">
+          <h1>{this.state.title}</h1>
+        </header>
+          <Router>
+            <Nav changeTitle={this.updateTitle} />
+            <main>
+                <Switch>
+                  <Route exact path="/" component={HomePage} />
+                  <Route path="/about_me" component={AboutPage} />
+                  <Route path="/contact" component={ContactPage} />
+                  <Route path="/booking" component={BookPage} />
+                  <Route component={Error404} />
+                </Switch>
+            </main>
+          </Router>
+
+          <Footer />
+
+      </div>
+    );
+  }
 }
 
 export default App;

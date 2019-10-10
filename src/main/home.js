@@ -5,10 +5,9 @@ import Donations from './components/donations';
 class HomePage extends Component {
 
   render() {
+
     return (
       <div>
-        <h1>home page title</h1>
-
         <section id="hero">
           <p>the hero section. the banner image, website title (sarah jain),
           what she does.</p>

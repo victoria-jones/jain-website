@@ -3,12 +3,9 @@ import ReactDOM from 'react-dom';
 import Donations from './components/donations';
 
 class AboutPage extends Component {
-
   render() {
     return (
       <div>
-        <h1> about me page</h1>
-
         <section id="aboutMe">
           <p>about me bio area.</p>
         </section>
@@ -23,7 +20,7 @@ class AboutPage extends Component {
 
         <Donations />
       </div>
-    )
+    );
   }
 }
 

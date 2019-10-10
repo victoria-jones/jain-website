@@ -6,8 +6,6 @@ class BookPage extends Component {
   render() {
     return (
       <div>
-        <h1>booking page</h1>
-
         <section id="bookingInfo">
           <p>booking information with some quick bullet points</p>
           <p>maybe a link to faqs and contact for more information</p>
