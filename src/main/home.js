@@ -8,6 +8,7 @@ class HomePage extends Component {
 
     return (
       <div>
+      <h2 class="heroTitle">Home page</h2>
         <section id="hero">
           <p>the hero section. the banner image, website title (sarah jain),
           what she does.</p>

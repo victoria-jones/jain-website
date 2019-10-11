@@ -6,6 +6,7 @@ class AboutPage extends Component {
   render() {
     return (
       <div>
+        <h2 class="pageTitle">About page</h2>
         <section id="aboutMe">
           <p>about me bio area.</p>
         </section>

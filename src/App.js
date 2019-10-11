@@ -11,27 +11,16 @@ import Footer from './footer/footer';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: "Sarah Jain"
-    };
-    this.updateTitle = this.updateTitle.bind(this);
-  }
-
-
-  updateTitle(newTitle){
-    this.setState({title: newTitle});
-  }
+  
   render() {
     return (
       <div className="App">
 
         <header className="App-header">
-          <h1>{this.state.title}</h1>
+          <h1>SJ(logo icon goes here next to h1)</h1>
         </header>
           <Router>
-            <Nav changeTitle={this.updateTitle} />
+            <Nav />
             <main>
                 <Switch>
                   <Route exact path="/" component={HomePage} />
