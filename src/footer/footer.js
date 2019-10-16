@@ -7,6 +7,8 @@ class Footer extends Component {
     return (
       <footer>
       <p>footer stuff</p>
+      <div class="footerOval">
+      </div>
       </footer>
     )
   }

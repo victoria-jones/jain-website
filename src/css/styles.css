@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #0b1114; }
+  background-color: #0b1114;
+  color: #0b1114; }
 
 header {
   text-align: left;
@@ -51,10 +52,34 @@ nav {
 main {
   margin-top: 40px;
   margin-left: 10vw;
-  margin-right: 10vw; }
+  margin-right: 10vw;
+  padding-bottom: 20em; }
 
 .pageTitle {
   font-size: 3em; }
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+  footer .footerOval {
+    background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
+    background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
+    background-image: linear-gradient(130deg, #60b585, #1f323b);
+    height: 100vh;
+    width: 170%;
+    background-color: #60b585;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -650px;
+    left: -90vh;
+    z-index: -100; }
 
 /**** home page ****/
 #hero {
@@ -93,6 +118,10 @@ main {
 
 #photos {
   margin-top: 35vh; }
+  #photos h3 {
+    text-transform: lowercase;
+    font-size: 3em;
+    font-weight: lighter; }
   #photos #bgPlant {
     z-index: -101;
     -webkit-transform: rotate(90deg);

@@ -5,6 +5,7 @@
 body {
   font-family: $montserrat;
   background-color: $blackBlue;
+  color: $blackBlue;
 }
 header {
   text-align: left;
@@ -58,9 +59,32 @@ main {
   margin-top: 40px;
   margin-left: 10vw;
   margin-right: 10vw;
+  padding-bottom: 20em;   //footer fix
 }
 .pageTitle {
   font-size: 3em;
+}
+.App { //this entire part is footer fix too
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+footer {
+  position: absolute; //footer fix
+  left: 0;            //
+  bottom: 0;          //
+  width: 100%;
+  .footerOval {
+    background-image: $greenToBlue;
+    height: 100vh;
+    width: 170%;
+    background-color: $mainGreen;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -650px;
+    left: -90vh;
+    z-index: -100;
+  }
 }
 
 /**** home page ****/
@@ -104,6 +128,11 @@ main {
 }
 #photos {
   margin-top: 35vh;
+  h3 {
+    text-transform: lowercase;
+    font-size: 3em;
+    font-weight: lighter;
+  }
   #bgPlant {
     z-index: -101;
     transform: rotate(90deg);
