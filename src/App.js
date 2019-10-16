@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/styles.css';
 import AboutPage from './main/about';
 import HomePage from './main/home';
 import ContactPage from './main/contact';
@@ -11,16 +11,16 @@ import Footer from './footer/footer';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 class App extends Component {
-  
+
   render() {
     return (
       <div className="App">
-
+        <Router>
         <header className="App-header">
-          <h1>SJ(logo icon goes here next to h1)</h1>
+          <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" title="Sarah Jain logo"/></Link>
+          <Nav />
         </header>
-          <Router>
-            <Nav />
+
             <main>
                 <Switch>
                   <Route exact path="/" component={HomePage} />

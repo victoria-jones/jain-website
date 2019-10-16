@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+@import "variables.scss";
+
+//whole site - large screen styles
+body {
+  font-family: $montserrat;
+  background-color: $blackBlue;
+}
+header {
+  text-align: left;
+  height: 40px;
+  position: fixed;
+  background-color: $blackBlue;
+  width: 100vw;
+  top: 0;
+  padding-bottom: 5px;
+  h1 {
+    display: inline-block;
+    font-size: 14pt;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+  }
+  img {
+    transform: rotate(90deg);
+    width: 23px;
+    height: 23px;
+    background-color: $white; //color cannot be changed needs to be changed in illustrator
+    vertical-align: text-bottom;
+  }
+}
+h1, h2, h3 {
+  font-family: $raleway;
+  font-weight: thin;
+}
+nav {
+  font-family: $raleway; font-size: 1em; font-weight: lighter;
+  display: inline-block;
+  ul li {
+    display: inline;
+    color: $white;
+    padding: 0 50px 0 50px;
+    a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+main {
+  margin-top: 40px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.pageTitle {
+  font-size: 3em;
+}
+
+/**** home page ****/
+#hero{
+  margin-top: 30vh;
+  #heroWrapper {
+    text-align: right;
+    display: inline-block;
+    margin-right: .3em;
+    h3{
+      font-weight: 100;
+      font-size: 1.3em;
+    }
+  }
+  img {
+    transform: rotate(90deg);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+}
+.heroOval {
+  height: 100vh;
+  width: 170%;
+  background-color: $mainGreen;
+  border-radius: 50%;
+  position: absolute;
+  top: -20vh;
+  right: -80vh;
+  z-index: -100;
+  //place background image, make sure to include gradient in the image
+  //remove background color after adding image
+  //make sure to set image to fixed
+}
+.heroTitle {
+  text-transform: uppercase;
+  word-spacing: -.2em;
+  font-weight: 100;
+  margin-bottom: -.5em;
+}
+#photos {
+  margin-top: 35vh;
+  #bgPlant {
+    z-index: -101;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 45vh;
+    left: -80px;
+    width: 45vw;
+  }
+}
+
+/*.App-header {
+  background-color: $blackBlue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}*/
