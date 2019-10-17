@@ -64,6 +64,16 @@ main {
   min-height: 100vh;
   overflow: hidden; }
 
+button {
+  padding: 15px 20px;
+  width: 180px;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 30px; }
+  button:hover {
+    cursor: pointer; }
+
 footer {
   position: absolute;
   left: 0;
@@ -178,7 +188,62 @@ footer {
     width: 45vw; }
 
 /*** about, contact, booking ***/
+.pageOval {
+  height: 100vh;
+  width: 170%;
+  background-color: #60b585;
+  border-radius: 50%;
+  position: absolute;
+  top: -70vh;
+  right: -80vh;
+  z-index: -100; }
+
+.pageTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-top: 2em; }
+
 /*** about ***/
+#aboutMe {
+  float: right;
+  width: 60%;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #9ce6b3; }
+  #aboutMe p {
+    font-size: 11pt; }
+
+#specialties {
+  clear: both;
+  color: #FFF;
+  text-align: center;
+  padding-top: 10em;
+  margin-bottom: 10em; }
+  #specialties ul li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    margin: 0 5vw; }
+
+#bookMe {
+  width: 100%;
+  background-color: #9ce6b3;
+  padding: 20px; }
+  #bookMe p {
+    display: inline-block;
+    width: 50%;
+    max-width: 700px; }
+  #bookMe button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10vw;
+    margin-bottom: 25px;
+    border: #1f323b;
+    background-color: #1f323b; }
+
 /*.App-header {
   background-color: $blackBlue;
   min-height: 100vh;
