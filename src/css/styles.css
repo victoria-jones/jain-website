@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0b1114;
+  color: #0b1114; }
+
+header {
+  text-align: left;
+  height: 40px;
+  position: fixed;
+  background-color: #0b1114;
+  width: 100vw;
+  top: 0;
+  padding-bottom: 5px;
+  z-index: 10000; }
+  header h1 {
+    display: inline-block;
+    font-size: 14pt; }
+  header a {
+    text-decoration: none;
+    color: #FFF; }
+    header a:visited {
+      color: #FFF; }
+  header img {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 23px;
+    height: 23px;
+    background-color: #FFF;
+    vertical-align: text-bottom; }
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: thin; }
+
+nav {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  display: inline-block; }
+  nav ul li {
+    display: inline;
+    color: #FFF;
+    padding: 0 50px 0 50px; }
+    nav ul li a {
+      color: #FFF;
+      text-decoration: none; }
+      nav ul li a:hover {
+        font-weight: bold;
+        text-decoration: underline; }
+
+main {
+  margin-top: 40px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-bottom: 20em; }
+
+.pageTitle {
+  font-size: 3em; }
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #FFF;
+  text-align: center; }
+  footer .footerOval {
+    background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
+    background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
+    background-image: linear-gradient(130deg, #60b585, #1f323b);
+    height: 100vh;
+    width: 170%;
+    background-color: #60b585;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -650px;
+    left: -90vh;
+    z-index: -100; }
+  footer small {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    word-spacing: -.2em; }
+  footer img {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    vertical-align: text-bottom; }
+  footer span {
+    font-size: 1em;
+    vertical-align: top; }
+
+.socialNav ul li {
+  list-style-type: none;
+  display: inline-block; }
+  .socialNav ul li img {
+    background-color: transparent;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+.socialNav:hover {
+  cursor: pointer; }
+
+.socialNavTop {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0; }
+  .socialNavTop ul li img {
+    width: 20px;
+    height: 20px;
+    padding: 0 10px; }
+
+.socialNavFt {
+  text-align: center; }
+  .socialNavFt ul li img {
+    padding: 0 15px; }
+
+/**** home page ****/
+#hero {
+  margin-top: 30vh; }
+  #hero #heroWrapper {
+    text-align: right;
+    display: inline-block;
+    margin-right: .3em; }
+    #hero #heroWrapper h3 {
+      font-weight: 100;
+      font-size: 1.3em; }
+  #hero img {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: text-bottom; }
+
+.heroOval {
+  height: 100vh;
+  width: 170%;
+  background-color: #60b585;
+  border-radius: 50%;
+  position: absolute;
+  top: -20vh;
+  right: -80vh;
+  z-index: -100; }
+
+.heroTitle {
+  text-transform: uppercase;
+  word-spacing: -.2em;
+  font-weight: 100;
+  margin-bottom: -.5em; }
+
+#photos {
+  margin-top: 35vh; }
+  #photos h3 {
+    text-transform: lowercase;
+    font-size: 3em;
+    font-weight: lighter; }
+  #photos #bgPlant {
+    z-index: -101;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 45vh;
+    left: -80px;
+    width: 45vw; }
+
+/*** about, contact, booking ***/
+/*** about ***/
+/*.App-header {
+  background-color: $blackBlue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}*/

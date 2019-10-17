@@ -5,18 +5,26 @@ import Donations from './components/donations';
 class HomePage extends Component {
 
   render() {
+
     return (
       <div>
-        <h1>home page title</h1>
 
-        <section id="hero">
-          <p>the hero section. the banner image, website title (sarah jain),
-          what she does.</p>
-        </section>
+          <section id="hero">
+            <div id="heroWrapper">
+              <h2 class="heroTitle pageTitle">Sarah Jain</h2>
+              <h3>published model &<br />  hash sommelier</h3>
+            </div>
+            <img src="images/icons/logo.svg" title="Sarah Jain logo"/>
+          </section>
+
+        <div class="heroOval">
+        </div>
 
         <section id="photos">
+          <h3>Photos</h3>
           <p>instagram API goes here. displays 9 photos (most recent).
           clicking on them should take user to the post.</p>
+          <img src="images/icons/background_plant.svg" id="bgPlant"/>
         </section>
 
         <Donations />
