@@ -15,6 +15,7 @@ header {
   width: 100vw;
   top: 0;
   padding-bottom: 5px;
+  z-index: 10000; //some things were clipping over the top of the nav
   h1 {
     display: inline-block;
     font-size: 14pt;
@@ -74,6 +75,8 @@ footer {
   left: 0;            //
   bottom: 0;          //
   width: 100%;
+  color: $white;
+  text-align: center;
   .footerOval {
     background-image: $greenToBlue;
     height: 100vh;
@@ -84,6 +87,50 @@ footer {
     bottom: -650px;
     left: -90vh;
     z-index: -100;
+  }
+  small {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    word-spacing: -.2em;
+  }
+  img {
+    transform: rotate(90deg);
+    background-color: white;  //for icon, swap out actual white one later
+    width: 22px; height: 22px;
+    vertical-align: text-bottom;
+  }
+  span {
+    font-size: 1em;
+    vertical-align: top;
+  }
+}
+.socialNav {
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    img {
+      background-color: transparent; //only necssary bc of background fill for logo standin
+      transform: rotate(0deg);  //necessary for logo icon turn
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.socialNavTop {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  ul li img {
+    width: 20px; height: 20px;
+    padding: 0 10px;
+  }
+}
+.socialNavFt {
+  text-align: center;
+  ul li img {
+    padding: 0 15px;
   }
 }
 
@@ -142,6 +189,9 @@ footer {
     width: 45vw;
   }
 }
+/*** about, contact, booking ***/
+
+/*** about ***/
 
 /*.App-header {
   background-color: $blackBlue;

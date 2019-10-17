@@ -7,6 +7,7 @@ import ContactPage from './main/contact';
 import BookPage from './main/book';
 import Error404 from './main/404error';
 import Nav from './nav/navigation';
+import SocialNav from './nav/socialNav';
 import Footer from './footer/footer';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
@@ -19,6 +20,7 @@ class App extends Component {
         <header className="App-header">
           <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" title="Sarah Jain logo"/></Link>
           <Nav />
+          <SocialNav addClass="socialNavTop" />
         </header>
 
             <main>

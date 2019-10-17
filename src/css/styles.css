@@ -11,7 +11,8 @@ header {
   background-color: #0b1114;
   width: 100vw;
   top: 0;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  z-index: 10000; }
   header h1 {
     display: inline-block;
     font-size: 14pt; }
@@ -67,7 +68,9 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  color: #FFF;
+  text-align: center; }
   footer .footerOval {
     background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
     background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
@@ -80,6 +83,48 @@ footer {
     bottom: -650px;
     left: -90vh;
     z-index: -100; }
+  footer small {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    word-spacing: -.2em; }
+  footer img {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    vertical-align: text-bottom; }
+  footer span {
+    font-size: 1em;
+    vertical-align: top; }
+
+.socialNav ul li {
+  list-style-type: none;
+  display: inline-block; }
+  .socialNav ul li img {
+    background-color: transparent;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+.socialNav:hover {
+  cursor: pointer; }
+
+.socialNavTop {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0; }
+  .socialNavTop ul li img {
+    width: 20px;
+    height: 20px;
+    padding: 0 10px; }
+
+.socialNavFt {
+  text-align: center; }
+  .socialNavFt ul li img {
+    padding: 0 15px; }
 
 /**** home page ****/
 #hero {
@@ -132,6 +177,8 @@ footer {
     left: -80px;
     width: 45vw; }
 
+/*** about, contact, booking ***/
+/*** about ***/
 /*.App-header {
   background-color: $blackBlue;
   min-height: 100vh;
