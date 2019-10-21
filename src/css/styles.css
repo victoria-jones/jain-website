@@ -4,6 +4,11 @@ body {
   background-color: #0b1114;
   color: #0b1114; }
 
+a {
+  color: #9ce6b3; }
+  a:visited {
+    color: #9ce6b3; }
+
 header {
   text-align: left;
   height: 40px;
@@ -204,6 +209,9 @@ footer {
   font-weight: 100;
   margin-top: 2em; }
 
+.pageTitleMrg {
+  margin-bottom: 3em; }
+
 /*** about ***/
 #aboutMe {
   float: right;
@@ -243,6 +251,15 @@ footer {
     margin-bottom: 25px;
     border: #1f323b;
     background-color: #1f323b; }
+
+/*** booking page ***/
+#bookingInfo {
+  color: #FFF; }
+  #bookingInfo h3, #bookingInfo h4 {
+    font-size: 1.5em;
+    line-height: .4em;
+    text-transform: lowercase;
+    font-weight: 100; }
 
 /*.App-header {
   background-color: $blackBlue;

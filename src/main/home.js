@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Donations from './components/donations';
+import Instagram from './components/instagram';
 
 class HomePage extends Component {
 
@@ -22,8 +23,7 @@ class HomePage extends Component {
 
         <section id="photos">
           <h3>Photos</h3>
-          <p>instagram API goes here. displays 9 photos (most recent).
-          clicking on them should take user to the post.</p>
+          <Instagram />
           <img src="images/icons/background_plant.svg" id="bgPlant"/>
         </section>
 

@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 class BookPage extends Component {
 
   render() {
     return (
       <div>
-        <h2 class="pageTitle">Booking</h2>
+        <h2 class="pageTitle pageTitleMrg">Booking</h2>
 
         <div class="pageOval">
         </div>
 
         <section id="bookingInfo">
-          <p>booking information with some quick bullet points</p>
-          <p>maybe a link to faqs and contact for more information</p>
+          <h3>My photo shoot booking and availability:</h3>
+          <h4>Click on a day you are interested in booking!</h4>
+          <ul>
+            <li>a couple quick "rules" for booking</li>
+            <li>such as types of photo shoots you take</li>
+            <li>maybe something saying what countries you will/can work in</li>
+          </ul>
+          <p>If you have any questions regarding booking please <Link to="/contact">contact me</Link>.</p>
         </section>
 
         <section id="calendar">

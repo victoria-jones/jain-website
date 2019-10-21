@@ -6,7 +6,7 @@ class ContactPage extends Component {
   render() {
     return (
       <div>
-      <h2 class="pageTitle">Contact</h2>
+      <h2 class="pageTitle pageTitleMrg">Contact</h2>
 
       <div class="pageOval">
       </div>

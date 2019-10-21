@@ -7,6 +7,12 @@ body {
   background-color: $blackBlue;
   color: $blackBlue;
 }
+a {
+  color: $lightGreen;
+  &:visited {
+    color: $lightGreen;
+  }
+}
 header {
   text-align: left;
   height: 40px;
@@ -216,6 +222,9 @@ footer {
   font-weight: 100;
   margin-top: 2em;
 }
+.pageTitleMrg {
+  margin-bottom: 3em;
+}
 
 /*** about ***/
 #aboutMe {
@@ -259,6 +268,16 @@ footer {
     margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
     border: $darkBlue;
     background-color: $darkBlue;
+  }
+}
+
+/*** booking page ***/
+#bookingInfo {
+  color: $white;
+  h3, h4 {
+    font-size: 1.5em; line-height: .4em;
+    text-transform: lowercase;
+    font-weight: 100;
   }
 }
 /*.App-header {
