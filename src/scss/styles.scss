@@ -252,7 +252,7 @@ footer {
     margin: 0 5vw;
   }
 }
-#bookMe {
+.cta {
   width: 100%;
   background-color: $lightGreen;
   padding: 20px;
@@ -278,6 +278,9 @@ footer {
     font-size: 1.5em; line-height: .4em;
     text-transform: lowercase;
     font-weight: 100;
+  }
+  ul li {
+    line-height: 1.8em;
   }
 }
 /*.App-header {

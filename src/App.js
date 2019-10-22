@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/styles.css';
 import AboutPage from './main/about';
 import HomePage from './main/home';
@@ -18,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Router>
         <header className="App-header">
-          <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" title="Sarah Jain logo"/></Link>
+          <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" alt ="Sarah Jain leaf logo" title="Sarah Jain logo"/></Link>
           <Nav />
           <SocialNav addClass="socialNavTop" />
         </header>

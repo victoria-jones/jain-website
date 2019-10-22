@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import Donations from './components/donations';
 
@@ -8,7 +7,7 @@ class AboutPage extends Component {
   render() {
     return (
       <div>
-        <h2 class="pageTitle">About Me</h2>
+        <h2 className="pageTitle">About Me</h2>
         <section id="aboutMe">
           <p>about me bio area about me bio area. about me bio area.about me bio area.
           about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
@@ -29,7 +28,7 @@ class AboutPage extends Component {
           <p>all filler stuff.</p>
         </section>
 
-        <div class="heroOval">
+        <div className="heroOval">
         </div>
 
         <section id="specialties">
@@ -40,7 +39,7 @@ class AboutPage extends Component {
           </ul>
         </section>
 
-        <section id="bookMe">
+        <section className="cta" id="bookMe">
           <p>the book me CTA and area.the book me CTA and area.the book me CTA and area.
           the book me CTA and area.the book me CTA and area.</p>
           <Link to="/booking"><button>book me</button></Link>

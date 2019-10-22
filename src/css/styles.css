@@ -236,15 +236,15 @@ footer {
     text-transform: uppercase;
     margin: 0 5vw; }
 
-#bookMe {
+.cta {
   width: 100%;
   background-color: #9ce6b3;
   padding: 20px; }
-  #bookMe p {
+  .cta p {
     display: inline-block;
     width: 50%;
     max-width: 700px; }
-  #bookMe button {
+  .cta button {
     display: inline-block;
     vertical-align: middle;
     margin-left: 10vw;
@@ -260,6 +260,8 @@ footer {
     line-height: .4em;
     text-transform: lowercase;
     font-weight: 100; }
+  #bookingInfo ul li {
+    line-height: 1.8em; }
 
 /*.App-header {
   background-color: $blackBlue;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
 class BookPage extends Component {
@@ -7,9 +6,9 @@ class BookPage extends Component {
   render() {
     return (
       <div>
-        <h2 class="pageTitle pageTitleMrg">Booking</h2>
+        <h2 className="pageTitle pageTitleMrg">Booking</h2>
 
-        <div class="pageOval">
+        <div className="pageOval">
         </div>
 
         <section id="bookingInfo">
@@ -31,9 +30,10 @@ class BookPage extends Component {
           calendar API</p>
         </section>
 
-        <section id="contactForQuestions">
-          <p>section prompting the user to contact for any other questions about
-          booking.</p>
+        <section className="cta" id="contactForQuestions">
+        <p>the book me CTA and area.the book me CTA and area.the book me CTA and area.
+        the book me CTA and area.the book me CTA and area.</p>
+        <Link to="/contact "><button>contact me</button></Link>
         </section>
       </div>
     )

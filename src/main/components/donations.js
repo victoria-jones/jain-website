@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 class Donations extends Component {
 
   render() {
     return (
-      <section class="donations">
+      <section className="donations">
         <p>donation stuff goes here</p>
       </section>
     )
