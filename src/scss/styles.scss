@@ -148,6 +148,10 @@ footer {
     padding: 0 15px;
   }
 }
+button {
+  border: $darkBlue;
+  background-color: $darkBlue;
+}
 
 /**** home page ****/
 #hero{
@@ -204,6 +208,46 @@ footer {
     width: 45vw;
   }
 }
+/*** donations ***/
+.donations {
+  //add background image later
+  width: 100%;
+  background-image: $greenToBlue;
+  padding: 20px;
+  text-align: right;      //for donqationInfo box
+  #donationInfo {
+    background-color: $lightGreen;
+    padding: 20px;
+    max-width: 500px;
+    display: inline-block;
+    text-align: center;   //for button
+    button {
+      display: inline-block;
+    }
+    h2, h3 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-bottom: -.5em;
+    }
+    h3 {
+      font-weight: 100;
+      font-size: 1em;
+      margin-bottom: 2em;
+    }
+    p {
+      text-align: left;
+      padding: 0 30px;
+      margin-bottom: 2em;
+    }
+    a {
+      color: $darkGreen;
+      font-weight: bold;
+    }
+  }
+}
+
 /*** about, contact, booking ***/
 .pageOval {
   height: 100vh;
@@ -266,8 +310,6 @@ footer {
     vertical-align: middle; //not really working, only sortof... its weird
     margin-left: 10vw;
     margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
-    border: $darkBlue;
-    background-color: $darkBlue;
   }
 }
 
@@ -281,6 +323,72 @@ footer {
   }
   ul li {
     line-height: 1.8em;
+  }
+}
+/*** contact page ***/
+#contactForm {
+  margin-bottom: 5em;
+  h3 {
+    color: $white;
+    text-transform: lowercase;
+    font-weight: 100;
+    font-size: 1.5em;
+    font-family: $montserrat;
+  }
+  #contactReason {
+    button {
+      border: 3px solid $lightGreen;
+      background-color: transparent;
+      margin-right: 100px;
+      color: $lightGreen;
+    }
+  }
+  #emailForm {
+    input, button, textarea {
+      display: block;
+    }
+    input, textarea {
+      margin-bottom: 20px;
+      width: 70%;
+      border-bottom: 3px solid $darkBlue;
+      border-top: none; border-right: none; border-left: none;
+      background-color: transparent;
+      color: $darkBlue;
+      font-size: 1em;
+      padding: 5px;
+    }
+    textarea {
+      height: 10em;
+    }
+    #emailFormBg {
+      background-color: $lightGreen;
+      padding: 20px;
+    }
+  }
+}
+#socialMedia{
+  ul {
+    list-style-type: none;
+    margin: 0 auto;
+    li {
+    display: inline-block;
+    width: 40px; height: 40px;
+    padding: 0 20px;
+
+    }
+  }
+}
+/*** 404 page ***/
+#error404 {
+  text-align: center;
+  color: $white;
+  width: 70%;
+  margin: 0 auto;
+  h2 {
+    font-weight: 100;
+  }
+  p {
+    text-align: left;
   }
 }
 /*.App-header {

@@ -141,6 +141,10 @@ footer {
   .socialNavFt ul li img {
     padding: 0 15px; }
 
+button {
+  border: #1f323b;
+  background-color: #1f323b; }
+
 /**** home page ****/
 #hero {
   margin-top: 30vh; }
@@ -191,6 +195,39 @@ footer {
     top: 45vh;
     left: -80px;
     width: 45vw; }
+
+/*** donations ***/
+.donations {
+  width: 100%;
+  background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
+  background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
+  background-image: linear-gradient(130deg, #60b585, #1f323b);
+  padding: 20px;
+  text-align: right; }
+  .donations #donationInfo {
+    background-color: #9ce6b3;
+    padding: 20px;
+    max-width: 500px;
+    display: inline-block;
+    text-align: center; }
+    .donations #donationInfo button {
+      display: inline-block; }
+    .donations #donationInfo h2, .donations #donationInfo h3 {
+      text-align: center;
+      text-transform: uppercase; }
+    .donations #donationInfo h2 {
+      margin-bottom: -.5em; }
+    .donations #donationInfo h3 {
+      font-weight: 100;
+      font-size: 1em;
+      margin-bottom: 2em; }
+    .donations #donationInfo p {
+      text-align: left;
+      padding: 0 30px;
+      margin-bottom: 2em; }
+    .donations #donationInfo a {
+      color: #1c3627;
+      font-weight: bold; }
 
 /*** about, contact, booking ***/
 .pageOval {
@@ -248,9 +285,7 @@ footer {
     display: inline-block;
     vertical-align: middle;
     margin-left: 10vw;
-    margin-bottom: 25px;
-    border: #1f323b;
-    background-color: #1f323b; }
+    margin-bottom: 25px; }
 
 /*** booking page ***/
 #bookingInfo {
@@ -262,6 +297,59 @@ footer {
     font-weight: 100; }
   #bookingInfo ul li {
     line-height: 1.8em; }
+
+/*** contact page ***/
+#contactForm {
+  margin-bottom: 5em; }
+  #contactForm h3 {
+    color: #FFF;
+    text-transform: lowercase;
+    font-weight: 100;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif; }
+  #contactForm #contactReason button {
+    border: 3px solid #9ce6b3;
+    background-color: transparent;
+    margin-right: 100px;
+    color: #9ce6b3; }
+  #contactForm #emailForm input, #contactForm #emailForm button, #contactForm #emailForm textarea {
+    display: block; }
+  #contactForm #emailForm input, #contactForm #emailForm textarea {
+    margin-bottom: 20px;
+    width: 70%;
+    border-bottom: 3px solid #1f323b;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    color: #1f323b;
+    font-size: 1em;
+    padding: 5px; }
+  #contactForm #emailForm textarea {
+    height: 10em; }
+  #contactForm #emailForm #emailFormBg {
+    background-color: #9ce6b3;
+    padding: 20px; }
+
+#socialMedia ul {
+  list-style-type: none;
+  margin: 0 auto; }
+  #socialMedia ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0 20px; }
+
+/*** 404 page ***/
+#error404 {
+  text-align: center;
+  color: #FFF;
+  width: 70%;
+  margin: 0 auto; }
+  #error404 h2 {
+    font-weight: 100; }
+  #error404 p {
+    text-align: left; }
 
 /*.App-header {
   background-color: $blackBlue;

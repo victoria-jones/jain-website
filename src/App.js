@@ -9,6 +9,7 @@ import Nav from './nav/navigation';
 import SocialNav from './nav/socialNav';
 import Footer from './footer/footer';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import ScrollToTop from './js/scrolltotop';
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
+        <ScrollToTop />
         <header className="App-header">
           <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" alt ="Sarah Jain leaf logo" title="Sarah Jain logo"/></Link>
           <Nav />
