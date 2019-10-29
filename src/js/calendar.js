@@ -14,11 +14,14 @@ class Calendar extends Component {
     this.setMonths = this.setMonths.bind(this);
   }
   componentDidMount() {
-    this.setMonths();
+    //debugger;
+    if(this.state.daysInMonth == 0){
+      this.setMonths();
+    }
     //this.populateDays();
   }
   componentDidUpdate() {
-    this.populateDays();
+    //this.populateDays();
   }
 
   render() {
@@ -106,6 +109,7 @@ class Calendar extends Component {
   //only runs on arrow click
   //change the month forward or backward
   transitionMonth(transitionTo){
+    //debugger;
     if(transitionTo === -1){
       this.state.dateObj.setMonth(this.state.dateObj.getMonth() -1);
     } else if(transitionTo === +1){
@@ -113,6 +117,7 @@ class Calendar extends Component {
     } else {
       return;
     }
+    //check state changes on this
     this.setState();
     this.setMonths();
   }
@@ -132,7 +137,7 @@ class Calendar extends Component {
         () => { this.populateDays(this.state.daysInMonth)}*/
         this.setState({
           daysInMonth: 31
-        }, () => console.log("setMonths has set state to: " + this.state.daysInMonth));
+        }, () => {this.populateDays()});
 	  }else if(month === 1){
 		//leap year test
 		  if(year % 4 === 0){
@@ -178,11 +183,12 @@ class Calendar extends Component {
     for some reason this breaks the back and forth arrows
     ALSO, setDays is currently not being used.
     */
-    //debugger;
+
     let dateCells = document.getElementsByTagName("td");
-    let daysInMonth = setDays; //WHY DOES THIS BREAK EVERY TIME I TRY TO USE THE STATE
+    let daysInMonth = this.state.daysInMonth;
     let dayOfWeek = this.state.dateObj.getDay();
     let dateToday = this.state.today;
+    let startDate = 1;
 
     console.log("days this month: " + this.state.daysInMonth);
 
@@ -190,13 +196,14 @@ class Calendar extends Component {
   	for(let i = 0;  i < dateCells.length; i++){
       console.log("CLEAR DATE is running");
   		//clear exsisting table dates
-  		dateCells[i].innerHTML = "empty";
+  		dateCells[i].innerHTML = "";
   		dateCells[i].className = "";
   	}
   	//add new dates to cells
     //this loop breaks b/c of daysInMonth?
-  	for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++){
-      //console.log("POPULATE DATE is running" + " current date Num: " + this.state.dateObj.getDate());
+  /*	for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++){
+      //debugger;
+      console.log("POPULATE DATE is running" + " current date Num: " + this.state.dateObj.getDate());
   		dateCells[i].innerHMTL = this.state.dateObj.getDate();
   		dateCells[i].className = "date";
   		if(dateToday < this.state.dateObj){
@@ -204,8 +211,24 @@ class Calendar extends Component {
   		}
   		let date = this.state.dateObj.getDate() + 1;
   		this.state.dateObj.setDate(date);
-  	}
+  	}*/
+    //debugger;
+    for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++) {
+      //console.log("new for loop running");
+      dateCells[i].innerHTML = startDate;
+      startDate++;
+      dateCells[i].className = "oldDate";
+      if(dateToday < this.state.dateObj) {
+        dateCells[i].className = "futureDate";
+      }
+      //let date = this.state.dateObj.getDate() + 1;
+      //this.state.dateObj.setDate(date);
+      /*this.setState({
+        dateObj: date
+      }, () => {console.log("state set for day obj")})
+    };*/
     console.log("end of populate");
+    }
   	//reset month to shown
   	//dateObject.setMonth(dateObject.getMonth() -1);
   	//display calendar if its not already visible
