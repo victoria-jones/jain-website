@@ -218,11 +218,19 @@ class Calendar extends Component {
       //startDate++;
       //dateCells[i].className = "oldDate";
       //debugger;
-      dateCells[i].className = "oldDate";
+
       //if the calendar date is greater than today
         //don't want today to be a part of "future dates" but it is appear as such
       if(dateToday < newDate) {
         dateCells[i].className = "futureDate";
+        let bookMe = document.createElement("p");
+        bookMe.innerHTML = "available for <u>booking</u>!"
+        dateCells[i].appendChild(bookMe);
+      } else {
+        dateCells[i].className = "oldDate";
+        let unAvailable = document.createElement("p");
+        unAvailable.innerHTML = "unavailable.";
+        dateCells[i].appendChild(unAvailable);
       }
 
       let date = newDate.getDate() + 1;
@@ -249,6 +257,7 @@ class Calendar extends Component {
     //this.setState();
     console.log("end of populate");
     console.log("date is now set to :" + this.state.dateObj.getDate());
+    //run function to add in text to tds
   }
 
 

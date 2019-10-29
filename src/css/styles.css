@@ -353,14 +353,21 @@ button {
       padding: 5px;
       vertical-align: top; }
     #calendar #cal .oldDate {
-      color: grey; }
+      color: grey;
+      border: 1px solid #1f323b; }
+      #calendar #cal .oldDate p {
+        text-transform: uppercase; }
       #calendar #cal .oldDate:hover {
-        cursor: cursor; }
+        cursor: cursor;
+        background-color: #1f323b; }
     #calendar #cal .futureDate {
       color: #FFF;
       background-color: #60b585; }
+      #calendar #cal .futureDate p {
+        text-transform: uppercase; }
       #calendar #cal .futureDate:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        background-color: #1c3627; }
 
 /*** contact page ***/
 #contactForm {

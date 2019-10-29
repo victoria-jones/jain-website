@@ -388,15 +388,24 @@ button {
     }
     .oldDate {
       color: grey;
+      border: 1px solid $darkBlue;
+      p{
+        text-transform: uppercase;
+      }
       &:hover {
         cursor: cursor;
+        background-color: $darkBlue;
       }
     }
     .futureDate {
       color: $white;
       background-color: $mainGreen;
+      p {
+        text-transform: uppercase;
+      }
       &:hover {
         cursor: pointer;
+        background-color: $darkGreen;
       }
     }
   }
