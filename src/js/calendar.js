@@ -207,15 +207,15 @@ class Calendar extends Component {
   	}
 
     //set days of month
-    let startDate = 1;
+    //let startDate = 1;
     let newDate = this.state.dateObj;
     //let newDate = new Date();
     newDate.setDate(1);   //sets day of the month for dateObj to 1 (first day of month)
 
     for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++) {
       //console.log("new for loop running");
-      dateCells[i].innerHTML = startDate;
-      startDate++;
+      dateCells[i].innerHTML = newDate.getDate();
+      //startDate++;
       //dateCells[i].className = "oldDate";
       //debugger;
       dateCells[i].className = "oldDate";
@@ -226,10 +226,12 @@ class Calendar extends Component {
       }
 
       let date = newDate.getDate() + 1;
+      newDate.setDate(date);
+      //let date = newDate.getDate() + 1;
       //newDate.setDate(date);
-      this.setState((state, props) => {
-        dateObj: state.dateObj.setDate(date)
-      })
+      //this.setState((state, props) => {
+      //  dateObj: state.dateObj.setDate(date)
+      //});
       //let date = this.state.dateObj.getDate() + 1;
       //this.state.dateObj.setDate(date);
       /*this.setState({
@@ -239,13 +241,14 @@ class Calendar extends Component {
       //console.log("date today is: " + dateToday);
       //console.log("set date in Obj is: " + newDate);
     }
-
+    newDate.setMonth(newDate.getMonth()-1);
   	//reset month to shown
   	//dateObject.setMonth(dateObject.getMonth() -1);
   	//display calendar if its not already visible
   	//document.getElementById("cal").style.display = "block";
     //this.setState();
     console.log("end of populate");
+    console.log("date is now set to :" + this.state.dateObj.getDate());
   }
 
 
