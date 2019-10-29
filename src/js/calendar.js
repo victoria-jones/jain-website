@@ -18,7 +18,7 @@ class Calendar extends Component {
     //this.populateDays();
   }
   componentDidUpdate() {
-  //  this.populateDays();
+    this.populateDays();
   }
 
   render() {
