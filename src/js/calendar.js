@@ -15,7 +15,7 @@ class Calendar extends Component {
   }
   componentDidMount() {
     //debugger;
-    if(this.state.daysInMonth == 0){
+    if(this.state.daysInMonth === 0){
       this.setMonths();
     }
     //this.populateDays();
@@ -111,15 +111,22 @@ class Calendar extends Component {
   transitionMonth(transitionTo){
     //debugger;
     if(transitionTo === -1){
-      this.state.dateObj.setMonth(this.state.dateObj.getMonth() -1);
+      //this.state.dateObj.setMonth(this.state.dateObj.getMonth() -1);
+      this.setState((state, props) => {
+        dateObj: state.dateObj.setMonth(state.dateObj.getMonth() -1)
+      }, () => this.setMonths());
     } else if(transitionTo === +1){
-      this.state.dateObj.setMonth(this.state.dateObj.getMonth() +1);
+      //this.state.dateObj.setMonth(this.state.dateObj.getMonth() +1)
+      this.setState((state, props) => {
+        dateObj: state.dateObj.setMonth(state.dateObj.getMonth() +1)
+      }, () => this.setMonths());
     } else {
       return;
     }
     //check state changes on this
-    this.setState();
-    this.setMonths();
+    //this.setState();
+    //this.setMonths();
+
   }
 
   //set the number of days for the current month selected
@@ -137,7 +144,7 @@ class Calendar extends Component {
         () => { console.log("months have been set to: " + this.state.daysInMonth)}*/
         this.setState({
           daysInMonth: 31
-        }, () => {this.populateDays()});
+        }, () => this.populateDays());
 	  }else if(month === 1){
 		//leap year test
 		  if(year % 4 === 0){
@@ -147,31 +154,31 @@ class Calendar extends Component {
   					//daysInMonth = 29;
             this.setState({
               daysInMonth: 29
-            }, () => {this.populateDays()});
+            }, () => this.populateDays());
   				}else{
   					//daysInMonth = 28;
             this.setState({
               daysInMonth: 28
-            }, () => {this.populateDays()});
+            }, () => this.populateDays());
   				}
   			}else{
   				//daysInMonth = 29;
           this.setState({
             daysInMonth: 29
-          }, () => {this.populateDays()});
+          }, () => this.populateDays());
   			}
   		}else{
   			//daysInMonth = 28;
         this.setState({
           daysInMonth: 28
-        }, () => {this.populateDays()});
+        }, () => this.populateDays());
   		}
   	//rest of the months
   	}else{
   		//daysInMonth = 30;
       this.setState({
         daysInMonth: 30
-      }, () => {this.populateDays()});
+      }, () => this.populateDays());
   	}
     //this.setState();
     //this.populateDays(this.state.daysInMonth); <-- dont do this it wont work and breaks
@@ -180,60 +187,67 @@ class Calendar extends Component {
   //populate the number of days in the calendar
   populateDays() {
     /*
-    for some reason this breaks the back and forth arrows
-    ALSO, setDays is currently not being used.
+    this is having issues with using the dateObj
+    probably b/c of async state changes :s
     */
-
+    console.log("current set month for population: " + this.state.dateObj.getMonth());
     let dateCells = document.getElementsByTagName("td");
     let daysInMonth = this.state.daysInMonth;
     let dayOfWeek = this.state.dateObj.getDay();
     let dateToday = this.state.today;
-    let startDate = 1;
 
     console.log("days this month: " + this.state.daysInMonth);
 
-    //this loops works fine
+    //clear days of month for new days
   	for(let i = 0;  i < dateCells.length; i++){
       console.log("CLEAR DATE is running");
   		//clear exsisting table dates
   		dateCells[i].innerHTML = "";
   		dateCells[i].className = "";
   	}
-  	//add new dates to cells
-    //this loop breaks b/c of daysInMonth?
-  /*	for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++){
-      //debugger;
-      console.log("POPULATE DATE is running" + " current date Num: " + this.state.dateObj.getDate());
-  		dateCells[i].innerHMTL = this.state.dateObj.getDate();
-  		dateCells[i].className = "date";
-  		if(dateToday < this.state.dateObj){
-  			dateCells[i].className = "futuredate";
-  		}
-  		let date = this.state.dateObj.getDate() + 1;
-  		this.state.dateObj.setDate(date);
-  	}*/
-    //debugger;
+
+    //set days of month
+    let startDate = 1;
+    let newDate = this.state.dateObj;
+    //let newDate = new Date();
+    newDate.setDate(1);   //sets day of the month for dateObj to 1 (first day of month)
+
     for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++) {
       //console.log("new for loop running");
       dateCells[i].innerHTML = startDate;
       startDate++;
+      //dateCells[i].className = "oldDate";
+      //debugger;
       dateCells[i].className = "oldDate";
-      if(dateToday < this.state.dateObj) {
+      //if the calendar date is greater than today
+        //don't want today to be a part of "future dates" but it is appear as such
+      if(dateToday < newDate) {
         dateCells[i].className = "futureDate";
       }
+
+      let date = newDate.getDate() + 1;
+      //newDate.setDate(date);
+      this.setState((state, props) => {
+        dateObj: state.dateObj.setDate(date)
+      })
       //let date = this.state.dateObj.getDate() + 1;
       //this.state.dateObj.setDate(date);
       /*this.setState({
         dateObj: date
       }, () => {console.log("state set for day obj")})
     };*/
-    console.log("end of populate");
+      //console.log("date today is: " + dateToday);
+      //console.log("set date in Obj is: " + newDate);
     }
+
   	//reset month to shown
   	//dateObject.setMonth(dateObject.getMonth() -1);
   	//display calendar if its not already visible
   	//document.getElementById("cal").style.display = "block";
+    //this.setState();
+    console.log("end of populate");
   }
+
 
 
 

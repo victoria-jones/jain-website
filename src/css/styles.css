@@ -352,6 +352,15 @@ button {
       height: 6vw;
       padding: 5px;
       vertical-align: top; }
+    #calendar #cal .oldDate {
+      color: grey; }
+      #calendar #cal .oldDate:hover {
+        cursor: cursor; }
+    #calendar #cal .futureDate {
+      color: #FFF;
+      background-color: #60b585; }
+      #calendar #cal .futureDate:hover {
+        cursor: pointer; }
 
 /*** contact page ***/
 #contactForm {

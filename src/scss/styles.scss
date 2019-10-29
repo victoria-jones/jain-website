@@ -386,6 +386,19 @@ button {
       padding: 5px;
       vertical-align: top;
     }
+    .oldDate {
+      color: grey;
+      &:hover {
+        cursor: cursor;
+      }
+    }
+    .futureDate {
+      color: $white;
+      background-color: $mainGreen;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 /*** contact page ***/
