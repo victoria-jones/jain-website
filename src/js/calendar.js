@@ -134,7 +134,7 @@ class Calendar extends Component {
         /*this.setState({
           daysInMonth: 31
         }, this.populateDays());
-        () => { this.populateDays(this.state.daysInMonth)}*/
+        () => { console.log("months have been set to: " + this.state.daysInMonth)}*/
         this.setState({
           daysInMonth: 31
         }, () => {this.populateDays()});
@@ -147,38 +147,38 @@ class Calendar extends Component {
   					//daysInMonth = 29;
             this.setState({
               daysInMonth: 29
-            }, () => {console.log("setMonths has set state to: " + this.state.daysInMonth)});
+            }, () => {this.populateDays()});
   				}else{
   					//daysInMonth = 28;
             this.setState({
               daysInMonth: 28
-            }, () => {console.log("setMonths has set state to: " + this.state.daysInMonth)});
+            }, () => {this.populateDays()});
   				}
   			}else{
   				//daysInMonth = 29;
           this.setState({
             daysInMonth: 29
-          }, () => {console.log("setMonths has set state to: " + this.state.daysInMonth)});
+          }, () => {this.populateDays()});
   			}
   		}else{
   			//daysInMonth = 28;
         this.setState({
           daysInMonth: 28
-        }, () => {console.log("setMonths has set state to: " + this.state.daysInMonth)});
+        }, () => {this.populateDays()});
   		}
   	//rest of the months
   	}else{
   		//daysInMonth = 30;
       this.setState({
         daysInMonth: 30
-      }, () => {console.log("setMonths has set state to: " + this.state.daysInMonth)});
+      }, () => {this.populateDays()});
   	}
     //this.setState();
     //this.populateDays(this.state.daysInMonth); <-- dont do this it wont work and breaks
   }
 
   //populate the number of days in the calendar
-  populateDays(setDays) {
+  populateDays() {
     /*
     for some reason this breaks the back and forth arrows
     ALSO, setDays is currently not being used.
