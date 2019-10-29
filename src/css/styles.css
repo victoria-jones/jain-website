@@ -298,6 +298,61 @@ button {
   #bookingInfo ul li {
     line-height: 1.8em; }
 
+#calendar {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif; }
+  #calendar #cal {
+    width: 99%; }
+    #calendar #cal #arrowWrap {
+      width: 99%;
+      margin: 0 auto;
+      position: relative;
+      top: 5em; }
+      #calendar #cal #arrowWrap .calArrow {
+        background-color: #60b585;
+        width: 10em; }
+        #calendar #cal #arrowWrap .calArrow:hover {
+          cursor: pointer; }
+      #calendar #cal #arrowWrap #prev {
+        margin-left: 20px; }
+        #calendar #cal #arrowWrap #prev i {
+          margin-right: 10px; }
+      #calendar #cal #arrowWrap #next {
+        float: right;
+        margin-right: 20px; }
+        #calendar #cal #arrowWrap #next i {
+          color: #FFF;
+          margin-left: 30px; }
+    #calendar #cal table {
+      width: 99%;
+      margin: 0 auto; }
+    #calendar #cal caption {
+      width: 100%;
+      border: 1px solid #9ce6b3;
+      border-bottom: none;
+      background-color: #02424e;
+      font-size: 2em;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      padding: 20px 0; }
+      #calendar #cal caption #calYear {
+        font-family: "Montserrat", sans-serif; }
+    #calendar #cal th {
+      color: #0b1114;
+      text-transform: lowercase;
+      font-size: 1.5em;
+      font-weight: 100;
+      width: 8vw;
+      height: 20px;
+      background-color: #9ce6b3; }
+    #calendar #cal td {
+      color: #FFF;
+      background-color: transparent;
+      border: 1px solid #9ce6b3;
+      height: 6vw;
+      padding: 5px;
+      vertical-align: top; }
+
 /*** contact page ***/
 #contactForm {
   margin-bottom: 5em; }

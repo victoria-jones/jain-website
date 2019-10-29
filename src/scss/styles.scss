@@ -325,6 +325,69 @@ button {
     line-height: 1.8em;
   }
 }
+#calendar {
+  color: $white;
+  font-family: $montserrat;
+  #cal {
+    width: 99%;
+    #arrowWrap{
+      width: 99%;
+      margin: 0 auto;
+      position: relative;
+      top: 5em;
+      .calArrow {
+        background-color: $mainGreen;
+        width: 10em;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      #prev {
+        margin-left: 20px;
+        i {
+          margin-right: 10px;
+        }
+      }
+      #next {
+        float: right;
+        margin-right: 20px;
+        i {
+          color: $white;
+          margin-left: 30px;
+        }
+      }
+    }
+    table{
+      width: 99%;
+      margin: 0 auto;
+    }
+    caption {
+      width: 100%;
+      border: 1px solid $lightGreen;
+      border-bottom: none;
+      background-color: $blue;
+      font-size: 2em; text-transform: uppercase; font-family: $raleway;
+      padding: 20px 0;
+      #calYear {
+        font-family: $montserrat;
+      }
+    }
+    th {
+      color: $blackBlue; text-transform: lowercase; font-size: 1.5em;
+      font-weight: 100;
+      width: 8vw; height: 20px;
+      background-color: $lightGreen;
+    }
+    td {
+      color: $white;
+      background-color: transparent;
+      border: 1px solid $lightGreen;
+      height: 6vw;
+      padding: 5px;
+      vertical-align: top;
+    }
+  }
+}
 /*** contact page ***/
 #contactForm {
   margin-bottom: 5em;

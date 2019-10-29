@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Calendar from '../js/calendar';
 
 class BookPage extends Component {
 
@@ -23,17 +24,13 @@ class BookPage extends Component {
         </section>
 
         <section id="calendar">
-          <p>calendar API to show availability for bookings</p>
-          <p>wanted to make it so clicking an available date would start
-          a booking form for a little more info that sends an email when
-          completed. HOWEVER, not sure if this can work with an existing
-          calendar API</p>
+          <Calendar />
         </section>
 
         <section className="cta" id="contactForQuestions">
         <p>the book me CTA and area.the book me CTA and area.the book me CTA and area.
         the book me CTA and area.the book me CTA and area.</p>
-        <Link to="/contact "><button>contact me</button></Link>
+        <Link to="/contact"><button>contact me</button></Link>
         </section>
       </div>
     )
