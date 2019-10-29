@@ -114,7 +114,7 @@ class Calendar extends Component {
       return;
     }
     this.setState();
-    //this.setMonths();
+    this.setMonths();
   }
 
   //set the number of days for the current month selected
