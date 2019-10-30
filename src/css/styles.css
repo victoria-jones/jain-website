@@ -75,9 +75,15 @@ button {
   font-size: 1em;
   text-transform: uppercase;
   color: #FFF;
-  border-radius: 30px; }
+  border-radius: 30px;
+  border: #1f323b;
+  background-color: #1f323b; }
   button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #02424e; }
 
 footer {
   position: absolute;
@@ -140,10 +146,6 @@ footer {
   text-align: center; }
   .socialNavFt ul li img {
     padding: 0 15px; }
-
-button {
-  border: #1f323b;
-  background-color: #1f323b; }
 
 /**** home page ****/
 #hero {
@@ -312,7 +314,11 @@ button {
         background-color: #60b585;
         width: 10em; }
         #calendar #cal #arrowWrap .calArrow:hover {
-          cursor: pointer; }
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          cursor: pointer;
+          background-color: #1c3627; }
       #calendar #cal #arrowWrap #prev {
         margin-left: 20px; }
         #calendar #cal #arrowWrap #prev i {
@@ -359,6 +365,9 @@ button {
         text-transform: uppercase; }
       #calendar #cal .oldDate:hover {
         cursor: cursor;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
         background-color: #1f323b; }
     #calendar #cal .futureDate {
       color: #FFF;
@@ -367,6 +376,9 @@ button {
         text-transform: uppercase; }
       #calendar #cal .futureDate:hover {
         cursor: pointer;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
         background-color: #1c3627; }
 
 /*** contact page ***/
@@ -383,6 +395,12 @@ button {
     background-color: transparent;
     margin-right: 100px;
     color: #9ce6b3; }
+    #contactForm #contactReason button:hover {
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      background-color: #9ce6b3;
+      color: #0b1114; }
   #contactForm #emailForm input, #contactForm #emailForm button, #contactForm #emailForm textarea {
     display: block; }
   #contactForm #emailForm input, #contactForm #emailForm textarea {
@@ -397,7 +415,8 @@ button {
     font-size: 1em;
     padding: 5px; }
   #contactForm #emailForm textarea {
-    height: 10em; }
+    height: 10em;
+    font-family: "Montserrat", sans-serif; }
   #contactForm #emailForm #emailFormBg {
     background-color: #9ce6b3;
     padding: 20px; }

@@ -81,8 +81,12 @@ button {
   width: 180px;
   font-size: 1em; text-transform: uppercase; color: $white;
   border-radius: 30px;
+  border: $darkBlue;
+  background-color: $darkBlue;
   &:hover {
     cursor: pointer;
+    transition: $colorTransition;
+    background-color: $blue;
   }
 }
 footer {
@@ -149,8 +153,7 @@ footer {
   }
 }
 button {
-  border: $darkBlue;
-  background-color: $darkBlue;
+
 }
 
 /**** home page ****/
@@ -278,7 +281,6 @@ button {
   background-color: $lightGreen;
   p {
     font-size: 11pt;
-
   }
 }
 #specialties {
@@ -339,7 +341,9 @@ button {
         background-color: $mainGreen;
         width: 10em;
         &:hover {
+          transition: $colorTransition;
           cursor: pointer;
+          background-color: $darkGreen;
         }
       }
       #prev {
@@ -394,6 +398,7 @@ button {
       }
       &:hover {
         cursor: cursor;
+        transition: $colorTransition;
         background-color: $darkBlue;
       }
     }
@@ -405,6 +410,7 @@ button {
       }
       &:hover {
         cursor: pointer;
+        transition: $colorTransition;
         background-color: $darkGreen;
       }
     }
@@ -426,6 +432,12 @@ button {
       background-color: transparent;
       margin-right: 100px;
       color: $lightGreen;
+      &:hover {
+        transition: $colorTransition;
+        background-color: $lightGreen;
+        color: $blackBlue;
+        //font-weight: bold;
+      }
     }
   }
   #emailForm {
@@ -444,6 +456,7 @@ button {
     }
     textarea {
       height: 10em;
+      font-family: $montserrat;
     }
     #emailFormBg {
       background-color: $lightGreen;

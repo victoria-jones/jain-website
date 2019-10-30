@@ -27,7 +27,7 @@ class ContactPage extends Component {
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email" />
             <label for="message">Message</label>
-            <textarea id="message">Message</textarea>
+            <textarea id="message" placeholder ="Message"></textarea>
             <button>Send</button>
           </div>
           </section>
