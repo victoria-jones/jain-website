@@ -28,7 +28,9 @@ class ContactPage extends Component {
             <input id="email" type="email" placeholder="Email" />
             <label for="message">Message</label>
             <textarea id="message" placeholder ="Message"></textarea>
-            <button id="contactFormSend">Send</button>
+            <button id="contactFormSend"
+                    onClick={() => this.props.showModal('open')}
+            >Send</button>
           </div>
           </section>
         </form>

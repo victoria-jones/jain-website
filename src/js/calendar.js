@@ -9,18 +9,16 @@ class Calendar extends Component {
       daysInMonth: 0,
       today: new Date(),
     };
-    this.transitionMonth = this.transitionMonth.bind(this);
-    this.setMonths = this.setMonths.bind(this);
+    //this.transitionMonth = this.transitionMonth.bind(this);
+    //this.setMonths = this.setMonths.bind(this);
   }
+
   componentDidMount() {
-    //debugger;
     if(this.state.daysInMonth === 0){
       this.setMonths();
     }
-    //this.populateDays();
-  }
-  componentDidUpdate() {
-    //this.populateDays();
+
+    this.handleBookingSelect();
   }
 
   render() {
@@ -259,7 +257,17 @@ class Calendar extends Component {
     //run function to add in text to tds
   }
 
+  handleBookingSelect() {
+    let dateCells = document.getElementsByTagName("td");
 
+    for(let i = 0; i < dateCells.length; i++) {
+      if(dateCells[i].addEventListener){
+        dateCells[i].addEventListener("click", () => this.props.showModal('open'), false);
+      } else {
+        dateCells[i].attachEvent("onclick", () => this.props.showModal('open'));
+      }
+    }
+  }
 
 
 }

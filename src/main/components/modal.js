@@ -6,9 +6,9 @@ class Modal extends Component {
     if (this.props.displayModal) {
       return(
 
-          <div class="modalWrapper">
+          <div className="modalWrapper">
             <section id="modal">
-              <img src="images/icons/close_icon.svg" class="closeBtn" alt="close window button" title="close button"
+              <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
                   onClick={() => this.props.showModal('close')}
               />
               <h2 id="modalHead">Modal Header</h2>
@@ -28,7 +28,7 @@ class Modal extends Component {
     let modalBody = document.getElementById("modalBody");
 
     modalH2.innerHTML = "Thank you!";
-    
+
   }
 
   fillForm() {

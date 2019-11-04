@@ -43,9 +43,13 @@ class App extends Component {
                   <Route path="/contact" render={(props) =>
                     <ContactPage {...props}
                       showModal={this.showModal}
-                    />} 
+                    />}
                   />
-                  <Route path="/booking" component={BookPage} />
+                  <Route path="/booking" render={(props) =>
+                    <BookPage {...props}
+                      sendModal={this.showModal}
+                    />}
+                  />
                   <Route component={Error404} />
                 </Switch>
             </main>

@@ -24,7 +24,7 @@ class BookPage extends Component {
         </section>
 
         <section id="calendar">
-          <Calendar />
+          <Calendar showModal={this.props.sendModal}/>
         </section>
 
         <section className="cta" id="contactForQuestions">
