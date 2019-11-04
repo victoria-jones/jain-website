@@ -7,7 +7,6 @@ class Calendar extends Component {
       dateObj: new Date(),
       thisMonth: ['Januaray', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       daysInMonth: 0,
-      year: "",
       today: new Date(),
     };
     this.transitionMonth = this.transitionMonth.bind(this);

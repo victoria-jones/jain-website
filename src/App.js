@@ -7,11 +7,19 @@ import BookPage from './main/book';
 import Error404 from './main/404error';
 import Nav from './nav/navigation';
 import SocialNav from './nav/socialNav';
+import Modal from './main/components/modal';
 import Footer from './footer/footer';
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import ScrollToTop from './js/scrolltotop';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      displayModal: true
+    };
+    this.showModal = this.showModal.bind(this);
+  }
 
   render() {
     return (
@@ -25,10 +33,18 @@ class App extends Component {
         </header>
 
             <main>
+            <Modal
+              displayModal={this.state.displayModal}
+              showModal={this.showModal}
+            />
                 <Switch>
                   <Route exact path="/" component={HomePage} />
                   <Route path="/about_me" component={AboutPage} />
-                  <Route path="/contact" component={ContactPage} />
+                  <Route path="/contact" render={(props) =>
+                    <ContactPage {...props}
+                      showModal={this.showModal}
+                    />} 
+                  />
                   <Route path="/booking" component={BookPage} />
                   <Route component={Error404} />
                 </Switch>
@@ -38,6 +54,21 @@ class App extends Component {
           <Footer />
       </div>
     );
+  }
+
+  showModal(boolChange) {
+    switch(boolChange) {
+      case 'close':
+        this.setState({
+          displayModal: false
+        });
+        break;
+      case 'open':
+        this.setState({
+          displayModal: true
+        });
+        break;
+    }
   }
 }
 
