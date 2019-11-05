@@ -17,8 +17,10 @@ class Calendar extends Component {
     if(this.state.daysInMonth === 0){
       this.setMonths();
     }
+  }
 
-    this.handleBookingSelect();
+  componentDidUpdate() {
+    //this.handleBookingSelect();
   }
 
   render() {
@@ -246,7 +248,9 @@ class Calendar extends Component {
       //console.log("date today is: " + dateToday);
       //console.log("set date in Obj is: " + newDate);
     }
+
     newDate.setMonth(newDate.getMonth()-1);
+    this.handleBookingSelect();
   	//reset month to shown
   	//dateObject.setMonth(dateObject.getMonth() -1);
   	//display calendar if its not already visible
@@ -257,14 +261,36 @@ class Calendar extends Component {
     //run function to add in text to tds
   }
 
+  /*showModalHandler(){
+    //this is a work around without using an annonymous function in the event listener
+    //an annonymous even listener cannot be removed.
+    //const showingModal = () => this.props.showModal('open');
+    //showingModal;
+    () => {this.props.showModal('open')};
+  }*/
+
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
+    const showModalHandler = () => this.props.showModal('open');
 
     for(let i = 0; i < dateCells.length; i++) {
-      if(dateCells[i].addEventListener){
-        dateCells[i].addEventListener("click", () => this.props.showModal('open'), false);
-      } else {
-        dateCells[i].attachEvent("onclick", () => this.props.showModal('open'));
+      //add event listener
+      debugger;
+      if(dateCells[i].className === "futureDate") {
+        if(dateCells[i].addEventListener){
+          console.log("event added to cell: " + i);
+          dateCells[i].addEventListener("click", showModalHandler, false);
+        } else {
+          dateCells[i].attachEvent("onclick", showModalHandler);
+        }
+      //remove event listener
+    } else if(dateCells[i].className != "futureDate") {
+          if(dateCells[i].removeEventListener){
+            console.log("event REMOVED from cell: " + i);
+            dateCells[i].removeEventListener("click", showModalHandler, false);
+          } else {
+            dateCells[i].detachEvent("onclick", showModalHandler);
+          }
       }
     }
   }
