@@ -261,35 +261,48 @@ class Calendar extends Component {
     //run function to add in text to tds
   }
 
-  /*showModalHandler(){
-    //this is a work around without using an annonymous function in the event listener
-    //an annonymous even listener cannot be removed.
-    //const showingModal = () => this.props.showModal('open');
-    //showingModal;
-    () => {this.props.showModal('open')};
+  /*showModalHander = () => {
+    this.props.showModal('open');
+    console.log('and event happened!');
   }*/
+
+  /*showModalHandler() {
+    console.log('an even happened');
+    let self = this;
+    //showModal comes up as undefined, is there a bind problem?
+    ((self) => {
+      self.method;
+    })();
+  }
+  showModalHander.prototype.method = () => {this.props.showModal('open')}*/
+
+
 
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
-    const showModalHandler = () => this.props.showModal('open');
+    //const showModalHandler = () => this.props.showModal('open');
+    //const showModalHandler = this.props.showModal('open');
+    //let self = this;
+    //let showModalHandler = () => self.props.showModal('open');
+
 
     for(let i = 0; i < dateCells.length; i++) {
       //add event listener
-      debugger;
+      //debugger;
       if(dateCells[i].className === "futureDate") {
         if(dateCells[i].addEventListener){
           console.log("event added to cell: " + i);
-          dateCells[i].addEventListener("click", showModalHandler, false);
+          dateCells[i].addEventListener("click", this.showModalHandler , false);
         } else {
-          dateCells[i].attachEvent("onclick", showModalHandler);
+          dateCells[i].attachEvent("onclick", this.showModalHandler);
         }
       //remove event listener
     } else if(dateCells[i].className != "futureDate") {
           if(dateCells[i].removeEventListener){
             console.log("event REMOVED from cell: " + i);
-            dateCells[i].removeEventListener("click", showModalHandler, false);
+            dateCells[i].removeEventListener("click", this.showModalHandler, false);
           } else {
-            dateCells[i].detachEvent("onclick", showModalHandler);
+            dateCells[i].detachEvent("onclick", this.showModalHandler);
           }
       }
     }
