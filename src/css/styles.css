@@ -449,7 +449,8 @@ footer {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: rgba(96, 181, 133, 0.8); }
+  background-color: rgba(96, 181, 133, 0.8);
+  text-align: center; }
   .modalWrapper #modal {
     width: 90%;
     height: 80%;
@@ -470,6 +471,13 @@ footer {
       text-transform: uppercase;
       font-weight: 100;
       font-size: 1.8em; }
+    .modalWrapper #modal #modalBody {
+      display: inline-block;
+      text-align: left;
+      font-size: 1.2em; }
+      .modalWrapper #modal #modalBody button {
+        display: block;
+        margin: 40vh auto 0 auto; }
 
 /*.App-header {
   background-color: $blackBlue;

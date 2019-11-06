@@ -497,6 +497,7 @@ button {
   top: 0;
   right: 0;
   background-color: $mainGreenT;
+  text-align: center;
   #modal {
     width: 90%; height: 80%;
     margin: 10vh auto;
@@ -515,6 +516,15 @@ button {
       text-align: center;
       text-transform: uppercase;
       font-weight: 100; font-size: 1.8em;
+    }
+    #modalBody {
+      display: inline-block;
+      text-align: left;
+      font-size: 1.2em;
+      button {
+        display: block;
+        margin: 40vh auto 0 auto;
+      }
     }
   }
 }
