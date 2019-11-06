@@ -16,7 +16,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      displayModal: false
+      displayModal: false,
+      fillModalWith: ['na', 'booking', 'contact']
     };
     this.showModal = this.showModal.bind(this);
   }
@@ -60,7 +61,7 @@ class App extends Component {
     );
   }
 
-  showModal(boolChange) {
+  showModal(boolChange, modalFill) {
     switch(boolChange) {
       case 'close':
         this.setState({
@@ -71,6 +72,21 @@ class App extends Component {
         this.setState({
           displayModal: true
         });
+        break;
+    }
+    this.fillModal(modalFill);
+  }
+
+  fillModal(fillWith){
+    switch(fillWith) {
+      case 'na':
+        console.log("empty the modal");
+        break;
+      case 'booking':
+        console.log("fill modal with the booking form");
+        break;
+      case 'contact':
+        console.log("fill modal with 'message sent'");
         break;
     }
   }

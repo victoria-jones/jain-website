@@ -14,29 +14,30 @@ class ContactPage extends Component {
         <form>
           <section id="contactReason">
             <h3>Reason for contact:</h3>
-            <button>Questions</button>
-            <button>Comments</button>
-            <button>Booking</button>
+            <button type="button">Questions</button>
+            <button type="button">Comments</button>
+            <button type="button">Booking</button>
           </section>
 
           <section id="emailForm">
           <h3>Email me:</h3>
           <div id="emailFormBg">
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input id="name" type="text" placeholder="Name" />
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input id="email" type="email" placeholder="Email" />
-            <label for="message">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea id="message" placeholder ="Message"></textarea>
-            <button id="contactFormSend"
-                    onClick={() => this.props.showModal('open')}
-            >Send</button>
+            <button type="button" id="contactFormSend"
+                    onClick={() => this.props.showModal('open', 'contact')}>
+                    Send
+            </button>
           </div>
           </section>
         </form>
       </section>
 
-      <section class="cta" id="socialMedia">
+      <section className="cta" id="socialMedia">
       <p>Check me out on social media too!</p>
         <ul>
           <li><img src="images/icons/fb_icon.svg" alt="facebook icon"/></li>

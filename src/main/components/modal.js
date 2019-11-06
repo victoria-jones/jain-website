@@ -29,10 +29,26 @@ class Modal extends Component {
 
     modalH2.innerHTML = "Thank you!";
 
+    let modalP = document.createElement('p');
+    modalP.innerHTML = "you message has been sent. I will be in touch through email soon!"
+    modalBody.appendChild(modalP);
+
+    let modalBtn = document.createElement('button');
+    modalBtn.innerHTML = "ok";
+    modalBody.appendChild(modalBtn);
+
   }
 
   fillForm() {
+    let modalH2 = document.getElementById("modalHead");
+    let modalBody = document.getElementById("modalBody");
 
+    modalH2.innerHTML = ""
+  }
+
+  removeFill() {
+    document.getElementById("modalHead").innerHTML = "";
+    document.getElementById("modalBody").innerHTML = "";
   }
 }
 

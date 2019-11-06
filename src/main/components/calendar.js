@@ -274,16 +274,16 @@ class Calendar extends Component {
       self.method;
     })();
   }
-  showModalHander.prototype.method = () => {this.props.showModal('open')}*/
+  showModalHander.prototype.method = () => {this.props.showModal('open', 'booking')}*/
 
 
 
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
-    //const showModalHandler = () => this.props.showModal('open');
-    //const showModalHandler = this.props.showModal('open');
+    //const showModalHandler = () => this.props.showModal('open', 'booking');
+    //const showModalHandler = this.props.showModal('open', 'booking');
     //let self = this;
-    //let showModalHandler = () => self.props.showModal('open');
+    //let showModalHandler = () => self.props.showModal('open', 'booking');
 
 
     for(let i = 0; i < dateCells.length; i++) {

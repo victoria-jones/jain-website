@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Calendar from '../js/calendar';
+import Calendar from './components/calendar';
 
 class BookPage extends Component {
 
