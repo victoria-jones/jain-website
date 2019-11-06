@@ -292,7 +292,7 @@ class Calendar extends Component {
       if(dateCells[i].className === "futureDate") {
         if(dateCells[i].addEventListener){
           console.log("event added to cell: " + i);
-          dateCells[i].addEventListener("click", this.showModalHandler , false);
+          dateCells[i].addEventListener("click", this.showModalHandler, false);
         } else {
           dateCells[i].attachEvent("onclick", this.showModalHandler);
         }

@@ -17,7 +17,11 @@ class App extends Component {
     super(props);
     this.state = {
       displayModal: false,
-      fillModalWith: ['na', 'booking', 'contact']
+      fillModalWith: {
+        thankYou: false,
+        form: false,
+        empty: true
+      }
     };
     this.showModal = this.showModal.bind(this);
   }
@@ -37,6 +41,7 @@ class App extends Component {
             <Modal
               displayModal={this.state.displayModal}
               showModal={this.showModal}
+              fillModal={this.state.fillModalWith}
             />
                 <Switch>
                   <Route exact path="/" component={HomePage} />
@@ -74,6 +79,7 @@ class App extends Component {
         });
         break;
     }
+    console.log(modalFill);
     this.fillModal(modalFill);
   }
 
@@ -81,12 +87,33 @@ class App extends Component {
     switch(fillWith) {
       case 'na':
         console.log("empty the modal");
+        this.setState({
+          fillModalWith: {
+            thankYou: false,
+            form: false,
+            empty: true
+          }
+        });
         break;
       case 'booking':
         console.log("fill modal with the booking form");
+        this.setState({
+          fillModalWith: {
+            thankYou: false,
+            form: true,
+            empty: false
+          }
+        });
         break;
       case 'contact':
         console.log("fill modal with 'message sent'");
+        this.setState({
+          fillModalWith: {
+            thankYou: true,
+            form: false,
+            empty: false
+          }
+        });
         break;
     }
   }
