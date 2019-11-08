@@ -21,7 +21,7 @@ class Calendar extends Component {
   }
 
   componentDidUpdate() {
-    //this.handleBookingSelect();
+    this.handleBookingSelect();
   }
 
   render() {
@@ -279,22 +279,37 @@ class Calendar extends Component {
     //this.props.showModal('open', 'booking');
 
   //}
-  
+
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
-    const showModalHandler = () => this.props.showModal('open', 'booking');
+    const showModal = () => this.props.showModal('open', 'booking');
     //const showModalHandler = () => this.funFunc('it worked!');
     //const showModalHandler = this.props.showModal('open', 'booking');
     //let self = this;
     //let showModalHandler = () => self.props.showModal('open', 'booking');
     //const showModal = this.props.showModal('open', 'booking');
 
+    function showModalHandler(e) {
+      console.log(e.target.className);
+       if(e.target.className === "futureDate") {
+        console.log("run the special script!");
+        showModal();
+      } else {
+        return;
+      }
+    }
+
 
     for(let i = 0; i < dateCells.length; i++) {
       //add event listener
       //debugger;
+      if(dateCells[i].addEventListener) {
+        dateCells[i].addEventListener("click", showModalHandler, false);
+      } else if(dateCells[i].attachEvent) {
+        dateCells[i].attachEvent("onclick", showModalHandler);
+      }
 
-      if(dateCells[i].className === "futureDate") {
+      /*if(dateCells[i].className === "futureDate") {
         if(dateCells[i].addEventListener){
           console.log("event added to cell: " + i);
           dateCells[i].addEventListener("click", showModalHandler, false);
@@ -309,7 +324,7 @@ class Calendar extends Component {
           } else {
             dateCells[i].detachEvent("onclick", showModalHandler);
           }
-      }
+      }*/
     }
   }
 
