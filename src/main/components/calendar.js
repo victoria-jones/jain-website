@@ -21,7 +21,7 @@ class Calendar extends Component {
   }
 
   componentDidUpdate() {
-    this.handleBookingSelect();
+    //this.handleBookingSelect();
   }
 
   render() {
@@ -282,7 +282,7 @@ class Calendar extends Component {
 
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
-    const showModal = () => this.props.showModal('open', 'booking');
+    const showModal = () => this.props.showModal('open', 'booking');;
     //const showModalHandler = () => this.funFunc('it worked!');
     //const showModalHandler = this.props.showModal('open', 'booking');
     //let self = this;
@@ -294,7 +294,6 @@ class Calendar extends Component {
        if(e.target.className === "futureDate") {
         console.log("run the special script!");
         showModal();
-      } else {
         return;
       }
     }
