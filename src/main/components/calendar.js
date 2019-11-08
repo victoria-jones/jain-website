@@ -279,13 +279,16 @@ class Calendar extends Component {
     //this.props.showModal('open', 'booking');
 
   //}
-
+  
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
     const showModalHandler = () => this.props.showModal('open', 'booking');
+    //const showModalHandler = () => this.funFunc('it worked!');
     //const showModalHandler = this.props.showModal('open', 'booking');
     //let self = this;
     //let showModalHandler = () => self.props.showModal('open', 'booking');
+    //const showModal = this.props.showModal('open', 'booking');
+
 
     for(let i = 0; i < dateCells.length; i++) {
       //add event listener
