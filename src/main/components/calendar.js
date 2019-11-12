@@ -9,20 +9,16 @@ class Calendar extends Component {
       daysInMonth: 0,
       today: new Date(),
     };
-    //this.transitionMonth = this.transitionMonth.bind(this);
-    //this.setMonths = this.setMonths.bind(this);
-    //this.showModalHandler = this.showModalHandler.bind(this);
   }
 
   componentDidMount() {
     if(this.state.daysInMonth === 0){
       this.setMonths();
     }
+    //add event listeners ONLY ONCE
+    this.handleBookingSelect();
   }
 
-  componentDidUpdate() {
-    //this.handleBookingSelect();
-  }
 
   render() {
     return(
@@ -123,9 +119,6 @@ class Calendar extends Component {
     } else {
       return;
     }
-    //check state changes on this
-    //this.setState();
-    //this.setMonths();
 
   }
 
@@ -138,10 +131,6 @@ class Calendar extends Component {
 
     if(month === 0 || month === 2 || month === 4 || month === 6 || month === 7 || month === 9 || month === 11){
 		    //daysInMonth = 31;
-        /*this.setState({
-          daysInMonth: 31
-        }, this.populateDays());
-        () => { console.log("months have been set to: " + this.state.daysInMonth)}*/
         this.setState({
           daysInMonth: 31
         }, () => this.populateDays());
@@ -180,47 +169,33 @@ class Calendar extends Component {
         daysInMonth: 30
       }, () => this.populateDays());
   	}
-    //this.setState();
-    //this.populateDays(this.state.daysInMonth); <-- dont do this it wont work and breaks
+
   }
 
   //populate the number of days in the calendar
   populateDays() {
-    /*
-    this is having issues with using the dateObj
-    probably b/c of async state changes :s
-    */
+
     console.log("current set month for population: " + this.state.dateObj.getMonth());
+    let newDate = this.state.dateObj;
+    newDate.setDate(1);
     let dateCells = document.getElementsByTagName("td");
     let daysInMonth = this.state.daysInMonth;
     let dayOfWeek = this.state.dateObj.getDay();
     let dateToday = this.state.today;
 
     console.log("days this month: " + this.state.daysInMonth);
+    console.log("day of week: " + dayOfWeek);
 
     //clear days of month for new days
   	for(let i = 0;  i < dateCells.length; i++){
-      console.log("CLEAR DATE is running");
-  		//clear exsisting table dates
   		dateCells[i].innerHTML = "";
   		dateCells[i].className = "";
   	}
 
-    //set days of month
-    //let startDate = 1;
-    let newDate = this.state.dateObj;
-    //let newDate = new Date();
-    newDate.setDate(1);   //sets day of the month for dateObj to 1 (first day of month)
-
+    //populate days of month
     for(let i = dayOfWeek; i < daysInMonth + dayOfWeek; i++) {
-      //console.log("new for loop running");
       dateCells[i].innerHTML = newDate.getDate();
-      //startDate++;
-      //dateCells[i].className = "oldDate";
-      //debugger;
 
-      //if the calendar date is greater than today
-        //don't want today to be a part of "future dates" but it is appear as such
       if(dateToday < newDate) {
         dateCells[i].className = "futureDate";
         let bookMe = document.createElement("p");
@@ -235,95 +210,40 @@ class Calendar extends Component {
 
       let date = newDate.getDate() + 1;
       newDate.setDate(date);
-      //let date = newDate.getDate() + 1;
-      //newDate.setDate(date);
-      //this.setState((state, props) => {
-      //  dateObj: state.dateObj.setDate(date)
-      //});
-      //let date = this.state.dateObj.getDate() + 1;
-      //this.state.dateObj.setDate(date);
-      /*this.setState({
-        dateObj: date
-      }, () => {console.log("state set for day obj")})
-    };*/
-      //console.log("date today is: " + dateToday);
-      //console.log("set date in Obj is: " + newDate);
     }
 
     newDate.setMonth(newDate.getMonth()-1);
-    this.handleBookingSelect();
-  	//reset month to shown
-  	//dateObject.setMonth(dateObject.getMonth() -1);
-  	//display calendar if its not already visible
-  	//document.getElementById("cal").style.display = "block";
-    //this.setState();
+
     console.log("end of populate");
     console.log("date is now set to :" + this.state.dateObj.getDate());
-    //run function to add in text to tds
+
   }
-
-  /*showModalHander = () => {
-    this.props.showModal('open');
-    console.log('and event happened!');
-  }*/
-
-//  showModalHandler() {
-    //console.log('an event happened');
-    /*let self = this;
-    //showModal comes up as undefined, is there a bind problem?
-    ((self) => {
-      self.method;
-    })();*/
-    //debugger;
-    //this.props.showModal = this.props.showModal.bind(this);
-    //this.props.showModal('open', 'booking');
-
-  //}
 
   handleBookingSelect() {
     let dateCells = document.getElementsByTagName("td");
     const showModal = () => this.props.showModal('open', 'booking');;
-    //const showModalHandler = () => this.funFunc('it worked!');
-    //const showModalHandler = this.props.showModal('open', 'booking');
-    //let self = this;
-    //let showModalHandler = () => self.props.showModal('open', 'booking');
-    //const showModal = this.props.showModal('open', 'booking');
 
     function showModalHandler(e) {
-      console.log(e.target.className);
-       if(e.target.className === "futureDate") {
-        console.log("run the special script!");
+      //targets set to className to highlight table cell
+      //targets also set to highlight innerHTML b/c:
+          //if innerHTML is clicked it doesn't register as the cell being click
+          //vice versa ^
+       if(e.target.className === "futureDate" ||
+          e.target.innerHTML === "available for <u>booking</u>!") {
+        console.log("handler ran via click");
         showModal();
-        return;
+        //return;
       }
     }
 
 
     for(let i = 0; i < dateCells.length; i++) {
       //add event listener
-      //debugger;
       if(dateCells[i].addEventListener) {
         dateCells[i].addEventListener("click", showModalHandler, false);
       } else if(dateCells[i].attachEvent) {
         dateCells[i].attachEvent("onclick", showModalHandler);
       }
-
-      /*if(dateCells[i].className === "futureDate") {
-        if(dateCells[i].addEventListener){
-          console.log("event added to cell: " + i);
-          dateCells[i].addEventListener("click", showModalHandler, false);
-        } else {
-          dateCells[i].attachEvent("onclick", showModalHandler);
-        }
-      //remove event listener
-    } else if(dateCells[i].className != "futureDate") {
-          if(dateCells[i].removeEventListener){
-            console.log("event REMOVED from cell: " + i);
-            dateCells[i].removeEventListener("click", showModalHandler, false);
-          } else {
-            dateCells[i].detachEvent("onclick", showModalHandler);
-          }
-      }*/
     }
   }
 
