@@ -20,9 +20,18 @@ class HomePage extends Component {
         </div>
 
         <section id="photos">
-          <h3>Photos</h3>
+          <div class="plantImgHolder pihTop">
+            <h3>Photos</h3>
+            <img src="images/icons/background_plant.svg" id="bgPlant" alt="Sarah Jain leaf logo"/>
+          </div>
+
           <Instagram />
-          <img src="images/icons/background_plant.svg" id="bgPlant" alt="Sarah Jain leaf logo"/>
+
+          <div class="plantImgHolder pihBottom">
+            <p>@sarahjain420</p>
+            <img src="images/icons/background_plant.svg" id="bgPlantBottom" alt="Sarah Jain leaf logo"/>
+          </div>
+
         </section>
 
         <Donations />

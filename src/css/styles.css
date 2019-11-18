@@ -183,7 +183,8 @@ footer {
   margin-bottom: -.5em; }
 
 #photos {
-  margin-top: 35vh; }
+  margin-top: 35vh;
+  margin-bottom: -690px; }
   #photos h3 {
     text-transform: lowercase;
     font-size: 3em;
@@ -194,9 +195,22 @@ footer {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     position: absolute;
-    top: 45vh;
-    left: -80px;
-    width: 45vw; }
+    top: 48vh;
+    left: -90px;
+    width: 800px; }
+  #photos .pihBottom {
+    text-align: right;
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif; }
+  #photos #bgPlantBottom {
+    z-index: -102;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: relative;
+    top: -450px;
+    right: -280px;
+    width: 800px; }
 
 /*** donations ***/
 .donations {
