@@ -28,10 +28,13 @@ class HomePage extends Component {
           <Instagram />
 
           <div class="plantImgHolder pihBottom">
-            <p>@sarahjain420</p>
+            <p>
+              <a href="https://www.instagram.com/sarahjain420/">
+              <img src="images/icons/insta_icon.svg" alt="instagram icon" id="hpHandle"/>
+              @sarahjain420</a>
+            </p>
             <img src="images/icons/background_plant.svg" id="bgPlantBottom" alt="Sarah Jain leaf logo"/>
           </div>
-
         </section>
 
         <Donations />

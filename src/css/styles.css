@@ -202,6 +202,14 @@ footer {
     text-align: right;
     font-size: 2em;
     font-family: "Montserrat", sans-serif; }
+    #photos .pihBottom a {
+      color: #02424e; }
+      #photos .pihBottom a:hover {
+        font-weight: bold; }
+    #photos .pihBottom #hpHandle {
+      width: 50px;
+      vertical-align: middle;
+      padding-right: 10px; }
   #photos #bgPlantBottom {
     z-index: -102;
     -webkit-transform: rotate(270deg);
