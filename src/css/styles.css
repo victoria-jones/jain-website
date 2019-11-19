@@ -92,17 +92,23 @@ footer {
   width: 100%;
   color: #FFF;
   text-align: center; }
+  footer #logoftWrap {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto; }
+    footer #logoftWrap img {
+      display: inline-block; }
   footer .footerOval {
     background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
     background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
     background-image: linear-gradient(130deg, #60b585, #1f323b);
-    height: 100vh;
+    height: 900px;
     width: 170%;
     background-color: #60b585;
     border-radius: 50%;
     position: absolute;
     bottom: -650px;
-    left: -90vh;
+    left: -800px;
     z-index: -100; }
   footer small {
     font-size: 1.5em;
@@ -120,10 +126,12 @@ footer {
     font-size: 1em;
     vertical-align: top; }
 
-.socialNav ul li {
-  list-style-type: none;
-  display: inline-block; }
-  .socialNav ul li img {
+.socialNav ul {
+  padding-left: 0; }
+  .socialNav ul li {
+    list-style-type: none;
+    display: inline-block; }
+  .socialNav ul img {
     background-color: transparent;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -195,7 +203,7 @@ footer {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     position: absolute;
-    top: 48vh;
+    top: 49vh;
     left: -90px;
     width: 800px; }
   #photos .pihBottom {
@@ -501,13 +509,37 @@ footer {
         display: block;
         margin: 40vh auto 0 auto; }
 
-/*.App-header {
-  background-color: $blackBlue;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}*/
+/**** media query start ****/
+@media only screen and (max-width: 1207px) {
+  /**** home page ****/
+  #hero {
+    margin-top: 30%;
+    margin-left: 1em; }
+  .heroOval {
+    top: -6%;
+    right: -50vh; }
+  #photos {
+    margin-top: 32%; }
+    #photos #bgPlant {
+      top: 13%; }
+    #photos .pihBottom {
+      text-align: right;
+      font-size: 2em;
+      font-family: "Montserrat", sans-serif; }
+      #photos .pihBottom a {
+        color: #02424e; }
+        #photos .pihBottom a:hover {
+          font-weight: bold; }
+      #photos .pihBottom #hpHandle {
+        width: 50px;
+        vertical-align: middle;
+        padding-right: 10px; }
+    #photos #bgPlantBottom {
+      z-index: -102;
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+      position: relative;
+      top: -450px;
+      right: -280px;
+      width: 800px; } }

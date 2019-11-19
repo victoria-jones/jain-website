@@ -96,15 +96,25 @@ footer {
   width: 100%;
   color: $white;
   text-align: center;
+  #logoftWrap {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    img {
+      display: inline-block;
+    }
+  }
   .footerOval {
     background-image: $greenToBlue;
-    height: 100vh;
+    //height: 100vh;
+    height: 900px;
     width: 170%;
     background-color: $mainGreen;
     border-radius: 50%;
     position: absolute;
     bottom: -650px;
-    left: -90vh;
+    //left: -90vh;
+    left: -800px;
     z-index: -100;
   }
   small {
@@ -124,9 +134,12 @@ footer {
   }
 }
 .socialNav {
-  ul li {
-    list-style-type: none;
-    display: inline-block;
+  ul {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+      display: inline-block;
+    }
     img {
       background-color: transparent; //only necssary bc of background fill for logo standin
       transform: rotate(0deg);  //necessary for logo icon turn
@@ -151,9 +164,6 @@ footer {
   ul li img {
     padding: 0 15px;
   }
-}
-button {
-
 }
 
 /**** home page ****/
@@ -207,7 +217,7 @@ button {
     z-index: -101;
     transform: rotate(90deg);
     position: absolute;
-    top: 48vh;
+    top: 49vh;
     left: -90px;
     width: 800px;
   }
@@ -554,13 +564,94 @@ button {
     }
   }
 }
-/*.App-header {
-  background-color: $blackBlue;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}*/
+
+/**** media query start ****/
+@media  only screen and (max-width: 1207px) {
+
+
+  /**** home page ****/
+  #hero{
+    //margin-top: 25vh;
+    margin-top: 30%;
+    margin-left: 1em;
+    #heroWrapper {
+      //text-align: right;
+      //display: inline-block;
+      //margin-right: .3em;
+      h3{
+        //font-weight: 100;
+        //font-size: 1.3em;
+      }
+    }
+    img {
+      //transform: rotate(90deg);
+      //width: 100px;
+      //height: 100px;
+      //display: inline-block;
+      //vertical-align: text-bottom;
+    }
+  }
+  .heroOval {
+    //height: 100vh;
+    //width: 170%;
+    //background-color: $mainGreen;
+    //border-radius: 50%;
+    //position: absolute;
+    top: -6%;
+    right: -50vh;
+    //z-index: -100;
+    //place background image, make sure to include gradient in the image
+    //remove background color after adding image
+    //make sure to set image to fixed
+  }
+  .heroTitle {
+    //text-transform: uppercase;
+    //word-spacing: -.2em;
+    //font-weight: 100;
+    //margin-bottom: -.5em;
+  }
+  #photos {
+    //margin-top: 35vh;
+    //margin-bottom: -690px;
+    margin-top: 32%;
+    h3 {
+      //text-transform: lowercase;
+      //font-size: 3em;
+      //font-weight: lighter;
+    }
+    #bgPlant {
+      //z-index: -101;
+      //transform: rotate(90deg);
+      //position: absolute;
+      //top: 49vh;
+      //left: -90px;
+      //width: 800px;
+      top: 13%;
+    }
+    .pihBottom {
+      text-align: right;
+      font-size: 2em;
+      font-family: $montserrat;
+      a {
+        color: $blue;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+      #hpHandle {
+        width: 50px;
+        vertical-align: middle;
+        padding-right: 10px;
+        //change this color to blue
+      }
+    }
+    #bgPlantBottom {
+      z-index: -102;
+      transform: rotate(270deg);
+      position: relative;
+      top: -450px;
+      right: -280px;
+      width: 800px;
+    }
+  }
+}
