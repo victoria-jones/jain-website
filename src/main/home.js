@@ -8,13 +8,13 @@ class HomePage extends Component {
 
     return (
       <div>
-          <section id="hero">
-            <div id="heroWrapper">
-              <h2 className="heroTitle pageTitle">Sarah Jain</h2>
-              <h3>published model &<br />  hash sommelier</h3>
-            </div>
-            <img src="images/icons/logo.svg" title="Sarah Jain logo" alt="Sarah Jain leaf logo"/>
-          </section>
+        <section id="hero">
+          <div id="heroWrapper">
+            <h2 className="heroTitle pageTitle">Sarah Jain</h2>
+            <h3>published model &<br />  hash sommelier</h3>
+          </div>
+          <img src="images/icons/logo.svg" title="Sarah Jain logo" alt="Sarah Jain leaf logo"/>
+        </section>
 
         <div className="heroOval">
         </div>
