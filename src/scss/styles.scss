@@ -338,6 +338,7 @@ footer {
   width: 100%;
   background-color: $lightGreen;
   padding: 20px;
+  margin-bottom: 10em;
   //replace background with single leaf image
   p {
     display: inline-block;
@@ -452,9 +453,12 @@ footer {
     }
   }
 }
+#contactForQuestions {
+  margin-top: 10em;
+}
 /*** contact page ***/
 #contactForm {
-  margin-bottom: 5em;
+  margin-bottom: 10em;
   h3 {
     color: $white;
     text-transform: lowercase;
@@ -733,7 +737,46 @@ footer {
   }
 
   /*** About Page ***/
-  
+  #aboutMe {
+    //float: right;
+    width: 60%; max-width: 650px;
+    padding: 20px;
+    margin-right: 90px;
+    p {
+      font-size: 11pt;
+    }
+  }
+  #specialties {
+    clear: both;
+    color: $white;
+    text-align: center;
+    padding-top: 10em; //margin doesn't work here bc of float
+    margin-bottom: 10em;
+    ul li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: 1.2em;
+      font-family: $raleway;
+      text-transform: uppercase;
+      margin: 0 5vw;
+    }
+  }
+  .cta {
+    width: 100%;
+    background-color: $lightGreen;
+    padding: 20px;
+    //replace background with single leaf image
+    p {
+      display: inline-block;
+      width: 50%; max-width: 700px;
+    }
+    button {
+      display: inline-block;
+      vertical-align: middle; //not really working, only sortof... its weird
+      margin-left: 10vw;
+      margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+    }
+  }
 
 }
 

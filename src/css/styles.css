@@ -308,7 +308,8 @@ footer {
 .cta {
   width: 100%;
   background-color: #9ce6b3;
-  padding: 20px; }
+  padding: 20px;
+  margin-bottom: 10em; }
   .cta p {
     display: inline-block;
     width: 50%;
@@ -411,9 +412,12 @@ footer {
         transition: 0.3s;
         background-color: #1c3627; }
 
+#contactForQuestions {
+  margin-top: 10em; }
+
 /*** contact page ***/
 #contactForm {
-  margin-bottom: 5em; }
+  margin-bottom: 10em; }
   #contactForm h3 {
     color: #FFF;
     text-transform: lowercase;
@@ -550,7 +554,40 @@ footer {
   /*** donations ***/
   .donations #donationInfo {
     margin-right: 40px; }
-  /*** About Page ***/ }
+  /*** About Page ***/
+  #aboutMe {
+    width: 60%;
+    max-width: 650px;
+    padding: 20px;
+    margin-right: 90px; }
+    #aboutMe p {
+      font-size: 11pt; }
+  #specialties {
+    clear: both;
+    color: #FFF;
+    text-align: center;
+    padding-top: 10em;
+    margin-bottom: 10em; }
+    #specialties ul li {
+      list-style-type: none;
+      display: inline-block;
+      font-size: 1.2em;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      margin: 0 5vw; }
+  .cta {
+    width: 100%;
+    background-color: #9ce6b3;
+    padding: 20px; }
+    .cta p {
+      display: inline-block;
+      width: 50%;
+      max-width: 700px; }
+    .cta button {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10vw;
+      margin-bottom: 25px; } }
 
 /*** extra media query fixes (in between sizes) ***/
 @media only screen and (max-width: 1217px) {
