@@ -566,8 +566,166 @@ footer {
 }
 
 /**** media query start ****/
-@media  only screen and (max-width: 1207px) {
-
+@media  only screen and (max-width: 1350px) {
+  /*** whole site styles ***/
+  //whole site - large screen styles
+  body {
+    font-family: $montserrat;
+    background-color: $blackBlue;
+    color: $blackBlue;
+  }
+  a {
+    color: $lightGreen;
+    &:visited {
+      color: $lightGreen;
+    }
+  }
+  header {
+    text-align: left;
+    height: 40px;
+    position: fixed;
+    background-color: $blackBlue;
+    width: 100vw;
+    top: 0;
+    padding-bottom: 5px;
+    z-index: 10000; //some things were clipping over the top of the nav
+    h1 {
+      display: inline-block;
+      font-size: 14pt;
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+      &:visited {
+        color: $white;
+      }
+    }
+    img {
+      transform: rotate(90deg);
+      width: 23px;
+      height: 23px;
+      background-color: $white; //color cannot be changed needs to be changed in illustrator
+      vertical-align: text-bottom;
+    }
+  }
+  h1, h2, h3 {
+    font-family: $raleway;
+    font-weight: thin;
+  }
+  nav {
+    font-family: $raleway; font-size: 1em; font-weight: lighter;
+    display: inline-block;
+    ul li {
+      display: inline;
+      color: $white;
+      padding: 0 50px 0 50px;
+      a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  main {
+    margin-top: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-bottom: 20em;   //footer fix
+  }
+  .pageTitle {
+    font-size: 3em;
+  }
+  .App { //this entire part is footer fix too
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  button {
+    padding: 15px 20px;
+    width: 180px;
+    font-size: 1em; text-transform: uppercase; color: $white;
+    border-radius: 30px;
+    border: $darkBlue;
+    background-color: $darkBlue;
+    &:hover {
+      cursor: pointer;
+      transition: $colorTransition;
+      background-color: $blue;
+    }
+  }
+  footer {
+    position: absolute; //footer fix
+    left: 0;            //
+    bottom: 0;          //
+    width: 100%;
+    color: $white;
+    text-align: center;
+    #logoftWrap {
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+      img {
+        display: inline-block;
+      }
+    }
+    .footerOval {
+      //height: 900px;
+      //width: 170%;
+      //position: absolute;
+      //bottom: -650px;
+      //left: -800px;
+      height: 700px;
+      left: -50%; bottom: -450px;
+    }
+    small {
+      //font-size: 1.5em;
+      //text-transform: uppercase;
+      //word-spacing: -.2em;
+    }
+    img {
+      //background-color: white;  //for icon, swap out actual white one later
+      //width: 22px; height: 22px;
+    }
+    span {
+      //font-size: 1em;
+      //vertical-align: top;
+    }
+  }
+  .socialNav {
+    ul {
+      //padding-left: 0;
+      li {
+        //list-style-type: none;
+        //display: inline-block;
+      }
+      img {
+        //background-color: transparent; //only necssary bc of background fill for logo standin
+        //transform: rotate(0deg);  //necessary for logo icon turn
+      }
+    }
+    &:hover {
+      //cursor: pointer;
+    }
+  }
+  .socialNavTop {
+    //display: inline-block;
+    //position: fixed;
+    //top: 0;
+    //right: 0;
+    ul li img {
+      //width: 20px; height: 20px;
+    //  padding: 0 10px;
+    }
+  }
+  .socialNavFt {
+    //text-align: center;
+    ul li img {
+    //  padding: 0 15px;
+    }
+  }
 
   /**** home page ****/
   #hero{
@@ -597,8 +755,11 @@ footer {
     //background-color: $mainGreen;
     //border-radius: 50%;
     //position: absolute;
-    top: -6%;
-    right: -50vh;
+    //top: -6%;
+    //right: -50vh;
+    height: 850px;
+    top: -140px;
+    right: -40%;
     //z-index: -100;
     //place background image, make sure to include gradient in the image
     //remove background color after adding image
@@ -613,11 +774,14 @@ footer {
   #photos {
     //margin-top: 35vh;
     //margin-bottom: -690px;
-    margin-top: 32%;
+    //margin-top: 30%;
+    margin-top: 200px;
     h3 {
       //text-transform: lowercase;
       //font-size: 3em;
       //font-weight: lighter;
+      //margin-top: 30%;
+      margin-top: 300px;
     }
     #bgPlant {
       //z-index: -101;
@@ -627,31 +791,23 @@ footer {
       //left: -90px;
       //width: 800px;
       top: 13%;
+      left: -150px;
     }
     .pihBottom {
-      text-align: right;
-      font-size: 2em;
-      font-family: $montserrat;
-      a {
-        color: $blue;
-        &:hover {
-          font-weight: bold;
-        }
-      }
+      //text-align: right;
+      //font-size: 2em;
       #hpHandle {
-        width: 50px;
-        vertical-align: middle;
-        padding-right: 10px;
+        //width: 50px;
+        //vertical-align: middle;
+      //  padding-right: 10px;
         //change this color to blue
       }
     }
     #bgPlantBottom {
-      z-index: -102;
-      transform: rotate(270deg);
-      position: relative;
-      top: -450px;
-      right: -280px;
-      width: 800px;
+      //position: relative;
+      //top: -450px;
+      //right: -280px;
+      //width: 800px;
     }
   }
 }

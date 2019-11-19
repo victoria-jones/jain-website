@@ -510,36 +510,114 @@ footer {
         margin: 40vh auto 0 auto; }
 
 /**** media query start ****/
-@media only screen and (max-width: 1207px) {
+@media only screen and (max-width: 1350px) {
+  /*** whole site styles ***/
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #0b1114;
+    color: #0b1114; }
+  a {
+    color: #9ce6b3; }
+    a:visited {
+      color: #9ce6b3; }
+  header {
+    text-align: left;
+    height: 40px;
+    position: fixed;
+    background-color: #0b1114;
+    width: 100vw;
+    top: 0;
+    padding-bottom: 5px;
+    z-index: 10000; }
+    header h1 {
+      display: inline-block;
+      font-size: 14pt; }
+    header a {
+      text-decoration: none;
+      color: #FFF; }
+      header a:visited {
+        color: #FFF; }
+    header img {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+      width: 23px;
+      height: 23px;
+      background-color: #FFF;
+      vertical-align: text-bottom; }
+  h1, h2, h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: thin; }
+  nav {
+    font-family: "Raleway", sans-serif;
+    font-size: 1em;
+    font-weight: lighter;
+    display: inline-block; }
+    nav ul li {
+      display: inline;
+      color: #FFF;
+      padding: 0 50px 0 50px; }
+      nav ul li a {
+        color: #FFF;
+        text-decoration: none; }
+        nav ul li a:hover {
+          font-weight: bold;
+          text-decoration: underline; }
+  main {
+    margin-top: 40px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-bottom: 20em; }
+  .pageTitle {
+    font-size: 3em; }
+  .App {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden; }
+  button {
+    padding: 15px 20px;
+    width: 180px;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #FFF;
+    border-radius: 30px;
+    border: #1f323b;
+    background-color: #1f323b; }
+    button:hover {
+      cursor: pointer;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      background-color: #02424e; }
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FFF;
+    text-align: center; }
+    footer #logoftWrap {
+      width: 90%;
+      text-align: center;
+      margin: 0 auto; }
+      footer #logoftWrap img {
+        display: inline-block; }
+    footer .footerOval {
+      height: 700px;
+      left: -50%;
+      bottom: -450px; }
   /**** home page ****/
   #hero {
     margin-top: 30%;
     margin-left: 1em; }
   .heroOval {
-    top: -6%;
-    right: -50vh; }
+    height: 850px;
+    top: -140px;
+    right: -40%; }
   #photos {
-    margin-top: 32%; }
+    margin-top: 200px; }
+    #photos h3 {
+      margin-top: 300px; }
     #photos #bgPlant {
-      top: 13%; }
-    #photos .pihBottom {
-      text-align: right;
-      font-size: 2em;
-      font-family: "Montserrat", sans-serif; }
-      #photos .pihBottom a {
-        color: #02424e; }
-        #photos .pihBottom a:hover {
-          font-weight: bold; }
-      #photos .pihBottom #hpHandle {
-        width: 50px;
-        vertical-align: middle;
-        padding-right: 10px; }
-    #photos #bgPlantBottom {
-      z-index: -102;
-      -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-      transform: rotate(270deg);
-      position: relative;
-      top: -450px;
-      right: -280px;
-      width: 800px; } }
+      top: 13%;
+      left: -150px; } }
