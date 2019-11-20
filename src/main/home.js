@@ -10,7 +10,7 @@ class HomePage extends Component {
       <div>
         <section id="hero">
           <div id="heroWrapper">
-            <h2 className="heroTitle pageTitle">Sarah Jain</h2>
+            <h2 className="heroTitle pageTitle">Sarah <span>Jain</span></h2>
             <h3>published model &<br />  hash sommelier</h3>
           </div>
           <img src="images/icons/logo.svg" title="Sarah Jain logo" alt="Sarah Jain leaf logo"/>
