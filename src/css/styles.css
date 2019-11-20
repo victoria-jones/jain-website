@@ -556,9 +556,7 @@ footer {
     margin-right: 40px; }
   /*** About Page ***/
   #aboutMe {
-    width: 60%;
-    max-width: 650px;
-    padding: 20px;
+    max-width: 620px;
     margin-right: 90px; }
     #aboutMe p {
       font-size: 11pt; }
