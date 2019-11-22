@@ -581,67 +581,6 @@ footer {
       margin: 40% auto 0 auto; } }
 
 /*** mobile styles ***/
-@media only screen and (max-width: 825px) {
-  /*** global ***/
-  /*** contact, booking ***/
-  /** page headers **/
-  .pageOval {
-    height: 500px;
-    top: -230px;
-    right: -500px; }
-  /*** whole site styles ***/
-  header {
-    width: 100%; }
-  main {
-    margin-left: 0;
-    margin-right: 0; }
-  footer {
-    width: 100%; }
-    footer .footerOval {
-      bottom: -500px; }
-    footer small {
-      font-size: 1.8em; }
-    footer img {
-      width: 26px;
-      height: 26px;
-      vertical-align: text-bottom; }
-    footer span {
-      font-size: 1.2em; }
-  .socialNavFt ul li img {
-    width: 35px;
-    height: 35px;
-    padding: 0 30px; }
-  /*** home screen ***/
-  #hero {
-    margin-top: 40%;
-    margin-left: 30px; }
-    #hero #heroWrapper h2 {
-      font-size: 3.5em;
-      text-align: right; }
-      #hero #heroWrapper h2 span {
-        display: block;
-        text-align: right; }
-    #hero #heroWrapper h3 {
-      font-size: 1.5em; }
-    #hero img {
-      width: 180px;
-      height: 180px; }
-  .heroOval {
-    top: -2%;
-    right: -40%; }
-  #photos {
-    margin-top: 190px !important; }
-    #photos h3 {
-      margin-left: 40px; }
-    #photos #bgPlant {
-      top: 15% !important;
-      width: 800px !important;
-      left: -170px !important; }
-    #photos .pihBottom p {
-      margin-right: 30px; }
-    #photos #bgPlantBottom {
-      right: -180px; } }
-
 /*** extra media query fixes (in between sizes) ***/
 @media only screen and (max-width: 1217px) {
   #photos {
