@@ -581,7 +581,7 @@ footer {
       margin: 40% auto 0 auto; } }
 
 /*** mobile styles ***/
-@media only screen and (max-width: 825px) {
+@media only screen and (max-width: 825px) and (min-width: 500px) {
   /*** contact, booking ***/
   /** page headers **/
   .pageOval {
@@ -614,7 +614,8 @@ footer {
   /**** home page ****/
   #hero {
     margin-left: 30px;
-    margin-top: 35%; }
+    margin-top: 35%;
+    margin-top: 270px; }
     #hero #heroWrapper h2 {
       text-align: right;
       font-size: 3.5em; }
@@ -649,25 +650,136 @@ footer {
       display: inline-block; }
   /*** About Page ***/
   #aboutMe {
-    max-width: 620px;
-    margin-right: 90px; }
+    max-width: 80%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    float: none; }
+  #specialties ul {
+    padding: 0; }
+    #specialties ul li {
+      font-size: 1em;
+      margin: 0 auto; }
+      #specialties ul li:first-child {
+        padding-right: 8%; }
+      #specialties ul li:last-child {
+        padding-left: 8%; } }
+
+/*** mobile styles smaller***/
+@media only screen and (max-width: 500px) {
+  /*** contact, booking ***/
+  /** page headers **/
+  .pageOval {
+    height: 500px;
+    top: -250px;
+    right: 50%;
+    width: 800px;
+    margin-right: -400px; }
+  /*** whole site styles ***/
+  header {
+    width: 100%; }
+  main {
+    margin-left: 0;
+    margin-right: 0; }
+  footer {
+    width: 100%; }
+    footer .footerOval {
+      height: 700px;
+      left: -35%;
+      bottom: -500px; }
+    footer small {
+      font-size: 2em; }
+    footer img {
+      width: 28px;
+      height: 28px; }
+    footer span {
+      font-size: 1.5em; }
+  .socialNavFt ul li img {
+    padding: 0 30px;
+    width: 40px;
+    height: 40px; }
+  /**** home page ****/
+  #hero {
+    margin-left: 30px;
+    margin-top: 35%;
+    margin-top: 270px; }
+    #hero #heroWrapper h2 {
+      text-align: right;
+      font-size: 2.5em; }
+      #hero #heroWrapper h2 span {
+        display: block; }
+    #hero #heroWrapper h3 {
+      font-size: 1.3em; }
+    #hero img {
+      width: 140px;
+      height: 140px; }
+  .heroOval {
+    height: 850px;
+    width: 1200px;
+    top: -140px;
+    right: -500px; }
+  #photos {
+    margin-top: 175px; }
+    #photos h3 {
+      margin-left: 90px; }
+    #photos #bgPlant {
+      top: 550px;
+      left: -50px;
+      width: 430px; }
+    #photos .pihBottom p {
+      margin-right: 90px; }
+    #photos #bgPlantBottom {
+      right: -180px; }
+  /*** donations ***/
+  .donations {
+    text-align: center; }
+    .donations #donationInfo {
+      max-width: 60%;
+      margin-right: 0;
+      display: inline-block; }
+  /*** About Page ***/
+  #aboutMe {
+    max-width: 80%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    float: none; }
+  #specialties ul {
+    padding: 0; }
+    #specialties ul li {
+      font-size: 1em;
+      margin: 0 auto; }
+      #specialties ul li:first-child {
+        padding-right: 8%; }
+      #specialties ul li:last-child {
+        padding-left: 8%; }
   /*** Contact page ***/
   #contactForm {
-    margin-left: 90px;
-    margin-right: 90px; }
+    margin-left: 10px;
+    margin-right: 10px; }
+    #contactForm #contactReason button {
+      margin-right: 30px; }
   /*** Booking page ***/
   #bookingInfo {
-    margin-right: 90px;
-    margin-left: 90px; }
+    margin-left: 30px;
+    margin-right: 30px; }
   #calendar #cal {
     width: 100%; }
+    #calendar #cal #arrowWrap #prev {
+      margin-left: 10px; }
+    #calendar #cal #arrowWrap #next {
+      margin-right: 10px; }
     #calendar #cal td {
-      height: 5em; }
+      height: 8em;
+      font-size: .8em; }
   /*** modal ***/
   .modalWrapper #modal {
     margin: 90px auto; }
     .modalWrapper #modal #modalBody button {
-      margin: 40% auto 0 auto; } }
+      margin: 40% auto 0 auto; }
+  /*** 404 page ***/
+  #error404 {
+    width: 90%; } }
 
 /*** extra media query fixes (in between sizes) ***/
 @media only screen and (max-width: 1217px) and (min-width: 825px) {

@@ -976,7 +976,7 @@ footer {
 }
 
 /*** mobile styles ***/
-@media only screen and (max-width: 825px) {
+@media only screen and (max-width: 825px) and (min-width: 500px) {
   /*** contact, booking ***/
         /** page headers **/
   .pageOval {
@@ -1108,6 +1108,7 @@ footer {
     //margin-left: 90px;
     margin-left: 30px;
     margin-top: 35%;
+    margin-top: 270px;
     #heroWrapper {
       //text-align: right;
       //display: inline-block;
@@ -1175,8 +1176,13 @@ footer {
 
   /*** About Page ***/
   #aboutMe {
-    max-width: 620px;
-    margin-right: 90px;
+    //max-width: 620px;
+    //margin-right: 90px;
+    max-width: 80%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
     p {
       //font-size: 11pt;
     }
@@ -1187,9 +1193,21 @@ footer {
     //text-align: center;
     //padding-top: 10em; //margin doesn't work here bc of float
     //margin-bottom: 10em;
-    ul li {
-      //font-size: 1.2em;
-      //margin: 0 5vw;
+    ul {
+      padding: 0;
+      li {
+        //font-size: 1.2em;
+        //margin: 0 5vw;
+        //margin-left: -10px;
+        font-size: 1em;
+        margin: 0 auto;
+        &:first-child {
+          padding-right: 8%;
+        }
+        &:last-child {
+          padding-left: 8%;
+        }
+      }
     }
   }
   .cta {
@@ -1207,11 +1225,273 @@ footer {
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
     }
   }
+}
+
+  /*** mobile styles smaller***/
+  @media only screen and (max-width: 500px) {
+    /*** contact, booking ***/
+          /** page headers **/
+    .pageOval {
+      //height: 100vh;
+      //width: 170%;
+      height: 500px;
+      //position: absolute;
+      //top: -70vh;
+      top: -250px;
+      //right: -200px;
+      //right: -80vh;
+      //z-index: -100;
+      //set background image for oval based on page
+      right: 50%;
+      width: 800px;
+      margin-right: -400px;
+    }
+    .pageTitle {
+      //text-align: center;
+      //text-transform: uppercase;
+      //font-weight: 100;
+      //margin-top: 2em;
+    }
+    .pageTitleMrg {
+      //margin-bottom: 3em;
+    }
+
+    /*** whole site styles ***/
+    header {
+      width: 100%;
+      h1 {
+        //display: inline-block;
+        //font-size: 14pt;
+      }
+      img {
+        //transform: rotate(90deg);
+        //width: 23px;
+        //height: 23px;
+        //background-color: $white; //color cannot be changed needs to be changed in illustrator
+        //vertical-align: text-bottom;
+      }
+    }
+    h1, h2, h3 {
+      //font-family: $raleway;
+      //font-weight: thin;
+    }
+    nav {
+      //font-family: $raleway; font-size: 1em; font-weight: lighter;
+      //display: inline-block;
+      ul li {
+        //display: inline;
+        //color: $white;
+        //padding: 0 50px 0 50px;
+      }
+    }
+    main {
+      //margin-top: 40px;
+      margin-left: 0;
+      margin-right: 0;
+      //padding-bottom: 20em;   //footer fix
+    }
+    .pageTitle {
+      //font-size: 3em;
+    }
+    .App {
+      //min-height: 100vh;  // needs to stay vh others percent doesnt work for some reaason
+    }
+    button {
+      //padding: 15px 20px;
+      //width: 180px;
+      //font-size: 1em; text-transform: uppercase; color: $white;
+      //border-radius: 30px;
+      //border: $darkBlue;
+      //background-color: $darkBlue;
+      &:hover {
+        //cursor: pointer;
+        //transition: $colorTransition;
+        //background-color: $blue;
+      }
+    }
+    footer {
+      //position: absolute; //footer fix
+      //left: 0;            //
+      //bottom: 0;          //
+      width: 100%;
+      #logoftWrap {
+        //margin: 0 auto;
+      }
+      .footerOval {
+        //height: 900px;
+        //width: 170%;
+        //position: absolute;
+        //bottom: -650px;
+        //left: -800px;
+        height: 700px;
+        left: -35%; bottom: -500px;
+      }
+      small {
+        font-size: 2em;
+        //text-transform: uppercase;
+        //word-spacing: -.2em;
+      }
+      img {
+        //background-color: white;  //for icon, swap out actual white one later
+        width: 28px; height: 28px;
+      }
+      span {
+        font-size: 1.5em;
+        //vertical-align: top;
+      }
+    }
+    .socialNavTop {
+      //top: 0;
+      //right: 0;
+      ul li img {
+        //width: 20px; height: 20px;
+      //  padding: 0 10px;
+      }
+    }
+    .socialNavFt {
+      //text-align: center;
+      ul li img {
+      padding: 0 30px;
+      width: 40px;
+      height: 40px;
+      }
+    }
+
+    /**** home page ****/
+    #hero{
+      margin-left: 30px;
+      margin-top: 35%;
+      margin-top: 270px;
+      #heroWrapper {
+        //text-align: right;
+        //display: inline-block;
+        //margin-right: .3em;
+        h2 {
+          text-align: right;
+          //font-size: 3.5em;
+          font-size: 2.5em;
+          span {
+            display: block;
+          }
+        }
+        h3{
+          //font-weight: 100;
+          //font-size: 1.5em;
+          font-size: 1.3em;
+        }
+      }
+      img {
+        //width: 190px; height: 190px;
+        //vertical-align: text-bottom;
+        width: 140px; height: 140px;
+      }
+    }
+    .heroOval {
+      height: 850px;
+      width: 1200px;
+      top: -140px;
+      right: -500px;
+    }
+    .heroTitle {
+      //word-spacing: -.2em;
+      //font-weight: 100;
+      //margin-bottom: -.5em;
+    }
+    #photos {
+      margin-top: 175px;
+      h3 {
+        margin-left: 90px;
+      }
+      #bgPlant {
+        //top: 15%;
+        //top: 400px;
+        top: 550px;
+        //left: -150px;
+        left: -50px;
+        width: 430px;
+      }
+      .pihBottom {
+        p {
+          margin-right: 90px;
+        }
+      }
+      #bgPlantBottom {
+        //top: -450px;
+        //right: -280px;
+        //width: 800px;
+        right: -180px;
+      }
+    }
+
+    /*** donations ***/
+    .donations {
+      text-align: center;
+      #donationInfo {
+        //margin-right: 40px;
+        max-width: 60%;
+        margin-right: 0;
+        display: inline-block;
+      }
+    }
+
+    /*** About Page ***/
+    #aboutMe {
+      //max-width: 620px;
+      //margin-right: 90px;
+      max-width: 80%;
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      float: none;
+      p {
+        //font-size: 11pt;
+      }
+    }
+    #specialties {
+      //clear: both;
+      //color: $white;
+      //text-align: center;
+      //padding-top: 10em; //margin doesn't work here bc of float
+      //margin-bottom: 10em;
+      ul {
+        padding: 0;
+        li {
+          //font-size: 1.2em;
+          //margin: 0 5vw;
+          //margin-left: -10px;
+          font-size: 1em;
+          margin: 0 auto;
+          &:first-child {
+            padding-right: 8%;
+          }
+          &:last-child {
+            padding-left: 8%;
+          }
+        }
+      }
+    }
+    .cta {
+      //width: 100%;
+      //background-color: $lightGreen;
+      //padding: 20px;
+      p {
+        //display: inline-block;
+        //width: 50%; max-width: 700px;
+      }
+      button {
+        //display: inline-block;
+        //vertical-align: middle; //not really working, only sortof... its weird
+        //margin-left: 10vw;
+        //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+      }
+    }
 
   /*** Contact page ***/
   #contactForm {
     //margin-bottom: 10em;
-    margin-left: 90px; margin-right: 90px;
+    //margin-left: 90px; margin-right: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
     h3 {
       //font-weight: 100;
       //font-size: 1.5em;
@@ -1222,6 +1502,7 @@ footer {
         //background-color: transparent;
         //margin-right: 100px;
         //color: $lightGreen;
+        margin-right: 30px;
         &:hover {
           //transition: $colorTransition;
           //background-color: $lightGreen;
@@ -1263,7 +1544,8 @@ footer {
   /*** Booking page ***/
   #bookingInfo {
     //color: $white;
-    margin-right: 90px; margin-left: 90px;
+    //margin-right: 90px; margin-left: 90px;
+    margin-left: 30px; margin-right: 30px;
     h3, h4 {
       //font-size: 1.5em; line-height: .4em;
       //text-transform: lowercase;
@@ -1291,12 +1573,14 @@ footer {
         }
         #prev {
           //margin-left: 20px;
+          margin-left: 10px;
           i {
             //margin-right: 10px;
           }
         }
         #next {
           //margin-right: 20px;
+          margin-right: 10px;
           i {
             //color: $white;
             //margin-left: 30px;
@@ -1311,6 +1595,7 @@ footer {
         //width: 100%;
         //font-size: 2em; text-transform: uppercase; font-family: $raleway;
         //padding: 20px 0;
+        //margin: 0 auto;
         #calYear {
           //font-family: $montserrat;
         }
@@ -1324,9 +1609,11 @@ footer {
         //color: $white;
         //background-color: transparent;
         //border: 1px solid $lightGreen;
-        height: 5em;
+        //height: 5em;
         //padding: 5px;
         //vertical-align: top;
+        height: 8em;
+        font-size: .8em;
       }
       .oldDate {
         //color: grey;
@@ -1385,6 +1672,10 @@ footer {
         }
       }
     }
+  }
+  /*** 404 page ***/
+  #error404 {
+    width: 90%;
   }
 
 }
