@@ -514,7 +514,7 @@ footer {
         margin: 40vh auto 0 auto; }
 
 /**** media query start ****/
-@media only screen and (max-width: 1350px) and (min-width: 825) {
+@media only screen and (max-width: 1350px) {
   /*** contact, booking ***/
   /** page headers **/
   .pageOval {
@@ -630,22 +630,17 @@ footer {
     top: -2%;
     right: -40%; }
   #photos {
-    margin-top: 190px; }
+    margin-top: 190px !important; }
     #photos h3 {
       margin-left: 40px; }
     #photos #bgPlant {
-      top: 15%;
-      width: 800px;
-      left: -170px; }
+      top: 15% !important;
+      width: 800px !important;
+      left: -170px !important; }
     #photos .pihBottom p {
       margin-right: 30px; }
     #photos #bgPlantBottom {
-      right: -180px; }
-  /*** donations ***/
-  .donations #donationInfo {
-    width: 600px;
-    margin-right: auto;
-    margin-left: auto; } }
+      right: -180px; } }
 
 /*** extra media query fixes (in between sizes) ***/
 @media only screen and (max-width: 1217px) {

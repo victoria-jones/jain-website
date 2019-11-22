@@ -570,7 +570,7 @@ footer {
 }
 
 /**** media query start ****/
-@media  only screen and (max-width: 1350px) and (min-width: 825){
+@media  only screen and (max-width: 1350px) {
   /*** contact, booking ***/
         /** page headers **/
   .pageOval {
@@ -1128,7 +1128,7 @@ footer {
   }
   #photos {
     //margin-top: 170px;
-    margin-top: 190px;
+    margin-top: 190px !important;  //not working wihtout important, would prefer to get it to work without
     h3 {
       //margin-left: 90px;
       margin-left: 40px;
@@ -1136,9 +1136,9 @@ footer {
     #bgPlant {
       //top: 15%;
       //left: -150px;
-      top: 15%;
-      width: 800px;
-      left: -170px;
+      top: 15% !important;
+      width: 800px !important;
+      left: -170px !important;
     }
     .pihBottom {
       p {
@@ -1151,15 +1151,6 @@ footer {
       //right: -280px;
       //width: 800px;
       right: -180px;
-    }
-  }
-
-  /*** donations ***/
-  .donations {
-    #donationInfo {
-      //margin-right: 40px;
-      width: 600px;
-      margin-right: auto; margin-left: auto;
     }
   }
 
