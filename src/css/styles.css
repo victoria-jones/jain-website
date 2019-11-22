@@ -514,7 +514,7 @@ footer {
         margin: 40vh auto 0 auto; }
 
 /**** media query start ****/
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1350px) and (min-width: 825px) {
   /*** contact, booking ***/
   /** page headers **/
   .pageOval {
@@ -581,8 +581,96 @@ footer {
       margin: 40% auto 0 auto; } }
 
 /*** mobile styles ***/
+@media only screen and (max-width: 825px) {
+  /*** contact, booking ***/
+  /** page headers **/
+  .pageOval {
+    height: 500px;
+    top: -230px;
+    right: -300px; }
+  /*** whole site styles ***/
+  header {
+    width: 100%; }
+  main {
+    margin-left: 0;
+    margin-right: 0; }
+  footer {
+    width: 100%; }
+    footer .footerOval {
+      height: 700px;
+      left: -35%;
+      bottom: -500px; }
+    footer small {
+      font-size: 2em; }
+    footer img {
+      width: 28px;
+      height: 28px; }
+    footer span {
+      font-size: 1.5em; }
+  .socialNavFt ul li img {
+    padding: 0 30px;
+    width: 40px;
+    height: 40px; }
+  /**** home page ****/
+  #hero {
+    margin-left: 30px;
+    margin-top: 35%; }
+    #hero #heroWrapper h2 {
+      text-align: right;
+      font-size: 3.5em; }
+      #hero #heroWrapper h2 span {
+        display: block; }
+    #hero #heroWrapper h3 {
+      font-size: 1.5em; }
+    #hero img {
+      width: 190px;
+      height: 190px; }
+  .heroOval {
+    height: 850px;
+    top: -140px;
+    right: -40%; }
+  #photos {
+    margin-top: 175px; }
+    #photos h3 {
+      margin-left: 120px; }
+    #photos #bgPlant {
+      top: 400px;
+      left: -150px; }
+    #photos .pihBottom p {
+      margin-right: 90px; }
+    #photos #bgPlantBottom {
+      right: -180px; }
+  /*** donations ***/
+  .donations {
+    text-align: center; }
+    .donations #donationInfo {
+      max-width: 60%;
+      margin-right: 0;
+      display: inline-block; }
+  /*** About Page ***/
+  #aboutMe {
+    max-width: 620px;
+    margin-right: 90px; }
+  /*** Contact page ***/
+  #contactForm {
+    margin-left: 90px;
+    margin-right: 90px; }
+  /*** Booking page ***/
+  #bookingInfo {
+    margin-right: 90px;
+    margin-left: 90px; }
+  #calendar #cal {
+    width: 100%; }
+    #calendar #cal td {
+      height: 5em; }
+  /*** modal ***/
+  .modalWrapper #modal {
+    margin: 90px auto; }
+    .modalWrapper #modal #modalBody button {
+      margin: 40% auto 0 auto; } }
+
 /*** extra media query fixes (in between sizes) ***/
-@media only screen and (max-width: 1217px) {
+@media only screen and (max-width: 1217px) and (min-width: 825px) {
   #photos {
     margin-top: 150px; }
     #photos #bgPlant {
@@ -590,7 +678,7 @@ footer {
       top: 13%;
       left: -120px; } }
 
-@media only screen and (max-width: 1005px) {
+@media only screen and (max-width: 1005px) and (min-width: 825px) {
   #photos {
     margin-top: 215px; }
     #photos #bgPlant {
