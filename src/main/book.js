@@ -20,6 +20,7 @@ class BookPage extends Component {
             <li>such as types of photo shoots you take</li>
             <li>maybe something saying what countries you will/can work in</li>
           </ul>
+          <p>Need to know more? Check out my <a>FAQ</a> about booking.</p>
           <p>If you have any questions about booking please <Link to="/contact">contact me</Link>.</p>
         </section>
 

@@ -8,6 +8,7 @@ class Calendar extends Component {
       thisMonth: ['Januaray', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       daysInMonth: 0,
       today: new Date(),
+      mountCount: 0
     };
   }
 
@@ -17,8 +18,15 @@ class Calendar extends Component {
     }
     //add event listeners ONLY ONCE
     this.handleBookingSelect();
+    //this.mobileStyleListener();
+    if(window.screen.width <= 500) {
+      this.mobileStyles();
+    }
+    window.addEventListener("resize", this.mobileStyles);
   }
-
+  componentWillUnmount() {
+    window.removeEventListner("resize", this.mobileStyles);
+  }
 
   render() {
     return(
@@ -200,11 +208,13 @@ class Calendar extends Component {
         dateCells[i].className = "futureDate";
         let bookMe = document.createElement("p");
         bookMe.innerHTML = "available for <u>booking</u>!"
+        bookMe.className = "innerText"
         dateCells[i].appendChild(bookMe);
       } else {
         dateCells[i].className = "oldDate";
         let unAvailable = document.createElement("p");
-        unAvailable.innerHTML = "unavailable.";
+        unAvailable.innerHTML = "not available.";
+        unAvailable.className = "innerText";
         dateCells[i].appendChild(unAvailable);
       }
 
@@ -216,6 +226,7 @@ class Calendar extends Component {
 
     console.log("end of populate");
     console.log("date is now set to :" + this.state.dateObj.getDate());
+    this.mobileStyles();
 
   }
 
@@ -247,7 +258,41 @@ class Calendar extends Component {
     }
   }
 
+  mobileStyles() {
+    let screenWidth = window.screen.width;
+    let dateCells = document.getElementsByTagName("td");
+    let calDayText = document.getElementsByClassName("innerText");
+    //let calDayTextFutureDate = document.getElementsByClassName("futureDate");
+    //let calDayTextOldDate = document.getElementsByClassname("oldDate");
+
+    if(screenWidth <= 500) {
+      changeStyles();
+    } else {
+      revertStyles();
+    }
+
+    function changeStyles() {
+      for (let i = 0; i < calDayText.length; i++) {
+        calDayText[i].innerHTML = "";
+        //console.log(calDayText[i].innerHTML);
+      }
+    }
+
+    function revertStyles() {
+      for (let i = 0; i < dateCells.length; i ++) {
+        if (dateCells[i].className === "oldDate") {
+          //calDayText[i].innerHTML = "not available.";
+        } else if (dateCells[i].className === "futureDate") {
+          //calDayText[i].innerHTML = "available for <u>booking</u>!";
+        }
+      }
+    }
+  }
+
+
 
 }
+
+
 
 export default Calendar;

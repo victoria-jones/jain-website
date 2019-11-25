@@ -20,14 +20,14 @@ class HomePage extends Component {
         </div>
 
         <section id="photos">
-          <div class="plantImgHolder pihTop">
+          <div className="plantImgHolder pihTop">
             <h3>Photos</h3>
             <img src="images/icons/background_plant.svg" id="bgPlant" alt="Sarah Jain leaf logo"/>
           </div>
 
           <Instagram />
 
-          <div class="plantImgHolder pihBottom">
+          <div className="plantImgHolder pihBottom">
             <p>
               <a href="https://www.instagram.com/sarahjain420/">
               <img src="images/icons/insta_icon.svg" alt="instagram icon" id="hpHandle"/>

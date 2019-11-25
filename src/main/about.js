@@ -28,7 +28,7 @@ class AboutPage extends Component {
           <p>all filler stuff.</p>
         </section>
 
-        <div className="heroOval">
+        <div className="heroOval aboutOval">
         </div>
 
         <section id="specialties">
