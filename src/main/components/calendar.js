@@ -231,7 +231,7 @@ class Calendar extends Component {
 
     console.log("end of populate");
     console.log("date is now set to :" + this.state.dateObj.getDate());
-    //this.mobileStyles();
+    this.mobileStyles();
 
   }
 
