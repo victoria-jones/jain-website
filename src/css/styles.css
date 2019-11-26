@@ -793,9 +793,17 @@ footer {
   #calendar #cal {
     width: 100%; }
     #calendar #cal #arrowWrap #prev {
-      margin-left: 10px; }
+      margin-left: 10px;
+      width: 60px;
+      height: 60px; }
+      #calendar #cal #arrowWrap #prev i {
+        margin: 0; }
     #calendar #cal #arrowWrap #next {
-      margin-right: 10px; }
+      margin-right: 10px;
+      width: 60px;
+      height: 60px; }
+      #calendar #cal #arrowWrap #next i {
+        margin: 0; }
     #calendar #cal th {
       font-size: 1em; }
     #calendar #cal td {

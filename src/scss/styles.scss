@@ -1606,16 +1606,25 @@ footer {
         #prev {
           //margin-left: 20px;
           margin-left: 10px;
+          //padding: 100px;
+          width: 60px; height: 60px;
           i {
             //margin-right: 10px;
+            margin: 0;
+            //width: 100px; height: 100px;
+            //float: left;
+            //background-color: white;
           }
         }
         #next {
           //margin-right: 20px;
           margin-right: 10px;
+          width: 60px; height: 60px;
           i {
             //color: $white;
             //margin-left: 30px;
+            margin: 0;
+
           }
         }
       }

@@ -19,13 +19,18 @@ class Calendar extends Component {
     //add event listeners ONLY ONCE
     this.handleBookingSelect();
     //this.mobileStyleListener();
-    if(window.screen.width <= 500) {
+    window.addEventListener("resize", this.mobileStyles);
+    if(window.screen.width <= 765) {
       this.mobileStyles();
     }
-    window.addEventListener("resize", this.mobileStyles);
+
   }
   componentWillUnmount() {
-    window.removeEventListner("resize", this.mobileStyles);
+    //debugger;
+    if(window.removeEventListener("resize", this.mobileStyles)) {
+      window.removeEventListner("resize", this.mobileStyles);
+    }
+
   }
 
   render() {
@@ -226,7 +231,7 @@ class Calendar extends Component {
 
     console.log("end of populate");
     console.log("date is now set to :" + this.state.dateObj.getDate());
-    this.mobileStyles();
+    //this.mobileStyles();
 
   }
 
@@ -259,34 +264,71 @@ class Calendar extends Component {
   }
 
   mobileStyles() {
+    //debugger;
     let screenWidth = window.screen.width;
     let dateCells = document.getElementsByTagName("td");
     let calDayText = document.getElementsByClassName("innerText");
+    let calNavBtns = document.getElementsByClassName("calArrow");
+    let prevArrow = document.createElement("i");
+    let nextArrow = document.createElement("i");
+    let prevArrowTxt = document.createTextNode(" previous");
+    let nextArrowTxt = document.createTextNode("next ");
+    let shortDayNames = ["S", "M", "T", "W", "T", "F", "S"];
+    let regDayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     //let calDayTextFutureDate = document.getElementsByClassName("futureDate");
     //let calDayTextOldDate = document.getElementsByClassname("oldDate");
 
-    if(screenWidth <= 500) {
+    prevArrow.className = "fas fa-chevron-left";
+    nextArrow.className = "fas fa-chevron-right";
+
+    if(screenWidth <= 765) {
       changeStyles();
     } else {
       revertStyles();
     }
 
     function changeStyles() {
+      //remove calendar day text
       for (let i = 0; i < calDayText.length; i++) {
         calDayText[i].innerHTML = "";
         //console.log(calDayText[i].innerHTML);
       }
+      //remove text from buttons
+      if (screenWidth <= 500) {
+        calNavBtns[0].innerHTML = "";
+        calNavBtns[1].innerHTML = "";
+        calNavBtns[0].appendChild(prevArrow);
+        calNavBtns[1].appendChild(nextArrow);
+      } else if (screenWidth > 500) {
+        calNavBtns[0].innerHTML = "";
+        calNavBtns[1].innerHTML = "";
+
+        calNavBtns[0].appendChild(prevArrow);
+        calNavBtns[0].appendChild(prevArrowTxt);
+        calNavBtns[1].appendChild(nextArrowTxt);
+        calNavBtns[1].appendChild(nextArrow);
+        //calNavBtns[0].innerHTML = " previous";
+      }
+
     }
 
     function revertStyles() {
+      //debugger;
+
+
       for (let i = 0; i < dateCells.length; i ++) {
         if (dateCells[i].className === "oldDate") {
-          //calDayText[i].innerHTML = "not available.";
+            //calDayText[i].innerHTML = "not available.";
+            //dateCells[i].children[1].innerHTML = "not available.";
+            //calDayText[i + ].innerHTML = "not available.";
+
         } else if (dateCells[i].className === "futureDate") {
-          //calDayText[i].innerHTML = "available for <u>booking</u>!";
+            //calDayText[i].innerHTML = "available for <u>booking</u>!";
+            //console.log(dateCells[i]);
         }
       }
     }
+
   }
 
 
