@@ -670,6 +670,8 @@ footer {
     margin-left: 90px; }
   #calendar #cal {
     width: 100%; }
+    #calendar #cal caption {
+      font-size: 1.8em; }
     #calendar #cal td {
       height: 5em;
       overflow: hidden; }
@@ -796,6 +798,8 @@ footer {
     margin-right: 10px; }
     #contactForm #contactReason button {
       margin-right: 30px; }
+  #socialMedia {
+    margin-bottom: 0; }
   /*** Booking page ***/
   #bookingInfo {
     margin-left: 10px;
@@ -816,6 +820,8 @@ footer {
       height: 60px; }
       #calendar #cal #arrowWrap #next i {
         margin: 0; }
+    #calendar #cal caption {
+      font-size: 1.5em; }
     #calendar #cal th {
       font-size: 1em; }
     #calendar #cal td {
@@ -827,9 +833,11 @@ footer {
       #calendar #cal td p:nth-child(1) {
         font-size: 0;
         visibility: hidden; }
+  #contactForQuestions {
+    margin-bottom: 0; }
   /*** modal ***/
   .modalWrapper #modal {
-    margin: 90px auto; }
+    margin: 10px auto; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; }
   /*** 404 page ***/

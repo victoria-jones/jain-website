@@ -1277,6 +1277,7 @@ footer {
         //width: 100%;
         //font-size: 2em; text-transform: uppercase; font-family: $raleway;
         //padding: 20px 0;
+        font-size: 1.8em;
         #calYear {
           //font-family: $montserrat;
         }
@@ -1660,7 +1661,8 @@ footer {
       }
     }
   }
-  #socialMedia{
+  #socialMedia {
+    margin-bottom: 0;
     ul {
       //margin: 0 auto;
       li {
@@ -1735,6 +1737,7 @@ footer {
         //font-size: 2em; text-transform: uppercase; font-family: $raleway;
         //padding: 20px 0;
         //margin: 0 auto;
+        font-size: 1.5em;
         #calYear {
           //font-family: $montserrat;
         }
@@ -1789,6 +1792,7 @@ footer {
   }
   #contactForQuestions {
     //margin-top: 10em;
+    margin-bottom: 0;
   }
 
   /*** modal ***/
@@ -1796,7 +1800,8 @@ footer {
     #modal {
       //width: 90%; height: 80%;
       //margin: 10vh auto;
-      margin: 90px auto;
+      margin: 10px auto;
+      //margin: 90px auto;
       //padding: 20px;
       .closeBtn {
         //width: 35px; height: 35px;

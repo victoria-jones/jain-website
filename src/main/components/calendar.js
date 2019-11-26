@@ -284,8 +284,6 @@ class Calendar extends Component {
 
     if(screenWidth <= 765) {
       changeStyles();
-    } else {
-      revertStyles();
     }
 
     function changeStyles() {
@@ -316,10 +314,6 @@ class Calendar extends Component {
           dayOfWeek[i].innerHTML = regDayNames[i];
         }
       }
-
-    }
-
-    function revertStyles() {
 
     }
 
