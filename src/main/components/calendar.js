@@ -290,7 +290,7 @@ class Calendar extends Component {
     function changeStyles() {
       //remove calendar day text
       for (let i = 0; i < calDayText.length; i++) {
-        calDayText[i].innerHTML = "";
+        //calDayText[i].innerHTML = "";
         //console.log(calDayText[i].innerHTML);
       }
       //remove text from buttons
@@ -316,17 +316,17 @@ class Calendar extends Component {
       //debugger;
 
 
-      for (let i = 0; i < dateCells.length; i ++) {
-        if (dateCells[i].className === "oldDate") {
+      //for (let i = 0; i < dateCells.length; i ++) {
+        //if (dateCells[i].className === "oldDate") {
             //calDayText[i].innerHTML = "not available.";
             //dateCells[i].children[1].innerHTML = "not available.";
             //calDayText[i + ].innerHTML = "not available.";
 
-        } else if (dateCells[i].className === "futureDate") {
+        //} else if (dateCells[i].className === "futureDate") {
             //calDayText[i].innerHTML = "available for <u>booking</u>!";
             //console.log(dateCells[i]);
-        }
-      }
+        //}
+      //}
     }
 
   }

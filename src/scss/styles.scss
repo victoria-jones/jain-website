@@ -1225,6 +1225,104 @@ footer {
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
     }
   }
+
+  /*** Booking page ***/
+  #bookingInfo {
+    //color: $white;
+    margin-right: 90px; margin-left: 90px;
+    h3, h4 {
+      //font-size: 1.5em; line-height: .4em;
+      //text-transform: lowercase;
+      //font-weight: 100;
+    }
+    ul li {
+      //line-height: 1.8em;
+    }
+  }
+  #calendar {
+    #cal {
+      width: 100%;
+      #arrowWrap{
+        //width: 99%;
+        //margin: 0 auto;
+        //position: relative;
+        //top: 5em;
+        .calArrow {
+          //width: 10em;
+          &:hover {
+            //transition: $colorTransition;
+            //cursor: pointer;
+            //background-color: $darkGreen;
+          }
+        }
+        #prev {
+          //margin-left: 20px;
+          i {
+            //margin-right: 10px;
+          }
+        }
+        #next {
+          //margin-right: 20px;
+          i {
+            //color: $white;
+            //margin-left: 30px;
+          }
+        }
+      }
+      table{
+        //width: 99%;
+        //margin: 0 auto;
+      }
+      caption {
+        //width: 100%;
+        //font-size: 2em; text-transform: uppercase; font-family: $raleway;
+        //padding: 20px 0;
+        #calYear {
+          //font-family: $montserrat;
+        }
+      }
+      th {
+        //color: $blackBlue; text-transform: lowercase; font-size: 1.5em;
+        //font-weight: 100;
+        //width: 8vw; height: 20px;
+      }
+      td {
+        //color: $white;
+        //background-color: transparent;
+        //border: 1px solid $lightGreen;
+        height: 5em;
+        //padding: 5px;
+        //vertical-align: top;
+        overflow: hidden;
+        p:nth-child(1){
+          font-size: 0;
+          visibility: hidden;
+        }
+      }
+      .oldDate {
+        //color: grey;
+        //border: 1px solid $darkBlue;
+        p{
+          //text-transform: uppercase;
+        }
+        &:hover {
+          //cursor: cursor;
+          //transition: $colorTransition;
+          //background-color: $darkBlue;
+        }
+      }
+      .futureDate {
+        p {
+          //text-transform: uppercase;
+        }
+        &:hover {
+          //cursor: pointer;
+          //transition: $colorTransition;
+          //background-color: $darkGreen;
+        }
+      }
+    }
+  }
 }
 
   /*** mobile styles smaller***/
@@ -1659,8 +1757,10 @@ footer {
         font-size: 1em;
         padding: 2px;
         height: 3em;
+        overflow: hidden;
         p:nth-child(1){
-          font-size: .54em;
+          font-size: 0;
+          visibility: hidden;
         }
       }
       .oldDate {

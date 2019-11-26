@@ -663,7 +663,19 @@ footer {
       #specialties ul li:first-child {
         padding-right: 8%; }
       #specialties ul li:last-child {
-        padding-left: 8%; } }
+        padding-left: 8%; }
+  /*** Booking page ***/
+  #bookingInfo {
+    margin-right: 90px;
+    margin-left: 90px; }
+  #calendar #cal {
+    width: 100%; }
+    #calendar #cal td {
+      height: 5em;
+      overflow: hidden; }
+      #calendar #cal td p:nth-child(1) {
+        font-size: 0;
+        visibility: hidden; } }
 
 /*** mobile styles smaller***/
 @media only screen and (max-width: 500px) {
@@ -810,9 +822,11 @@ footer {
       height: 8em;
       font-size: 1em;
       padding: 2px;
-      height: 3em; }
+      height: 3em;
+      overflow: hidden; }
       #calendar #cal td p:nth-child(1) {
-        font-size: .54em; }
+        font-size: 0;
+        visibility: hidden; }
   /*** modal ***/
   .modalWrapper #modal {
     margin: 90px auto; }
