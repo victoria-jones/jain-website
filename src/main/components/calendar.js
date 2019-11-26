@@ -267,6 +267,7 @@ class Calendar extends Component {
     //debugger;
     let screenWidth = window.screen.width;
     let dateCells = document.getElementsByTagName("td");
+    let dayOfWeek = document.getElementsByTagName("th");
     let calDayText = document.getElementsByClassName("innerText");
     let calNavBtns = document.getElementsByClassName("calArrow");
     let prevArrow = document.createElement("i");
@@ -274,7 +275,7 @@ class Calendar extends Component {
     let prevArrowTxt = document.createTextNode(" previous");
     let nextArrowTxt = document.createTextNode("next ");
     let shortDayNames = ["S", "M", "T", "W", "T", "F", "S"];
-    let regDayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let regDayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     //let calDayTextFutureDate = document.getElementsByClassName("futureDate");
     //let calDayTextOldDate = document.getElementsByClassname("oldDate");
 
@@ -288,11 +289,6 @@ class Calendar extends Component {
     }
 
     function changeStyles() {
-      //remove calendar day text
-      for (let i = 0; i < calDayText.length; i++) {
-        //calDayText[i].innerHTML = "";
-        //console.log(calDayText[i].innerHTML);
-      }
       //remove text from buttons
       if (screenWidth <= 500) {
         calNavBtns[0].innerHTML = "";
@@ -310,23 +306,21 @@ class Calendar extends Component {
         //calNavBtns[0].innerHTML = " previous";
       }
 
+      //change th day name headers
+      if (screenWidth <= 400) {
+        for (let i = 0; i < dayOfWeek.length; i++) {
+          dayOfWeek[i].innerHTML = shortDayNames[i];
+        }
+      } else if (screenWidth > 400) {
+        for (let i = 0; i < dayOfWeek.length; i++) {
+          dayOfWeek[i].innerHTML = regDayNames[i];
+        }
+      }
+
     }
 
     function revertStyles() {
-      //debugger;
 
-
-      //for (let i = 0; i < dateCells.length; i ++) {
-        //if (dateCells[i].className === "oldDate") {
-            //calDayText[i].innerHTML = "not available.";
-            //dateCells[i].children[1].innerHTML = "not available.";
-            //calDayText[i + ].innerHTML = "not available.";
-
-        //} else if (dateCells[i].className === "futureDate") {
-            //calDayText[i].innerHTML = "available for <u>booking</u>!";
-            //console.log(dateCells[i]);
-        //}
-      //}
     }
 
   }
