@@ -29,6 +29,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //check menu state upon app load
     this.mobileMenuToggle();
   }
 

@@ -115,14 +115,12 @@ footer {
   }
   .footerOval {
     background-image: $greenToBlue;
-    //height: 100vh;
     height: 900px;
     width: 170%;
     background-color: $mainGreen;
     border-radius: 50%;
     position: absolute;
     bottom: -650px;
-    //left: -90vh;
     left: -800px;
     z-index: -100;
   }
@@ -485,7 +483,6 @@ footer {
         transition: $colorTransition;
         background-color: $lightGreen;
         color: $blackBlue;
-        //font-weight: bold;
       }
     }
   }
@@ -989,52 +986,30 @@ footer {
   /*** contact, booking ***/
         /** page headers **/
   .pageOval {
-    //height: 100vh;
-    //width: 170%;
     height: 500px;
-    //position: absolute;
-    //top: -70vh;
     top: -230px;
     right: -300px;
-    //right: -80vh;
-    //z-index: -100;
     //set background image for oval based on page
   }
   .pageTitle {
-    //text-align: center;
-    //text-transform: uppercase;
-    //font-weight: 100;
-    //margin-top: 2em;
   }
   .pageTitleMrg {
-    //margin-bottom: 3em;
   }
 
   /*** whole site styles ***/
   header {
     width: 100%;
     h1 {
-      //display: inline-block;
-      //font-size: 14pt;
     }
     img {
-      //transform: rotate(90deg);
-      //width: 23px;
-      //height: 23px;
-      //background-color: $white; //color cannot be changed needs to be changed in illustrator
-      //vertical-align: text-bottom;
     }
   }
   h1, h2, h3 {
-    //font-family: $raleway;
-    //font-weight: thin;
   }
   .mobileNavWrap {
-    //display: inline-block;
     position: absolute;
     right: -500px;
     width: 100%;
-    //top: 0;
   }
   .mobileNavBtns {
     display: block;
@@ -1052,7 +1027,6 @@ footer {
     }
     img {
       position: absolute;
-      //right: 300px;
       top: 5px; //right: 65%; //right: 365px;
       background-color: transparent;
       width: 35px; height: 35px;
@@ -1060,17 +1034,12 @@ footer {
     }
   }
   nav {
-    //font-family: $raleway; font-size: 1em; font-weight: lighter;
-    //display: inline-block;
     position: absolute;
     right: -370px;
     top: 0;
     ul {
 
       li {
-        //display: inline;
-        //color: $white;
-        //padding: 0 50px 0 50px;
         display: block;
         padding: 30px 0;
         font-size: 1.5em;
@@ -1078,43 +1047,27 @@ footer {
     }
     .navOval {
       background-color: $blackBlue;
-      //height: 900px;
-      //width: 170%;
       border-radius: 50%;
       position: relative;
       z-index: -2;
       top: -450px;
       left: -200px;
-      //bottom: -650px;
-      //left: -800px;
       height: 700px; width: 650px;
       transform: rotate(10deg);
-      //left: -35%; bottom: -500px;
     }
   }
   main {
-    //margin-top: 40px;
     margin-left: 0;
     margin-right: 0;
     //padding-bottom: 20em;   //footer fix
   }
   .pageTitle {
-    //font-size: 3em;
   }
   .App {
     //min-height: 100vh;  // needs to stay vh others percent doesnt work for some reaason
   }
   button {
-    //padding: 15px 20px;
-    //width: 180px;
-    //font-size: 1em; text-transform: uppercase; color: $white;
-    //border-radius: 30px;
-    //border: $darkBlue;
-    //background-color: $darkBlue;
     &:hover {
-      //cursor: pointer;
-      //transition: $colorTransition;
-      //background-color: $blue;
     }
   }
   footer {
@@ -1123,21 +1076,13 @@ footer {
     //bottom: 0;          //
     width: 100%;
     #logoftWrap {
-      //margin: 0 auto;
     }
     .footerOval {
-      //height: 900px;
-      //width: 170%;
-      //position: absolute;
-      //bottom: -650px;
-      //left: -800px;
       height: 700px;
       left: -35%; bottom: -500px;
     }
     small {
       font-size: 2em;
-      //text-transform: uppercase;
-      //word-spacing: -.2em;
     }
     img {
       //background-color: white;  //for icon, swap out actual white one later
@@ -1145,24 +1090,18 @@ footer {
     }
     span {
       font-size: 1.5em;
-      //vertical-align: top;
     }
   }
   .socialNavTop {
-    //top: 0;
-    //right: 0;
     position: absolute;
     top: 450px;
     margin-right: 50px;
     ul li img {
-      //width: 20px; height: 20px;
-    //  padding: 0 10px;
     width: 40px; height: 40px;
     padding: 0 30px;
     }
   }
   .socialNavFt {
-    //text-align: center;
     ul li img {
     padding: 0 30px;
     width: 40px;
@@ -1172,15 +1111,10 @@ footer {
 
   /**** home page ****/
   #hero{
-    //margin-top: 30%;
-    //margin-left: 90px;
     margin-left: 30px;
     margin-top: 35%;
     margin-top: 270px;
     #heroWrapper {
-      //text-align: right;
-      //display: inline-block;
-      //margin-right: .3em;
       h2 {
         text-align: right;
         font-size: 3.5em;
@@ -1189,13 +1123,11 @@ footer {
         }
       }
       h3{
-        //font-weight: 100;
         font-size: 1.5em;
       }
     }
     img {
       width: 190px; height: 190px;
-      //vertical-align: text-bottom;
     }
   }
   .heroOval {
@@ -1204,9 +1136,6 @@ footer {
     right: -40%;
   }
   .heroTitle {
-    //word-spacing: -.2em;
-    //font-weight: 100;
-    //margin-bottom: -.5em;
   }
   #photos {
     margin-top: 175px;
@@ -1214,7 +1143,6 @@ footer {
       margin-left: 120px;
     }
     #bgPlant {
-      //top: 15%;
       top: 400px;
       left: -150px;
     }
@@ -1224,9 +1152,6 @@ footer {
       }
     }
     #bgPlantBottom {
-      //top: -450px;
-      //right: -280px;
-      //width: 800px;
       right: -180px;
     }
   }
@@ -1235,7 +1160,6 @@ footer {
   .donations {
     text-align: center;
     #donationInfo {
-      //margin-right: 40px;
       max-width: 60%;
       margin-right: 0;
       display: inline-block;
@@ -1244,29 +1168,18 @@ footer {
 
   /*** About Page ***/
   #aboutMe {
-    //max-width: 620px;
-    //margin-right: 90px;
     max-width: 80%;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
     float: none;
     p {
-      //font-size: 11pt;
     }
   }
   #specialties {
-    //clear: both;
-    //color: $white;
-    //text-align: center;
-    //padding-top: 10em; //margin doesn't work here bc of float
-    //margin-bottom: 10em;
     ul {
       padding: 0;
       li {
-        //font-size: 1.2em;
-        //margin: 0 5vw;
-        //margin-left: -10px;
         font-size: 1em;
         margin: 0 auto;
         &:first-child {
@@ -1279,89 +1192,50 @@ footer {
     }
   }
   .cta {
-    //width: 100%;
-    //background-color: $lightGreen;
-    //padding: 20px;
     p {
-      //display: inline-block;
-      //width: 50%; max-width: 700px;
     }
     button {
-      //display: inline-block;
       //vertical-align: middle; //not really working, only sortof... its weird
-      //margin-left: 10vw;
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
     }
   }
 
   /*** Booking page ***/
   #bookingInfo {
-    //color: $white;
     margin-right: 90px; margin-left: 90px;
     h3, h4 {
-      //font-size: 1.5em; line-height: .4em;
-      //text-transform: lowercase;
-      //font-weight: 100;
     }
     ul li {
-      //line-height: 1.8em;
     }
   }
   #calendar {
     #cal {
       width: 100%;
       #arrowWrap{
-        //width: 99%;
-        //margin: 0 auto;
-        //position: relative;
-        //top: 5em;
         .calArrow {
-          //width: 10em;
           &:hover {
-            //transition: $colorTransition;
-            //cursor: pointer;
-            //background-color: $darkGreen;
           }
         }
         #prev {
-          //margin-left: 20px;
           i {
-            //margin-right: 10px;
           }
         }
         #next {
-          //margin-right: 20px;
           i {
-            //color: $white;
-            //margin-left: 30px;
           }
         }
       }
       table{
-        //width: 99%;
-        //margin: 0 auto;
       }
       caption {
-        //width: 100%;
-        //font-size: 2em; text-transform: uppercase; font-family: $raleway;
-        //padding: 20px 0;
         font-size: 1.8em;
         #calYear {
-          //font-family: $montserrat;
         }
       }
       th {
-        //color: $blackBlue; text-transform: lowercase; font-size: 1.5em;
-        //font-weight: 100;
-        //width: 8vw; height: 20px;
       }
       td {
-        //color: $white;
-        //background-color: transparent;
-        //border: 1px solid $lightGreen;
         height: 5em;
-        //padding: 5px;
-        //vertical-align: top;
         overflow: hidden;
         p:nth-child(1){
           font-size: 0;
@@ -1369,25 +1243,15 @@ footer {
         }
       }
       .oldDate {
-        //color: grey;
-        //border: 1px solid $darkBlue;
         p{
-          //text-transform: uppercase;
         }
         &:hover {
-          //cursor: cursor;
-          //transition: $colorTransition;
-          //background-color: $darkBlue;
         }
       }
       .futureDate {
         p {
-          //text-transform: uppercase;
         }
         &:hover {
-          //cursor: pointer;
-          //transition: $colorTransition;
-          //background-color: $darkGreen;
         }
       }
     }
@@ -1399,55 +1263,32 @@ footer {
     /*** contact, booking ***/
           /** page headers **/
     .pageOval {
-      //height: 100vh;
-      //width: 170%;
       height: 500px;
-      //position: absolute;
-      //top: -70vh;
       top: -250px;
-      //right: -200px;
-      //right: -80vh;
-      //z-index: -100;
-      //set background image for oval based on page
       right: 50%;
       width: 800px;
       margin-right: -400px;
     }
     .pageTitle {
-      //text-align: center;
-      //text-transform: uppercase;
-      //font-weight: 100;
-      //margin-top: 2em;
     }
     .pageTitleMrg {
-      //margin-bottom: 3em;
     }
 
     /*** whole site styles ***/
     header {
       width: 100%;
       h1 {
-        //display: inline-block;
-        //font-size: 14pt;
       }
       img {
-        //transform: rotate(90deg);
-        //width: 23px;
-        //height: 23px;
-        //background-color: $white; //color cannot be changed needs to be changed in illustrator
-        //vertical-align: text-bottom;
       }
     }
     h1, h2, h3 {
-      //font-family: $raleway;
-      //font-weight: thin;
+
     }
     .mobileNavWrap {
-      //display: inline-block;
       position: absolute;
       right: -500px;
       width: 100%;
-      //top: 0;
     }
     .mobileNavBtns {
       display: block;
@@ -1459,7 +1300,6 @@ footer {
       }
       img {
         position: absolute;
-        //right: 300px;
         top: 5px; //right: 65%; //right: 365px;
         background-color: transparent;
         width: 35px; height: 35px;
@@ -1467,17 +1307,11 @@ footer {
       }
     }
     nav {
-      //font-family: $raleway; font-size: 1em; font-weight: lighter;
-      //display: inline-block;
       position: absolute;
       right: -450px;
       top: 0;
       ul {
-
         li {
-          //display: inline;
-          //color: $white;
-          //padding: 0 50px 0 50px;
           display: block;
           padding: 30px 0;
           font-size: 1.5em;
@@ -1485,91 +1319,61 @@ footer {
       }
       .navOval {
         background-color: $blackBlue;
-        //height: 900px;
-        //width: 170%;
         border-radius: 50%;
         position: relative;
         z-index: -2;
         top: -450px;
         left: -150px;
-        //bottom: -650px;
-        //left: -800px;
         height: 700px; width: 650px;
         transform: rotate(10deg);
-        //left: -35%; bottom: -500px;
       }
     }
     main {
-      //margin-top: 40px;
       margin-left: 0;
       margin-right: 0;
       //padding-bottom: 20em;   //footer fix
     }
     .pageTitle {
-      //font-size: 3em;
     }
     .App {
       //min-height: 100vh;  // needs to stay vh others percent doesnt work for some reaason
     }
     button {
-      //padding: 15px 20px;
-      //width: 180px;
-      //font-size: 1em; text-transform: uppercase; color: $white;
-      //border-radius: 30px;
-      //border: $darkBlue;
-      //background-color: $darkBlue;
       &:hover {
-        //cursor: pointer;
-        //transition: $colorTransition;
-        //background-color: $blue;
       }
     }
     footer {
+      //*****DO NOT CHANGE THESES****//
       //position: absolute; //footer fix
       //left: 0;            //
       //bottom: 0;          //
       width: 100%;
       #logoftWrap {
-        //margin: 0 auto;
       }
       .footerOval {
-        //width: 170%;
-        //position: absolute;
-        //bottom: -650px;
-        //left: -800px;
-        //height: 700px;
         height: 250px;
         left: -35%; bottom: -100px;
       }
       small {
         font-size: 2em;
-        //text-transform: uppercase;
-        //word-spacing: -.2em;
       }
       img {
-        //background-color: white;  //for icon, swap out actual white one later
         width: 28px; height: 28px;
       }
       span {
         font-size: 1.5em;
-        //vertical-align: top;
       }
     }
     .socialNavTop {
-      //top: 0;
-      //right: 0;
       position: absolute;
       top: 450px;
       margin-right: 0;
       ul li img {
-        //width: 20px; height: 20px;
-      //  padding: 0 10px;
       width: 40px; height: 40px;
       padding: 0 30px;
       }
     }
     .socialNavFt {
-      //text-align: center;
       ul li img {
       padding: 0 30px;
       width: 40px;
@@ -1579,33 +1383,21 @@ footer {
 
     /**** home page ****/
     #hero{
-      //margin-left: 30px;
-      //margin-top: 35%;
-      //margin-top: 270px;
       margin-left: 10px;
       margin-top: 320px;
       #heroWrapper {
-        //text-align: right;
-        //display: inline-block;
-        //margin-right: .3em;
         h2 {
           text-align: right;
-          //font-size: 3.5em;
           font-size: 2.5em;
           span {
             display: block;
           }
         }
         h3{
-          //font-weight: 100;
-          //font-size: 1.5em;
-          //font-size: 1.3em;
           font-size: 1.1em;
         }
       }
       img {
-        //width: 190px; height: 190px;
-        //vertical-align: text-bottom;
         width: 140px; height: 140px;
       }
     }
@@ -1616,9 +1408,6 @@ footer {
       right: -500px;
     }
     .heroTitle {
-      //word-spacing: -.2em;
-      //font-weight: 100;
-      //margin-bottom: -.5em;
     }
     #photos {
       margin-top: 175px;
@@ -1626,10 +1415,7 @@ footer {
         margin-left: 90px;
       }
       #bgPlant {
-        //top: 15%;
-        //top: 400px;
         top: 550px;
-        //left: -150px;
         left: -50px;
         width: 430px;
       }
@@ -1643,9 +1429,6 @@ footer {
         }
       }
       #bgPlantBottom {
-        //top: -450px;
-        //right: -280px;
-        //width: 800px;
         right: -50px; top: -340px;
         width: 580px;
         margin-bottom: 6em;
@@ -1658,10 +1441,7 @@ footer {
       padding: 30px 0;
       margin: 0 auto;
       #donationInfo {
-        //margin-right: 40px;
-        //max-width: 60%;
         max-width: 80%;
-        //margin-right: 0;
         display: inline-block;
         padding: 5px 5px 20px 5px;
       }
@@ -1669,8 +1449,6 @@ footer {
 
     /*** About Page ***/
     #aboutMe {
-      //max-width: 620px;
-      //margin-right: 90px;
       max-width: 80%;
       width: 80%;
       margin-right: auto;
@@ -1678,59 +1456,39 @@ footer {
       float: none;
       margin-top: 17em;
       p {
-        //font-size: 11pt;
         line-height: 1.5;
       }
     }
     .aboutOval {
       top: -60px;
-      //height: 1500px;
       height: 43%;
       width: 1600px;
       right: 0; left: 0;
       margin-right: 50%;
       margin-left: -600px;
-      //margin-bottom: 10em;
     }
     #specialties {
-      //clear: both;
-      //color: $white;
-      //text-align: center;
       //padding-top: 10em; //margin doesn't work here bc of float
-      //margin-bottom: 10em;
       ul {
         padding: 0;
         li {
-          //font-size: 1.2em;
-          //margin: 0 5vw;
-          //margin-left: -10px;
           display: block;
           font-size: 1em;
           margin: 5em auto;
           &:first-child {
-            //padding-right: 8%;
             padding: 0;
           }
           &:last-child {
-            //padding-left: 8%;
             padding: 0;
           }
         }
       }
     }
     .cta {
-      //width: 100%;
-      //background-color: $lightGreen;
-      //padding: 20px;
       p {
-        //display: inline-block;
-        //width: 50%; max-width: 700px;
         width: 80%;
       }
       button {
-        //display: inline-block;
-        //vertical-align: middle; //not really working, only sortof... its weird
-        //margin-left: 10vw;
         //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
         margin: 0;
         display: block;
@@ -1739,145 +1497,79 @@ footer {
 
   /*** Contact page ***/
   #contactForm {
-    //margin-bottom: 10em;
-    //margin-left: 90px; margin-right: 90px;
     margin-left: 10px;
     margin-right: 10px;
     h3 {
-      //font-weight: 100;
-      //font-size: 1.5em;
     }
     #contactReason {
       button {
-        //border: 3px solid $lightGreen;
-        //background-color: transparent;
-        //margin-right: 100px;
-        //color: $lightGreen;
         margin-right: 30px;
         &:hover {
-          //transition: $colorTransition;
-          //background-color: $lightGreen;
-          //color: $blackBlue;
         }
       }
     }
     #emailForm {
       input, textarea {
-        //margin-bottom: 20px;
-        //width: 70%;
-        //border-bottom: 3px solid $darkBlue;
-        //border-top: none; border-right: none; border-left: none;
-        //background-color: transparent;
-        //color: $darkBlue;
-        //font-size: 1em;
-        //padding: 5px;
       }
       textarea {
-        //height: 10em;
-        //font-family: $montserrat;
       }
       #emailFormBg {
-        //background-color: $lightGreen;
-        //padding: 20px;
       }
     }
   }
   #socialMedia {
     margin-bottom: 0;
     ul {
-      //margin: 0 auto;
       li {
-      //width: 40px; height: 40px;
-      //padding: 0 20px;
       }
     }
   }
 
   /*** Booking page ***/
   #bookingInfo {
-    //color: $white;
-    //margin-right: 90px; margin-left: 90px;
     margin-left: 10px; margin-right: 10px;
     h3, h4 {
-      //font-size: 1.5em; line-height: .4em;
-      //text-transform: lowercase;
-      //font-weight: 100;
       line-height: normal;
     }
     ul li {
-      //line-height: 1.8em;
     }
   }
   #calendar {
     #cal {
       width: 100%;
       #arrowWrap{
-        //width: 99%;
-        //margin: 0 auto;
-        //position: relative;
-        //top: 5em;
         .calArrow {
-          //width: 10em;
           &:hover {
-            //transition: $colorTransition;
-            //cursor: pointer;
-            //background-color: $darkGreen;
           }
         }
         #prev {
-          //margin-left: 20px;
           margin-left: 10px;
-          //padding: 100px;
           width: 60px; height: 60px;
           i {
-            //margin-right: 10px;
             margin: 0;
-            //width: 100px; height: 100px;
-            //float: left;
-            //background-color: white;
           }
         }
         #next {
-          //margin-right: 20px;
           margin-right: 10px;
           width: 60px; height: 60px;
           i {
-            //color: $white;
-            //margin-left: 30px;
             margin: 0;
 
           }
         }
       }
       table{
-        //width: 99%;
-        //margin: 0 auto;
       }
       caption {
-        //width: 100%;
-        //font-size: 2em; text-transform: uppercase; font-family: $raleway;
-        //padding: 20px 0;
-        //margin: 0 auto;
         font-size: 1.5em;
         #calYear {
-          //font-family: $montserrat;
         }
       }
       th {
-        //color: $blackBlue; text-transform: lowercase; font-size: 1.5em;
-        //font-weight: 100;
-        //width: 8vw; height: 20px;
         font-size: 1em;
       }
       td {
-        //color: $white;
-        //background-color: transparent;
-        //border: 1px solid $lightGreen;
-        //height: 5em;
-        //padding: 5px;
-        //vertical-align: top;
         height: 8em;
-        //font-size: .8em;
         font-size: 1em;
         padding: 2px;
         height: 3em;
@@ -1888,60 +1580,35 @@ footer {
         }
       }
       .oldDate {
-        //color: grey;
-        //border: 1px solid $darkBlue;
         p{
-          //text-transform: uppercase;
         }
         &:hover {
-          //cursor: cursor;
-          //transition: $colorTransition;
-          //background-color: $darkBlue;
         }
       }
       .futureDate {
         p {
-          //text-transform: uppercase;
         }
         &:hover {
-          //cursor: pointer;
-          //transition: $colorTransition;
-          //background-color: $darkGreen;
         }
       }
     }
   }
   #contactForQuestions {
-    //margin-top: 10em;
     margin-bottom: 0;
   }
 
   /*** modal ***/
   .modalWrapper {
     #modal {
-      //width: 90%; height: 80%;
-      //margin: 10vh auto;
       margin: 10px auto;
-      //margin: 90px auto;
-      //padding: 20px;
       .closeBtn {
-        //width: 35px; height: 35px;
-        //float: right;
         &:hover {
-          //cursor: pointer;
         }
       }
       h2 {
-        //text-align: center;
-        //font-weight: 100; font-size: 1.8em;
       }
       #modalBody {
-        //display: inline-block;
-        //text-align: left;
-        //font-size: 1.2em;
         button {
-          //display: block;
-          //margin: 40vh auto 0 auto;
           margin: 40% auto 0 auto;
         }
       }
@@ -1956,6 +1623,8 @@ footer {
 
 /*** extra media query fixes (in between sizes) ***/
 //homepage photo title fix
+//i plan on removing these soon
+//I'm going to change some styles so that these are not necessary
 @media only screen and (max-width: 1217px) and (min-width: 825px) {
   #photos {
     margin-top: 150px;
