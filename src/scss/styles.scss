@@ -75,12 +75,13 @@ main {
   margin-top: 40px;
   margin-left: 10vw;
   margin-right: 10vw;
-  padding-bottom: 20em;   //footer fix
+  padding-bottom: 20em;   //footer fix //*****DO NOT CHANGE THESES****//
 }
 .pageTitle {
   font-size: 3em;
 }
 .App { //this entire part is footer fix too
+  //*****DO NOT CHANGE THESES****//
   position: relative;
   min-height: 100vh;
   overflow: hidden;
@@ -99,6 +100,7 @@ button {
   }
 }
 footer {
+  //*****DO NOT CHANGE THESES****//
   position: absolute; //footer fix
   left: 0;            //
   bottom: 0;          //
@@ -633,6 +635,7 @@ footer {
     //margin-top: 40px;
     margin-left: 0;
     margin-right: 0;
+    //*****DO NOT CHANGE THESES****//
     //padding-bottom: 20em;   //footer fix
   }
   .pageTitle {
@@ -655,6 +658,7 @@ footer {
     }
   }
   footer {
+    //*****DO NOT CHANGE THESES****//
     //position: absolute; //footer fix
     //left: 0;            //
     //bottom: 0;          //
@@ -1059,11 +1063,13 @@ footer {
   main {
     margin-left: 0;
     margin-right: 0;
+    //*****DO NOT CHANGE THESES****//
     //padding-bottom: 20em;   //footer fix
   }
   .pageTitle {
   }
   .App {
+    //*****DO NOT CHANGE THESES****//
     //min-height: 100vh;  // needs to stay vh others percent doesnt work for some reaason
   }
   button {
@@ -1071,6 +1077,7 @@ footer {
     }
   }
   footer {
+    //*****DO NOT CHANGE THESES****//
     //position: absolute; //footer fix
     //left: 0;            //
     //bottom: 0;          //
@@ -1331,11 +1338,13 @@ footer {
     main {
       margin-left: 0;
       margin-right: 0;
+      //*****DO NOT CHANGE THESES****//
       //padding-bottom: 20em;   //footer fix
     }
     .pageTitle {
     }
     .App {
+      //*****DO NOT CHANGE THESES****//
       //min-height: 100vh;  // needs to stay vh others percent doesnt work for some reaason
     }
     button {
