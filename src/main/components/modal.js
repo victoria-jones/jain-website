@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Modal extends Component {
 
   componentDidUpdate() {
-    console.log(this.props.fillModal);
+    //console.log(this.props.fillModal);
 
     if(this.props.displayModal){
       if(this.props.fillModal.thankYou) {

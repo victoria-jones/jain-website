@@ -21,9 +21,15 @@ class App extends Component {
         thankYou: false,
         form: false,
         empty: true
-      }
+      },
+      displayMobileMenu: false
     };
     this.showModal = this.showModal.bind(this);
+    this.showMobileMenu = this.showMobileMenu.bind(this);
+  }
+
+  componentDidMount() {
+    this.mobileMenuToggle();
   }
 
   render() {
@@ -34,11 +40,13 @@ class App extends Component {
         <header className="App-header">
           <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" alt ="Sarah Jain leaf logo" title="Sarah Jain logo"/></Link>
           <div className="mobileNavBtns">
-            <img src="images/icons/menu_icon.svg" id="openMenu" alt="open the navigation menu" />
-            <img src="images/icons/close_icon.svg" id="closeMenu" alt="open the navigation menu" />
+            <img onClick={()=> this.showMobileMenu("open")} src="images/icons/menu_icon.svg" id="openMenu" alt="open the navigation menu" />
+            <img onClick={()=> this.showMobileMenu("close")} src="images/icons/close_icon.svg" id="closeMenu" alt="open the navigation menu" />
           </div>
           <div className="mobileNavWrap">
-            <Nav />
+            <Nav
+              showMobileMenu={this.showMobileMenu}
+            />
             <SocialNav addClass="socialNavTop" />
           </div>
         </header>
@@ -123,6 +131,43 @@ class App extends Component {
         break;
     }
   }
+
+  showMobileMenu(boolChange) {
+    switch(boolChange) {
+      case 'close':
+        this.setState({
+          displayMobileMenu: false
+        }, () => this.mobileMenuToggle());
+        break;
+      case 'open':
+        this.setState({
+          displayMobileMenu: true
+        }, ()=> this.mobileMenuToggle());
+        break;
+    }
+
+    //this.mobileMenuToggle();
+  }
+
+  mobileMenuToggle() {
+    let menuBtn = document.getElementById("openMenu");
+    let closeBtn = document.getElementById("closeMenu");
+    let mobileMenu = document.getElementsByClassName("mobileNavWrap")[0];
+
+    if(this.state.displayMobileMenu){
+      console.log("open the menu");
+      menuBtn.style.display = "none";
+      closeBtn.style.display = "block";
+      mobileMenu.style.right = "0";
+    } else if (!this.state.displayMenu) {
+      console.log("close the menu");
+      menuBtn.style.display = "block";
+      closeBtn.style.display = "none";
+      mobileMenu.style.right = "-500px";
+    }
+
+  }
+
 }
 
 export default App;
