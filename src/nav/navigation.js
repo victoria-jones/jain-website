@@ -13,6 +13,8 @@ class Nav extends Component {
               <li><Link to="/contact">contact</Link></li>
               <li><Link to="/booking">booking</Link></li>
             </ul>
+            <div className="navOval">
+            </div>
           </nav>
     );
   }

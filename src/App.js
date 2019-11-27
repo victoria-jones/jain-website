@@ -33,8 +33,14 @@ class App extends Component {
         <ScrollToTop />
         <header className="App-header">
           <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" alt ="Sarah Jain leaf logo" title="Sarah Jain logo"/></Link>
-          <Nav />
-          <SocialNav addClass="socialNavTop" />
+          <div className="mobileNavBtns">
+            <img src="images/icons/menu_icon.svg" id="openMenu" alt="open the navigation menu" />
+            <img src="images/icons/close_icon.svg" id="closeMenu" alt="open the navigation menu" />
+          </div>
+          <div className="mobileNavWrap">
+            <Nav />
+            <SocialNav addClass="socialNavTop" />
+          </div>
         </header>
 
             <main>

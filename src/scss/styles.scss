@@ -45,6 +45,9 @@ h1, h2, h3 {
   font-family: $raleway;
   font-weight: thin;
 }
+.mobileNavBtns {
+  display: none;
+}
 nav {
   font-family: $raleway; font-size: 1em; font-weight: lighter;
   display: inline-block;
@@ -1020,13 +1023,50 @@ footer {
     //font-family: $raleway;
     //font-weight: thin;
   }
+  .mobileNavBtns {
+    display: block;
+    position: absolute; right: 0; top: 0;
+    z-index: 3;
+    img {
+      position: absolute;
+      //right: 300px;
+      top: 5px; //right: 65%; //right: 365px;
+      background-color: transparent;
+      width: 40px; height: 40px;
+      transform: rotate(-180deg);
+    }
+  }
   nav {
     //font-family: $raleway; font-size: 1em; font-weight: lighter;
     //display: inline-block;
-    ul li {
-      //display: inline;
-      //color: $white;
-      //padding: 0 50px 0 50px;
+    position: absolute;
+    right: -50%;;
+    top: 0;
+    ul {
+
+      li {
+        //display: inline;
+        //color: $white;
+        //padding: 0 50px 0 50px;
+        display: block;
+        padding: 30px 0;
+        font-size: 1.5em;
+      }
+    }
+    .navOval {
+      background-color: $blackBlue;
+      //height: 900px;
+      //width: 170%;
+      border-radius: 50%;
+      position: relative;
+      z-index: -2;
+      top: -450px;
+      left: -200px;
+      //bottom: -650px;
+      //left: -800px;
+      height: 700px; width: 650px;
+      transform: rotate(10deg);
+      //left: -35%; bottom: -500px;
     }
   }
   main {
@@ -1088,9 +1128,14 @@ footer {
   .socialNavTop {
     //top: 0;
     //right: 0;
+    position: absolute;
+    top: 450px;
+    margin-right: 50px;
     ul li img {
       //width: 20px; height: 20px;
     //  padding: 0 10px;
+    width: 40px; height: 40px;
+    padding: 0 30px;
     }
   }
   .socialNavFt {

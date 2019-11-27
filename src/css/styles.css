@@ -39,6 +39,9 @@ h1, h2, h3 {
   font-family: "Raleway", sans-serif;
   font-weight: thin; }
 
+.mobileNavBtns {
+  display: none; }
+
 nav {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
@@ -591,6 +594,41 @@ footer {
   /*** whole site styles ***/
   header {
     width: 100%; }
+  .mobileNavBtns {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3; }
+    .mobileNavBtns img {
+      position: absolute;
+      top: 5px;
+      background-color: transparent;
+      width: 40px;
+      height: 40px;
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
+  nav {
+    position: absolute;
+    right: -50%;
+    top: 0; }
+    nav ul li {
+      display: block;
+      padding: 30px 0;
+      font-size: 1.5em; }
+    nav .navOval {
+      background-color: #0b1114;
+      border-radius: 50%;
+      position: relative;
+      z-index: -2;
+      top: -450px;
+      left: -200px;
+      height: 700px;
+      width: 650px;
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg); }
   main {
     margin-left: 0;
     margin-right: 0; }
@@ -607,6 +645,14 @@ footer {
       height: 28px; }
     footer span {
       font-size: 1.5em; }
+  .socialNavTop {
+    position: absolute;
+    top: 450px;
+    margin-right: 50px; }
+    .socialNavTop ul li img {
+      width: 40px;
+      height: 40px;
+      padding: 0 30px; }
   .socialNavFt ul li img {
     padding: 0 30px;
     width: 40px;
