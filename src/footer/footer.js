@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import SocialNav from '../nav/socialNav';
 
 class Footer extends Component {
@@ -7,8 +6,10 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <small>Sarah Jain</small><img src="images/icons/logo.svg" title="Sarah Jain logo"/><span>&copy;</span>
-        <div class="footerOval">
+        <div id="logoftWrap">
+        <small>Sarah Jain</small><img src="images/icons/logo.svg" title="Sarah Jain logo" alt="Sarah Jain leaf logo"/><span>&copy;</span>
+        </div>
+        <div className="footerOval">
         </div>
         <SocialNav addClass="socialNavFt"/>
       </footer>

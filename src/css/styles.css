@@ -4,6 +4,11 @@ body {
   background-color: #0b1114;
   color: #0b1114; }
 
+a {
+  color: #9ce6b3; }
+  a:visited {
+    color: #9ce6b3; }
+
 header {
   text-align: left;
   height: 40px;
@@ -36,6 +41,14 @@ h1, h2, h3 {
   color: #FFF;
  }
 
+.mobileNavBtns {
+  display: none;
+  width: 0;
+  height: 0; }
+
+.mobileNavWrap {
+  display: inline-block; }
+
 nav {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
@@ -66,6 +79,22 @@ main {
   min-height: 100vh;
   overflow: hidden; }
 
+button {
+  padding: 15px 20px;
+  width: 180px;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 30px;
+  border: #1f323b;
+  background-color: #1f323b; }
+  button:hover {
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #02424e; }
+
 footer {
   position: absolute;
   left: 0;
@@ -73,17 +102,23 @@ footer {
   width: 100%;
   color: #FFF;
   text-align: center; }
+  footer #logoftWrap {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto; }
+    footer #logoftWrap img {
+      display: inline-block; }
   footer .footerOval {
     background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
     background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
     background-image: linear-gradient(130deg, #60b585, #1f323b);
-    height: 100vh;
+    height: 900px;
     width: 170%;
     background-color: #60b585;
     border-radius: 50%;
     position: absolute;
     bottom: -650px;
-    left: -90vh;
+    left: -800px;
     z-index: -100; }
   footer small {
     font-size: 1.5em;
@@ -101,10 +136,12 @@ footer {
     font-size: 1em;
     vertical-align: top; }
 
-.socialNav ul li {
-  list-style-type: none;
-  display: inline-block; }
-  .socialNav ul li img {
+.socialNav ul {
+  padding-left: 0; }
+  .socialNav ul li {
+    list-style-type: none;
+    display: inline-block; }
+  .socialNav ul img {
     background-color: transparent;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -164,7 +201,8 @@ footer {
   margin-bottom: -.5em; }
 
 #photos {
-  margin-top: 35vh; }
+  margin-top: 35vh;
+  margin-bottom: -690px; }
   #photos h3 {
     text-transform: lowercase;
     font-size: 3em;
@@ -175,19 +213,766 @@ footer {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     position: absolute;
-    top: 45vh;
-    left: -80px;
-    width: 45vw; }
+    top: 49vh;
+    left: -90px;
+    width: 800px; }
+  #photos .pihBottom {
+    text-align: right;
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif; }
+    #photos .pihBottom a {
+      color: #02424e; }
+      #photos .pihBottom a:hover {
+        font-weight: bold; }
+    #photos .pihBottom #hpHandle {
+      width: 50px;
+      vertical-align: middle;
+      padding-right: 10px; }
+  #photos #bgPlantBottom {
+    z-index: -102;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: relative;
+    top: -450px;
+    right: -280px;
+    width: 800px; }
+
+/*** donations ***/
+.donations {
+  width: 100%;
+  background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
+  background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
+  background-image: linear-gradient(130deg, #60b585, #1f323b);
+  padding: 20px;
+  text-align: right; }
+  .donations #donationInfo {
+    background-color: #9ce6b3;
+    padding: 20px;
+    max-width: 500px;
+    display: inline-block;
+    text-align: center; }
+    .donations #donationInfo button {
+      display: inline-block; }
+    .donations #donationInfo h2, .donations #donationInfo h3 {
+      text-align: center;
+      text-transform: uppercase; }
+    .donations #donationInfo h2 {
+      margin-bottom: -.5em; }
+    .donations #donationInfo h3 {
+      font-weight: 100;
+      font-size: 1em;
+      margin-bottom: 2em; }
+    .donations #donationInfo p {
+      text-align: left;
+      padding: 0 30px;
+      margin-bottom: 2em; }
+    .donations #donationInfo a {
+      color: #1c3627;
+      font-weight: bold; }
 
 /*** about, contact, booking ***/
+.pageOval {
+  height: 100vh;
+  width: 170%;
+  background-color: #60b585;
+  border-radius: 50%;
+  position: absolute;
+  top: -70vh;
+  right: -80vh;
+  z-index: -100; }
+
+.pageTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-top: 2em; }
+
+.pageTitleMrg {
+  margin-bottom: 3em; }
+
 /*** about ***/
-/*.App-header {
-  background-color: $blackBlue;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}*/
+#aboutMe {
+  float: right;
+  width: 60%;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #9ce6b3; }
+  #aboutMe p {
+    font-size: 11pt; }
+
+#specialties {
+  clear: both;
+  color: #FFF;
+  text-align: center;
+  padding-top: 10em;
+  margin-bottom: 10em; }
+  #specialties ul li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    margin: 0 5vw; }
+
+.cta {
+  width: 100%;
+  background-color: #9ce6b3;
+  padding: 20px;
+  margin-bottom: 10em; }
+  .cta p {
+    display: inline-block;
+    width: 50%;
+    max-width: 700px; }
+  .cta button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10vw;
+    margin-bottom: 25px; }
+
+/*** booking page ***/
+#bookingInfo {
+  color: #FFF; }
+  #bookingInfo h3, #bookingInfo h4 {
+    font-size: 1.5em;
+    line-height: .4em;
+    text-transform: lowercase;
+    font-weight: 100; }
+  #bookingInfo ul li {
+    line-height: 1.8em; }
+
+#calendar {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif; }
+  #calendar #cal {
+    width: 99%; }
+    #calendar #cal #arrowWrap {
+      width: 99%;
+      margin: 0 auto;
+      position: relative;
+      top: 5em; }
+      #calendar #cal #arrowWrap .calArrow {
+        background-color: #60b585;
+        width: 10em; }
+        #calendar #cal #arrowWrap .calArrow:hover {
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          cursor: pointer;
+          background-color: #1c3627; }
+      #calendar #cal #arrowWrap #prev {
+        margin-left: 20px; }
+        #calendar #cal #arrowWrap #prev i {
+          margin-right: 10px; }
+      #calendar #cal #arrowWrap #next {
+        float: right;
+        margin-right: 20px; }
+        #calendar #cal #arrowWrap #next i {
+          color: #FFF;
+          margin-left: 30px; }
+    #calendar #cal table {
+      width: 99%;
+      margin: 0 auto; }
+    #calendar #cal caption {
+      width: 100%;
+      border: 1px solid #9ce6b3;
+      border-bottom: none;
+      background-color: #02424e;
+      font-size: 2em;
+      text-transform: uppercase;
+      font-family: "Raleway", sans-serif;
+      padding: 20px 0; }
+      #calendar #cal caption #calYear {
+        font-family: "Montserrat", sans-serif; }
+    #calendar #cal th {
+      color: #0b1114;
+      text-transform: lowercase;
+      font-size: 1.5em;
+      font-weight: 100;
+      width: 8vw;
+      height: 20px;
+      background-color: #9ce6b3; }
+    #calendar #cal td {
+      color: #FFF;
+      background-color: transparent;
+      border: 1px solid #9ce6b3;
+      height: 6vw;
+      padding: 5px;
+      vertical-align: top; }
+    #calendar #cal .oldDate {
+      color: grey;
+      border: 1px solid #1f323b; }
+      #calendar #cal .oldDate p {
+        text-transform: uppercase; }
+      #calendar #cal .oldDate:hover {
+        cursor: cursor;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        background-color: #1f323b; }
+    #calendar #cal .futureDate {
+      color: #FFF;
+      background-color: #60b585; }
+      #calendar #cal .futureDate p {
+        text-transform: uppercase; }
+      #calendar #cal .futureDate:hover {
+        cursor: pointer;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        background-color: #1c3627; }
+
+#contactForQuestions {
+  margin-top: 10em; }
+
+/*** contact page ***/
+#contactForm {
+  margin-bottom: 10em; }
+  #contactForm h3 {
+    color: #FFF;
+    text-transform: lowercase;
+    font-weight: 100;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif; }
+  #contactForm #contactReason button {
+    border: 3px solid #9ce6b3;
+    background-color: transparent;
+    margin-right: 100px;
+    color: #9ce6b3; }
+    #contactForm #contactReason button:hover {
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      background-color: #9ce6b3;
+      color: #0b1114; }
+  #contactForm #emailForm input, #contactForm #emailForm button, #contactForm #emailForm textarea {
+    display: block; }
+  #contactForm #emailForm input, #contactForm #emailForm textarea {
+    margin-bottom: 20px;
+    width: 70%;
+    border-bottom: 3px solid #1f323b;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    color: #1f323b;
+    font-size: 1em;
+    padding: 5px; }
+  #contactForm #emailForm textarea {
+    height: 10em;
+    font-family: "Montserrat", sans-serif; }
+  #contactForm #emailForm #emailFormBg {
+    background-color: #9ce6b3;
+    padding: 20px; }
+
+#socialMedia ul {
+  list-style-type: none;
+  margin: 0 auto; }
+  #socialMedia ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0 20px; }
+
+/*** 404 page ***/
+#error404 {
+  text-align: center;
+  color: #FFF;
+  width: 70%;
+  margin: 0 auto; }
+  #error404 h2 {
+    font-weight: 100; }
+  #error404 p {
+    text-align: left; }
+
+/*** Modal ***/
+.modalWrapper {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(96, 181, 133, 0.8);
+  text-align: center; }
+  .modalWrapper #modal {
+    width: 90%;
+    height: 80%;
+    margin: 10vh auto;
+    padding: 20px;
+    background-color: #0b1114;
+    -webkit-box-shadow: 20px 20px 20px rgba(11, 17, 20, 0.8);
+    box-shadow: 20px 20px 20px rgba(11, 17, 20, 0.8);
+    color: #FFF; }
+    .modalWrapper #modal .closeBtn {
+      width: 35px;
+      height: 35px;
+      float: right; }
+      .modalWrapper #modal .closeBtn:hover {
+        cursor: pointer; }
+    .modalWrapper #modal h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 1.8em; }
+    .modalWrapper #modal #modalBody {
+      display: inline-block;
+      text-align: left;
+      font-size: 1.2em; }
+      .modalWrapper #modal #modalBody button {
+        display: block;
+        margin: 40vh auto 0 auto; }
+
+/**** media query start ****/
+@media only screen and (max-width: 1350px) and (min-width: 825px) {
+  /*** contact, booking ***/
+  /** page headers **/
+  .pageOval {
+    height: 500px;
+    top: -230px;
+    right: -500px; }
+  /*** whole site styles ***/
+  header {
+    width: 100%; }
+  main {
+    margin-left: 0;
+    margin-right: 0; }
+  footer {
+    width: 100%; }
+    footer .footerOval {
+      height: 700px;
+      left: -50%;
+      bottom: -450px; }
+  .socialNavFt ul li img {
+    width: 30px;
+    height: 30px; }
+  /**** home page ****/
+  #hero {
+    margin-top: 30%;
+    margin-left: 90px; }
+  .heroOval {
+    height: 850px;
+    top: -140px;
+    right: -40%; }
+  #photos {
+    margin-top: 170px; }
+    #photos h3 {
+      margin-left: 90px; }
+    #photos #bgPlant {
+      top: 15%;
+      left: -150px; }
+    #photos .pihBottom p {
+      margin-right: 90px; }
+    #photos #bgPlantBottom {
+      right: -180px; }
+  /*** donations ***/
+  .donations #donationInfo {
+    margin-right: 40px; }
+  /*** About Page ***/
+  #aboutMe {
+    max-width: 620px;
+    margin-right: 90px; }
+  /*** Contact page ***/
+  #contactForm {
+    margin-left: 90px;
+    margin-right: 90px; }
+  /*** Booking page ***/
+  #bookingInfo {
+    margin-right: 90px;
+    margin-left: 90px; }
+  #calendar #cal {
+    width: 100%; }
+    #calendar #cal td {
+      height: 5em; }
+  /*** modal ***/
+  .modalWrapper #modal {
+    margin: 90px auto; }
+    .modalWrapper #modal #modalBody button {
+      margin: 40% auto 0 auto; } }
+
+/*** mobile styles ***/
+@media only screen and (max-width: 825px) and (min-width: 500px) {
+  /*** contact, booking ***/
+  /** page headers **/
+  .pageOval {
+    height: 500px;
+    top: -230px;
+    right: -300px; }
+  /*** whole site styles ***/
+  header {
+    width: 100%; }
+  .mobileNavWrap {
+    position: absolute;
+    right: -500px;
+    width: 100%; }
+  .mobileNavBtns {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    z-index: 1; }
+    .mobileNavBtns:hover {
+      cursor: pointer; }
+    .mobileNavBtns #openMenu {
+      display: block; }
+    .mobileNavBtns #closeMenu {
+      display: none; }
+    .mobileNavBtns img {
+      position: absolute;
+      top: 5px;
+      background-color: transparent;
+      width: 35px;
+      height: 35px;
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
+  nav {
+    position: absolute;
+    right: -370px;
+    top: 0; }
+    nav ul li {
+      display: block;
+      padding: 30px 0;
+      font-size: 1.5em; }
+    nav .navOval {
+      background-color: #0b1114;
+      border-radius: 50%;
+      position: relative;
+      z-index: -2;
+      top: -450px;
+      left: -200px;
+      height: 700px;
+      width: 650px;
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg); }
+  main {
+    margin-left: 0;
+    margin-right: 0; }
+  footer {
+    width: 100%; }
+    footer .footerOval {
+      height: 700px;
+      left: -35%;
+      bottom: -500px; }
+    footer small {
+      font-size: 2em; }
+    footer img {
+      width: 28px;
+      height: 28px; }
+    footer span {
+      font-size: 1.5em; }
+  .socialNavTop {
+    position: absolute;
+    top: 450px;
+    margin-right: 50px; }
+    .socialNavTop ul li img {
+      width: 40px;
+      height: 40px;
+      padding: 0 30px; }
+  .socialNavFt ul li img {
+    padding: 0 30px;
+    width: 40px;
+    height: 40px; }
+  /**** home page ****/
+  #hero {
+    margin-left: 30px;
+    margin-top: 35%;
+    margin-top: 270px; }
+    #hero #heroWrapper h2 {
+      text-align: right;
+      font-size: 3.5em; }
+      #hero #heroWrapper h2 span {
+        display: block; }
+    #hero #heroWrapper h3 {
+      font-size: 1.5em; }
+    #hero img {
+      width: 190px;
+      height: 190px; }
+  .heroOval {
+    height: 850px;
+    top: -140px;
+    right: -40%; }
+  #photos {
+    margin-top: 175px; }
+    #photos h3 {
+      margin-left: 120px; }
+    #photos #bgPlant {
+      top: 400px;
+      left: -150px; }
+    #photos .pihBottom p {
+      margin-right: 90px; }
+    #photos #bgPlantBottom {
+      right: -180px; }
+  /*** donations ***/
+  .donations {
+    text-align: center; }
+    .donations #donationInfo {
+      max-width: 60%;
+      margin-right: 0;
+      display: inline-block; }
+  /*** About Page ***/
+  #aboutMe {
+    max-width: 80%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    float: none; }
+  #specialties ul {
+    padding: 0; }
+    #specialties ul li {
+      font-size: 1em;
+      margin: 0 auto; }
+      #specialties ul li:first-child {
+        padding-right: 8%; }
+      #specialties ul li:last-child {
+        padding-left: 8%; }
+  /*** Booking page ***/
+  #bookingInfo {
+    margin-right: 90px;
+    margin-left: 90px; }
+  #calendar #cal {
+    width: 100%; }
+    #calendar #cal caption {
+      font-size: 1.8em; }
+    #calendar #cal td {
+      height: 5em;
+      overflow: hidden; }
+      #calendar #cal td p:nth-child(1) {
+        font-size: 0;
+        visibility: hidden; } }
+
+/*** mobile styles smaller***/
+@media only screen and (max-width: 500px) {
+  /*** contact, booking ***/
+  /** page headers **/
+  .pageOval {
+    height: 500px;
+    top: -250px;
+    right: 50%;
+    width: 800px;
+    margin-right: -400px; }
+  /*** whole site styles ***/
+  header {
+    width: 100%; }
+  .mobileNavWrap {
+    position: absolute;
+    right: -500px;
+    width: 100%; }
+  .mobileNavBtns {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    z-index: 1; }
+    .mobileNavBtns:hover {
+      cursor: pointer; }
+    .mobileNavBtns img {
+      position: absolute;
+      top: 5px;
+      background-color: transparent;
+      width: 35px;
+      height: 35px;
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
+  nav {
+    position: absolute;
+    right: -450px;
+    top: 0; }
+    nav ul li {
+      display: block;
+      padding: 30px 0;
+      font-size: 1.5em; }
+    nav .navOval {
+      background-color: #0b1114;
+      border-radius: 50%;
+      position: relative;
+      z-index: -2;
+      top: -450px;
+      left: -150px;
+      height: 700px;
+      width: 650px;
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg); }
+  main {
+    margin-left: 0;
+    margin-right: 0; }
+  footer {
+    width: 100%; }
+    footer .footerOval {
+      height: 250px;
+      left: -35%;
+      bottom: -100px; }
+    footer small {
+      font-size: 2em; }
+    footer img {
+      width: 28px;
+      height: 28px; }
+    footer span {
+      font-size: 1.5em; }
+  .socialNavTop {
+    position: absolute;
+    top: 450px;
+    margin-right: 0; }
+    .socialNavTop ul li img {
+      width: 40px;
+      height: 40px;
+      padding: 0 30px; }
+  .socialNavFt ul li img {
+    padding: 0 30px;
+    width: 40px;
+    height: 40px; }
+  /**** home page ****/
+  #hero {
+    margin-left: 10px;
+    margin-top: 320px; }
+    #hero #heroWrapper h2 {
+      text-align: right;
+      font-size: 2.5em; }
+      #hero #heroWrapper h2 span {
+        display: block; }
+    #hero #heroWrapper h3 {
+      font-size: 1.1em; }
+    #hero img {
+      width: 140px;
+      height: 140px; }
+  .heroOval {
+    height: 850px;
+    width: 1200px;
+    top: -140px;
+    right: -500px; }
+  #photos {
+    margin-top: 175px; }
+    #photos h3 {
+      margin-left: 90px; }
+    #photos #bgPlant {
+      top: 550px;
+      left: -50px;
+      width: 430px; }
+    #photos .pihBottom p {
+      margin-right: 10px;
+      font-size: .9em; }
+    #photos .pihBottom a img {
+      width: 40px;
+      height: 40px; }
+    #photos #bgPlantBottom {
+      right: -50px;
+      top: -340px;
+      width: 580px;
+      margin-bottom: 6em; }
+  /*** donations ***/
+  .donations {
+    text-align: center;
+    padding: 30px 0;
+    margin: 0 auto; }
+    .donations #donationInfo {
+      max-width: 80%;
+      display: inline-block;
+      padding: 5px 5px 20px 5px; }
+  /*** About Page ***/
+  #aboutMe {
+    max-width: 80%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    margin-top: 17em; }
+    #aboutMe p {
+      line-height: 1.5; }
+  .aboutOval {
+    top: -60px;
+    height: 43%;
+    width: 1600px;
+    right: 0;
+    left: 0;
+    margin-right: 50%;
+    margin-left: -600px; }
+  #specialties ul {
+    padding: 0; }
+    #specialties ul li {
+      display: block;
+      font-size: 1em;
+      margin: 5em auto; }
+      #specialties ul li:first-child {
+        padding: 0; }
+      #specialties ul li:last-child {
+        padding: 0; }
+  .cta p {
+    width: 80%; }
+  .cta button {
+    margin: 0;
+    display: block; }
+  /*** Contact page ***/
+  #contactForm {
+    margin-left: 10px;
+    margin-right: 10px; }
+    #contactForm #contactReason button {
+      margin-right: 30px; }
+  #socialMedia {
+    margin-bottom: 0; }
+  /*** Booking page ***/
+  #bookingInfo {
+    margin-left: 10px;
+    margin-right: 10px; }
+    #bookingInfo h3, #bookingInfo h4 {
+      line-height: normal; }
+  #calendar #cal {
+    width: 100%; }
+    #calendar #cal #arrowWrap #prev {
+      margin-left: 10px;
+      width: 60px;
+      height: 60px; }
+      #calendar #cal #arrowWrap #prev i {
+        margin: 0; }
+    #calendar #cal #arrowWrap #next {
+      margin-right: 10px;
+      width: 60px;
+      height: 60px; }
+      #calendar #cal #arrowWrap #next i {
+        margin: 0; }
+    #calendar #cal caption {
+      font-size: 1.5em; }
+    #calendar #cal th {
+      font-size: 1em; }
+    #calendar #cal td {
+      height: 8em;
+      font-size: 1em;
+      padding: 2px;
+      height: 3em;
+      overflow: hidden; }
+      #calendar #cal td p:nth-child(1) {
+        font-size: 0;
+        visibility: hidden; }
+  #contactForQuestions {
+    margin-bottom: 0; }
+  /*** modal ***/
+  .modalWrapper #modal {
+    margin: 10px auto; }
+    .modalWrapper #modal #modalBody button {
+      margin: 40% auto 0 auto; }
+  /*** 404 page ***/
+  #error404 {
+    width: 90%; } }
+
+/*** extra media query fixes (in between sizes) ***/
+@media only screen and (max-width: 1217px) and (min-width: 825px) {
+  #photos {
+    margin-top: 150px; }
+    #photos #bgPlant {
+      width: 600px;
+      top: 13%;
+      left: -120px; } }
+
+@media only screen and (max-width: 1005px) and (min-width: 825px) {
+  #photos {
+    margin-top: 215px; }
+    #photos #bgPlant {
+      width: 600px;
+      top: 14%;
+      left: -120px; } }

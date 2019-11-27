@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
 class Nav extends Component {
@@ -8,12 +7,14 @@ class Nav extends Component {
 
     return (
           <nav>
-            <ul class="navMenu">
-              <li><Link to="/">home</Link></li>
-              <li><Link to="/about_me">about me</Link></li>
-              <li><Link to="/contact">contact</Link></li>
-              <li><Link to="/booking">booking</Link></li>
+            <ul className="navMenu">
+              <li><Link to="/" onClick={() => this.props.showMobileMenu("close")}>home</Link></li>
+              <li><Link to="/about_me" onClick={() => this.props.showMobileMenu("close")}>about me</Link></li>
+              <li><Link to="/contact" onClick={() => this.props.showMobileMenu("close")}>contact</Link></li>
+              <li><Link to="/booking" onClick={() => this.props.showMobileMenu("close")}>booking</Link></li>
             </ul>
+            <div className="navOval">
+            </div>
           </nav>
     );
   }
