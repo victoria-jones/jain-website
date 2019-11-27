@@ -37,7 +37,9 @@ header {
 
 h1, h2, h3 {
   font-family: "Raleway", sans-serif;
-  font-weight: thin; }
+  font-weight: thin;
+  color: #FFF;
+ }
 
 .mobileNavBtns {
   display: none;
