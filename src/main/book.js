@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Slide from 'react-reveal/Slide';
 import Calendar from './components/calendar';
 
 class BookPage extends Component {
@@ -7,10 +8,12 @@ class BookPage extends Component {
   render() {
     return (
       <div>
-        <h2 className="pageTitle pageTitleMrg">Booking</h2>
+        <Slide top>
+          <h2 className="pageTitle pageTitleMrg">Booking</h2>
 
-        <div className="pageOval">
-        </div>
+          <div className="pageOval">
+          </div>
+        </Slide>
 
         <section id="bookingInfo">
           <h3>My photo shoot booking and availability:</h3>

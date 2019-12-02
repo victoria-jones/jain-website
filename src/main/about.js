@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Slide from 'react-reveal/Slide';
 import Donations from './components/donations';
 
 
@@ -7,29 +8,33 @@ class AboutPage extends Component {
   render() {
     return (
       <div>
-        <h2 className="pageTitle">About Me</h2>
-        <section id="aboutMe">
-          <p>about me bio area about me bio area. about me bio area.about me bio area.
-          about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
-          about me bio area. about me bio area.about me bio area. about me bio area.
-          about me bio area. about me bio area.</p>
-          <p>about me bio area about me bio area. about me bio area.about me bio area.
-          about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
-          about me bio area. about me bio area.about me bio area. about me bio area.
-          about me bio area. about me bio area.about me bio area about me bio area. about me bio area.about me bio area.
-          about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
-          about me bio area. about me bio area.about me bio area. about me bio area.
-          about me bio area. about me bio area.</p>
-          <p>about me bio area. about me bio area about me bio area. about me bio area.about me bio area.
-          about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
-          about me bio area. about me bio area.about me bio area. about me bio area.
-          about me bio area. about me bio area.</p>
+      <Slide top cascade>
+        <div>
+          <h2 className="pageTitle">About Me</h2>
+          <section id="aboutMe">
+            <p>about me bio area about me bio area. about me bio area.about me bio area.
+            about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
+            about me bio area. about me bio area.about me bio area. about me bio area.
+            about me bio area. about me bio area.</p>
+            <p>about me bio area about me bio area. about me bio area.about me bio area.
+            about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
+            about me bio area. about me bio area.about me bio area. about me bio area.
+            about me bio area. about me bio area.about me bio area about me bio area. about me bio area.about me bio area.
+            about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
+            about me bio area. about me bio area.about me bio area. about me bio area.
+            about me bio area. about me bio area.</p>
+            <p>about me bio area. about me bio area about me bio area. about me bio area.about me bio area.
+            about me bio area. about me bio area. about me bio area.about me bio area.about me bio area.
+            about me bio area. about me bio area.about me bio area. about me bio area.
+            about me bio area. about me bio area.</p>
 
-          <p>all filler stuff.</p>
-        </section>
+            <p>all filler stuff.</p>
+          </section>
 
-        <div className="heroOval aboutOval">
+          <div className="heroOval aboutOval">
+          </div>
         </div>
+      </Slide>
 
         <section id="specialties">
           <ul>

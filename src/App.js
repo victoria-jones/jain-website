@@ -159,12 +159,18 @@ class App extends Component {
       console.log("open the menu");
       menuBtn.style.display = "none";
       closeBtn.style.display = "block";
+      mobileMenu.style.animation = "bouncePractice .6s ease";
+      mobileMenu.style.animationDelay = ".3s";
       mobileMenu.style.right = "0";
+      mobileMenu.style.top = "0"
     } else if (!this.state.displayMenu) {
       console.log("close the menu");
       menuBtn.style.display = "block";
       closeBtn.style.display = "none";
+      mobileMenu.style.animation = "none";
+      mobileMenu.style.animationDelay = "none";
       mobileMenu.style.right = "-500px";
+      mobileMenu.style.top = "-500px";
     }
 
   }

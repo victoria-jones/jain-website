@@ -22,4 +22,43 @@ $greenToBlue: linear-gradient(130deg, #60b585, #1f323b);
 //animations
 $colorTransition: 0.3s;
 
+@keyframes bounce {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  10% {
+    transform: scale(1.2, 0.8);
+  }
+  30% {
+    transform: scale(0.8, 1.1) translateY(-5px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bouncePractice {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  10% {
+    transform: scale(.95, 1.05) translateY(0);
+  }
+  20% {
+    transform: scale(0.85, 1.1) translateY(-5px) translateX(-5px);
+  }
+  40% {
+    transform: scale(1.05, 0.95);
+  }
+  60% {
+    transform: scale(0.95, 1.05);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
 //functions

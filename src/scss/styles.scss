@@ -46,6 +46,16 @@ h1, h2, h3 {
   font-weight: thin;
   color: $blackBlue;
 }
+.App-header {
+  margin-top: -2px;
+  padding-bottom: 7px;
+  color: $white;
+  h1 {
+    color: $white;
+    margin-right: 2px;
+    margin-left: 5px;
+  }
+}
 .mobileNavBtns {
   display: none;
   width: 0;
@@ -57,16 +67,26 @@ h1, h2, h3 {
 nav {
   font-family: $raleway; font-size: 1em; font-weight: lighter;
   display: inline-block;
-  ul li {
-    display: inline;
-    color: $white;
-    padding: 0 50px 0 50px;
+  //margin-top: 0;
+  ul {
+    li {
+      display: inline;
+      color: $white;
+      padding: 0 50px 0 50px;
+      //border-bottom: 3px solid $mainGreen;
+  }
     a {
       color: $white;
       text-decoration: none;
+      padding-bottom: 0px;
+      border-bottom: 1px transparent $mainGreen;
       &:hover {
+        transition: .3s;
+        transition-timing-function: ease;
         font-weight: bold;
-        text-decoration: underline;
+        padding-bottom: 3px;
+        border-bottom: 3px solid $mainGreen;
+        //text-decoration: underline;
       }
     }
   }
@@ -159,12 +179,14 @@ footer {
   }
 }
 .socialNavTop {
+  margin-top: -8px;
   display: inline-block;
   position: fixed;
   top: 0;
   right: 0;
   ul li img {
-    width: 20px; height: 20px;
+    //width: 20px; height: 20px;
+    width: 30px; height: 30px;
     padding: 0 10px;
   }
 }
@@ -561,7 +583,7 @@ footer {
       }
     }
     h2 {
-      text-align: center;
+      text-align: center; color: $white;
       text-transform: uppercase;
       font-weight: 100; font-size: 1.8em;
     }
@@ -708,7 +730,8 @@ footer {
 
   /**** home page ****/
   #hero{
-    margin-top: 30%;
+    //margin-top: 30%;
+    margin-top: 300px;
     margin-left: 90px;
     #heroWrapper {
       //text-align: right;
@@ -741,13 +764,17 @@ footer {
     //margin-bottom: -.5em;
   }
   #photos {
-    margin-top: 170px;
+    //margin-top: 170px;
+    margin-top: 190px;
     h3 {
       margin-left: 90px;
     }
     #bgPlant {
-      top: 15%;
+      //top: 15%;
+      top: 450px;
       left: -150px;
+      //width: 700px;
+      width: 600px;
     }
     .pihBottom {
       p {
@@ -1013,7 +1040,10 @@ footer {
   .mobileNavWrap {
     position: absolute;
     right: -500px;
+    top: -500px;
     width: 100%;
+    //animation: bounce 1s;
+    transition: .4s ease-out;
   }
   .mobileNavBtns {
     display: block;
@@ -1636,21 +1666,22 @@ footer {
 //I'm going to change some styles so that these are not necessary
 @media only screen and (max-width: 1217px) and (min-width: 825px) {
   #photos {
-    margin-top: 150px;
+    //margin-top: 190px;
     #bgPlant {
-      width: 600px;
-      top: 13%;
-      left: -120px;
+      //width: 600px;
+      //top: 13%;
+      //top: 450px;
+      //left: -120px;
     }
   }
 }
 @media only screen and (max-width: 1005px) and (min-width: 825px) {
   #photos {
-    margin-top: 215px;
+    //margin-top: 215px;
     #bgPlant {
-      width: 600px;
-      top: 14%;
-      left: -120px;
+      //width: 600px;
+      //top: 14%;
+      //left: -120px;
     }
   }
 }
