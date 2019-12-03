@@ -126,10 +126,12 @@ button {
   border-radius: 30px;
   border: $darkBlue;
   background-color: $darkBlue;
+  box-shadow: 0 0 0 0 rgba(31, 50, 59, 1);
   &:hover {
     cursor: pointer;
     transition: $colorTransition;
     background-color: $blue;
+    animation: buttonPulseBlue 2s infinite;
   }
 }
 footer {
