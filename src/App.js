@@ -159,7 +159,7 @@ class App extends Component {
       console.log("open the menu");
       menuBtn.style.display = "none";
       closeBtn.style.display = "block";
-      mobileMenu.style.animation = "bouncePractice .6s ease";
+      mobileMenu.style.animation = "bounceNav .6s ease";
       mobileMenu.style.animationDelay = ".3s";
       mobileMenu.style.right = "0";
       mobileMenu.style.top = "0"

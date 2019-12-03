@@ -13,6 +13,19 @@ a {
     color: $lightGreen;
   }
 }
+.bounceAnchor {
+  display: inline-block;
+  text-align: left;
+  a {
+    text-align: center;
+  }
+  &:hover {
+    animation: bounceAnchor 1s ease;
+  }
+  &:active {
+    animation: bounceAnchor 1s ease;
+  }
+}
 header {
   text-align: left;
   height: 40px;

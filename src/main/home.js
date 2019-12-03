@@ -29,9 +29,11 @@ class HomePage extends Component {
 
           <div className="plantImgHolder pihBottom">
             <p>
-              <a href="https://www.instagram.com/sarahjain420/">
-              <img src="images/icons/insta_icon.svg" alt="instagram icon" id="hpHandle"/>
-              @sarahjain420</a>
+              <div class="bounceAnchor">
+                <a href="https://www.instagram.com/sarahjain420/">
+                <img src="images/icons/insta_icon.svg" alt="instagram icon" id="hpHandle"/>
+                @sarahjain420</a>
+              </div>
             </p>
             <img src="images/icons/background_plant.svg" id="bgPlantBottom" alt="Sarah Jain leaf logo"/>
           </div>
