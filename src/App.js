@@ -29,6 +29,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //check menu state upon app load
     this.mobileMenuToggle();
   }
 
@@ -38,7 +39,7 @@ class App extends Component {
         <Router>
         <ScrollToTop />
         <header className="App-header">
-          <Link to="/"><h1>SJ</h1><img src="images/icons/logo.svg" alt ="Sarah Jain leaf logo" title="Sarah Jain logo"/></Link>
+          <Link to="/" onClick={()=> this.showMobileMenu("close")}><h1>SJ</h1><img src="images/icons/logo.svg" alt ="Sarah Jain leaf logo" title="Sarah Jain logo"/></Link>
           <div className="mobileNavBtns">
             <img onClick={()=> this.showMobileMenu("open")} src="images/icons/menu_icon.svg" id="openMenu" alt="open the navigation menu" />
             <img onClick={()=> this.showMobileMenu("close")} src="images/icons/close_icon.svg" id="closeMenu" alt="open the navigation menu" />
@@ -158,12 +159,18 @@ class App extends Component {
       console.log("open the menu");
       menuBtn.style.display = "none";
       closeBtn.style.display = "block";
+      mobileMenu.style.animation = "bounceNav .6s ease";
+      mobileMenu.style.animationDelay = ".3s";
       mobileMenu.style.right = "0";
+      mobileMenu.style.top = "0"
     } else if (!this.state.displayMenu) {
       console.log("close the menu");
       menuBtn.style.display = "block";
       closeBtn.style.display = "none";
+      mobileMenu.style.animation = "none";
+      mobileMenu.style.animationDelay = "none";
       mobileMenu.style.right = "-500px";
+      mobileMenu.style.top = "-500px";
     }
 
   }

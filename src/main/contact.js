@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import Slide from 'react-reveal/Slide';
 
 class ContactPage extends Component {
 
   render() {
     return (
       <div>
-      <h2 className="pageTitle pageTitleMrg">Contact</h2>
+      <Slide top>
+        <h2 className="pageTitle pageTitleMrg">Contact</h2>
 
-      <div className="pageOval">
-      </div>
+        <div className="pageOval">
+        </div>
+      </Slide>
 
       <section id="contactForm">
         <form>

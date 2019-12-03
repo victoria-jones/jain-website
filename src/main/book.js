@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Slide from 'react-reveal/Slide';
 import Calendar from './components/calendar';
 
 class BookPage extends Component {
@@ -7,10 +8,12 @@ class BookPage extends Component {
   render() {
     return (
       <div>
-        <h2 className="pageTitle pageTitleMrg">Booking</h2>
+        <Slide top>
+          <h2 className="pageTitle pageTitleMrg">Booking</h2>
 
-        <div className="pageOval">
-        </div>
+          <div className="pageOval">
+          </div>
+        </Slide>
 
         <section id="bookingInfo">
           <h3>My photo shoot booking and availability:</h3>
@@ -20,8 +23,8 @@ class BookPage extends Component {
             <li>such as types of photo shoots you take</li>
             <li>maybe something saying what countries you will/can work in</li>
           </ul>
-          <p>Need to know more? Check out my <a>FAQ</a> about booking.</p>
-          <p>If you have any questions about booking please <Link to="/contact">contact me</Link>.</p>
+          <p>Need to know more? Check out my <div class="bounceAnchor"><a>FAQ</a></div> about booking.</p>
+          <p>If you have any questions about booking please <div class="bounceAnchor"><Link to="/contact">contact me</Link></div>.</p>
         </section>
 
         <section id="calendar">
