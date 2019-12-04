@@ -513,6 +513,7 @@ footer {
     font-family: $montserrat;
   }
   #contactReason {
+    margin-left: 20px;
     button {
       border: 3px solid $lightGreen;
       background-color: transparent;
@@ -526,26 +527,45 @@ footer {
     }
   }
   #emailForm {
+    width: 100%;
+    background-image: $greenToBlue;
+    padding: 20px;
+    //text-align: right;      //for box info
+    margin-top: 3em;
+    h3 {
+      //text-align: left;
+      color: $blackBlue;
+    }
     input, button, textarea {
       display: block;
     }
     input, textarea {
       margin-bottom: 20px;
-      width: 70%;
-      border-bottom: 3px solid $darkBlue;
-      border-top: none; border-right: none; border-left: none;
-      background-color: transparent;
+      margin-top: 5px;
+      width: 80%;
+      //border-bottom: 3px solid $darkBlue;
+      //border-top: none; border-right: none; border-left: none;
+      border: 1px $white solid;
+      border-radius: 30px;
+      background-color: $white;
       color: $darkBlue;
       font-size: 1em;
-      padding: 5px;
+      padding: 10px;
     }
     textarea {
-      height: 10em;
+      height: 6em;
       font-family: $montserrat;
     }
+    label {
+      margin-left: 3px;
+    }
     #emailFormBg {
+      width: 50%;
       background-color: $lightGreen;
       padding: 20px;
+      padding-top: 5px;
+      text-align: left;
+      max-width: 500px;
     }
   }
 }
@@ -849,7 +869,8 @@ footer {
   /*** Contact page ***/
   #contactForm {
     //margin-bottom: 10em;
-    margin-left: 90px; margin-right: 90px;
+    //margin-left: 90px; margin-right: 90px;
+    width: 100%;
     h3 {
       //font-weight: 100;
       //font-size: 1.5em;
@@ -860,6 +881,8 @@ footer {
         //background-color: transparent;
         //margin-right: 100px;
         //color: $lightGreen;
+        margin-right: 80px;
+        width: 170px;
         &:hover {
           //transition: $colorTransition;
           //background-color: $lightGreen;
@@ -1057,7 +1080,6 @@ footer {
     right: -500px;
     top: -500px;
     width: 100%;
-    //animation: bounce 1s;
     transition: .4s ease-out;
   }
   .mobileNavBtns {
@@ -1308,6 +1330,49 @@ footer {
       }
     }
   }
+
+  /*** Contact page ***/
+  #contactForm {
+    width: 100%;
+    h3 {
+    }
+    #contactReason {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      h3{
+        text-align: left;
+      }
+      button {
+        display: inline-block;
+        width: 150px;
+        margin-right: 10px;
+        padding-left: 0; padding-right: 0;
+        text-align: center;
+        &:hover {
+        }
+      }
+    }
+    #emailForm {
+      padding-left: 0; padding-right: 0;
+      padding-top: 150px;
+      input, textarea {
+      }
+      textarea {
+      }
+      #emailFormBg {
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+  }
+  #socialMedia{
+    ul {
+      li {
+      }
+    }
+  }
+
 }
 
   /*** mobile styles smaller***/
@@ -1340,7 +1405,9 @@ footer {
     .mobileNavWrap {
       position: absolute;
       right: -500px;
+      top: -500px;
       width: 100%;
+      transition: .4s ease-out;
     }
     .mobileNavBtns {
       display: block;
@@ -1550,24 +1617,27 @@ footer {
     }
 
   /*** Contact page ***/
+  /*** Contact page ***/
   #contactForm {
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
     h3 {
     }
     #contactReason {
       button {
-        margin-right: 30px;
         &:hover {
         }
       }
     }
     #emailForm {
+      padding-left: 0; padding-right: 0;
+      padding-top: 150px;
       input, textarea {
       }
       textarea {
       }
       #emailFormBg {
+        margin: 0 auto;
+        width: 80%;
       }
     }
   }

@@ -23,8 +23,8 @@ class ContactPage extends Component {
           </section>
 
           <section id="emailForm">
-          <h3>Email me:</h3>
           <div id="emailFormBg">
+            <h3>Email me:</h3>
             <label htmlFor="name">Name</label>
             <input id="name" type="text" name="name" placeholder="Name" />
             <label htmlFor="email">Email</label>
