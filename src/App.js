@@ -31,6 +31,7 @@ class App extends Component {
   componentDidMount() {
     //check menu state upon app load
     this.mobileMenuToggle();
+    this.modalSwitch();
   }
 
   render() {
@@ -86,16 +87,17 @@ class App extends Component {
       case 'close':
         this.setState({
           displayModal: false
-        });
+        }, () => this.modalSwitch());
         break;
       case 'open':
         this.setState({
           displayModal: true
-        });
+        }, () => this.modalSwitch());
         break;
     }
     console.log(modalFill);
     this.fillModal(modalFill);
+
   }
 
   fillModal(fillWith){
@@ -133,6 +135,27 @@ class App extends Component {
     }
   }
 
+  modalSwitch() {
+    let modalWrapper = document.getElementsByClassName("modalWrapper")[0];
+    let modal = document.getElementById("modal");
+
+    if(this.state.displayModal) {
+      modalWrapper.style.backgroundColor = "rgba(96, 181, 133, .8)";
+      modalWrapper.style.zIndex = "9999";
+      modal.style.bottom = "-10%";
+      modal.style.animation = "bounceModal .7s ease";
+      modal.style.transition = ".8s";
+      modal.style.animationDelay = ".4s";
+      modalWrapper.style.transition = "1s";
+    } else if(!this.state.displayModal) {
+      modalWrapper.style.zIndex = "-10000";
+      modalWrapper.style.backgroundColor = "rgba(0,0,0,0)";
+      modal.style.bottom = "-10000px";
+      modal.style.animation = "none";
+      modal.style.animationDelay = "none";
+    }
+  }
+
   showMobileMenu(boolChange) {
     switch(boolChange) {
       case 'close':
@@ -163,7 +186,7 @@ class App extends Component {
       mobileMenu.style.animationDelay = ".3s";
       mobileMenu.style.right = "0";
       mobileMenu.style.top = "0"
-    } else if (!this.state.displayMenu) {
+    } else if (!this.state.displayMobileMenu) {
       console.log("close the menu");
       menuBtn.style.display = "block";
       closeBtn.style.display = "none";

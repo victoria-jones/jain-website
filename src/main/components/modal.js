@@ -11,14 +11,12 @@ class Modal extends Component {
       } else if(this.props.fillModal.form) {
         this.fillForm();
       } else {
-        return;
       }
     }
 
   }
 
   render() {
-    if (this.props.displayModal) {
       return(
 
           <div className="modalWrapper">
@@ -33,14 +31,14 @@ class Modal extends Component {
           </div>
 
       );
-    } else {
-      return null;
-    }
   }
 
   fillThankYou() {
     let modalH2 = document.getElementById("modalHead");
     let modalBody = document.getElementById("modalBody");
+
+    //first empty anything in the modal
+    modalBody.innerHTML = "";
 
     modalH2.innerHTML = "Thank you!";
 
@@ -60,6 +58,9 @@ class Modal extends Component {
   fillForm() {
     let modalH2 = document.getElementById("modalHead");
     let modalBody = document.getElementById("modalBody");
+
+    //first empty anything in the modal
+    modalBody.innerHTML = "";
 
     modalH2.innerHTML = "Request a booking"
   }

@@ -23,19 +23,19 @@ class ContactPage extends Component {
           </section>
 
           <section id="emailForm">
-          <div id="emailFormBg">
-            <h3>Email me:</h3>
-            <label htmlFor="name">Name</label>
-            <input id="name" type="text" name="name" placeholder="Name" />
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Email" />
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" placeholder ="Message"></textarea>
-            <button type="button" id="contactFormSend"
-                    onClick={() => this.props.showModal('open', 'contact')}>
-                    Send
-            </button>
-          </div>
+            <div id="emailFormBg">
+              <h3>Email me:</h3>
+              <label htmlFor="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Name" />
+              <label htmlFor="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Email" />
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" placeholder ="Message"></textarea>
+              <button type="button" id="contactFormSend"
+                      onClick={() => this.props.showModal('open', 'contact')}>
+                      Send
+              </button>
+            </div>
           </section>
         </form>
       </section>

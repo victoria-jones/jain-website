@@ -601,11 +601,16 @@ footer {
   width: 100%; height: 100%;
   top: 0;
   right: 0;
-  background-color: $mainGreenT;
+  //background-color: $mainGreenT;
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
+  transition: .4s ease-out;
   #modal {
+    position: relative;
+    bottom: -10000px;
+    //top: 10%;
     width: 90%; height: 80%;
-    margin: 10vh auto;
+    margin: 0 auto;
     padding: 20px;
     background-color: $blackBlue;
     box-shadow: 20px 20px 20px $blackBlueT;
@@ -1342,6 +1347,7 @@ footer {
       text-align: center;
       h3{
         text-align: left;
+        margin-left: 15%;
       }
       button {
         display: inline-block;
@@ -1623,7 +1629,20 @@ footer {
     h3 {
     }
     #contactReason {
+      margin: 0;
+      text-align: center;
+      h3 {
+        margin-left: 10px;
+        text-align: left;
+      }
       button {
+        width: 100px;
+        padding-left: 0; padding-right: 0;
+        font-size: 10pt;
+        margin: 0 auto;
+        &:nth-child(3) {
+          margin-left: 10px; margin-right: 10px;
+        }
         &:hover {
         }
       }

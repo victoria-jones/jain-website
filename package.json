@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "googleapis": "^39.2.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-reveal": "^1.2.2",
