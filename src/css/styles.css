@@ -348,7 +348,8 @@ footer {
     border-radius: 50%;
     position: absolute;
     bottom: -650px;
-    left: -800px;
+    left: 50%;
+    margin-left: -85%;
     z-index: -100; }
   footer small {
     font-size: 1.5em;
@@ -510,7 +511,8 @@ footer {
   border-radius: 50%;
   position: absolute;
   top: -70vh;
-  right: -80vh;
+  right: 50%;
+  margin-right: -85%;
   z-index: -100; }
 
 .pageTitle {
@@ -782,8 +784,7 @@ footer {
   /** page headers **/
   .pageOval {
     height: 500px;
-    top: -230px;
-    right: -500px; }
+    top: -230px; }
   /*** whole site styles ***/
   header {
     width: 100%; }
@@ -794,7 +795,6 @@ footer {
     width: 100%; }
     footer .footerOval {
       height: 700px;
-      left: -50%;
       bottom: -450px; }
   .socialNavFt ul li img {
     width: 30px;
@@ -852,8 +852,7 @@ footer {
   /** page headers **/
   .pageOval {
     height: 500px;
-    top: -230px;
-    right: -300px; }
+    top: -230px; }
   /*** whole site styles ***/
   header {
     width: 100%; }
@@ -915,7 +914,6 @@ footer {
     width: 100%; }
     footer .footerOval {
       height: 700px;
-      left: -35%;
       bottom: -500px; }
     footer small {
       font-size: 2em; }
@@ -1095,7 +1093,6 @@ footer {
     width: 100%; }
     footer .footerOval {
       height: 250px;
-      left: -35%;
       bottom: -100px; }
     footer small {
       font-size: 2em; }
@@ -1197,7 +1194,6 @@ footer {
     margin: 0;
     display: block; }
   /*** Contact page ***/
-  /*** Contact page ***/
   #contactForm {
     width: 100%; }
     #contactForm #contactReason {
@@ -1267,5 +1263,3 @@ footer {
   /*** 404 page ***/
   #error404 {
     width: 90%; } }
-
-/*** extra media query fixes (in between sizes) ***/
