@@ -758,6 +758,12 @@ footer {
     -webkit-box-shadow: 20px 20px 20px rgba(11, 17, 20, 0.8);
     box-shadow: 20px 20px 20px rgba(11, 17, 20, 0.8);
     color: #FFF; }
+    .modalWrapper #modal::-webkit-scrollbar {
+      width: 10px; }
+    .modalWrapper #modal::-webkit-scrollbar-track {
+      background: transparent; }
+    .modalWrapper #modal::-webkit-scrollbar-thumb {
+      background: #60b585; }
     .modalWrapper #modal .closeBtn {
       width: 35px;
       height: 35px;
@@ -842,7 +848,7 @@ footer {
       height: 5em; }
   /*** modal ***/
   .modalWrapper #modal {
-    margin: 90px auto; }
+    margin: 0 auto; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; } }
 
@@ -1024,7 +1030,14 @@ footer {
       padding-top: 150px; }
       #contactForm #emailForm #emailFormBg {
         margin: 0 auto;
-        width: 80%; } }
+        width: 80%; }
+  /*** modal ***/
+  .modalWrapper #modal {
+    height: 85%;
+    margin-top: -25px;
+    overflow-y: scroll; }
+    .modalWrapper #modal #modalBody button {
+      margin: 40% auto 0 auto; } }
 
 /*** mobile styles smaller***/
 @media only screen and (max-width: 500px) {
@@ -1257,7 +1270,10 @@ footer {
     margin-bottom: 0; }
   /*** modal ***/
   .modalWrapper #modal {
-    margin: 10px auto; }
+    height: 89%;
+    width: 90%;
+    margin: -40px auto;
+    overflow-y: scroll; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; }
   /*** 404 page ***/
