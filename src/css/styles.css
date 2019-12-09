@@ -202,9 +202,12 @@ body {
   color: #0b1114; }
 
 a {
-  color: #9ce6b3; }
+  color: #9ce6b3;
+  text-decoration: underline; }
   a:visited {
     color: #9ce6b3; }
+  a:hover {
+    cursor: pointer; }
 
 .bounceAnchor {
   display: inline-block;
@@ -757,13 +760,15 @@ footer {
     background-color: #0b1114;
     -webkit-box-shadow: 20px 20px 20px rgba(11, 17, 20, 0.8);
     box-shadow: 20px 20px 20px rgba(11, 17, 20, 0.8);
-    color: #FFF; }
+    color: #FFF;
+    overflow-y: scroll; }
     .modalWrapper #modal::-webkit-scrollbar {
       width: 10px; }
     .modalWrapper #modal::-webkit-scrollbar-track {
       background: transparent; }
     .modalWrapper #modal::-webkit-scrollbar-thumb {
-      background: #60b585; }
+      background: #60b585;
+      border: 2px solid #0b1114; }
     .modalWrapper #modal .closeBtn {
       width: 35px;
       height: 35px;
@@ -788,6 +793,18 @@ footer {
       .modalWrapper #modal #modalBody #thankYouMsg {
         margin: 0 auto;
         width: 50%; }
+      .modalWrapper #modal #modalBody ol {
+        line-height: 1.5;
+        margin: 20px auto 0 auto;
+        width: 90%; }
+        .modalWrapper #modal #modalBody ol li {
+          font-weight: bold;
+          font-size: 1.2em;
+          margin-top: 15px; }
+        .modalWrapper #modal #modalBody ol ul {
+          color: #9ce6b3; }
+      .modalWrapper #modal #modalBody #faqOk {
+        margin: 50px auto; }
       .modalWrapper #modal #modalBody .emailForm {
         margin: 10px auto;
         width: 90%; }

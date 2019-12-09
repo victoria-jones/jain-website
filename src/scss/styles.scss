@@ -9,8 +9,12 @@ body {
 }
 a {
   color: $lightGreen;
+  text-decoration: underline;
   &:visited {
     color: $lightGreen;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 .bounceAnchor {
@@ -618,6 +622,7 @@ footer {
     background-color: $blackBlue;
     box-shadow: 20px 20px 20px $blackBlueT;
     color: $white;
+    overflow-y: scroll;
     &::-webkit-scrollbar {
       width: 10px;
     }
@@ -626,6 +631,7 @@ footer {
     }
     &::-webkit-scrollbar-thumb {
       background: $mainGreen;
+      border: 2px solid $blackBlue;
     }
     .closeBtn {
       width: 35px; height: 35px;
@@ -653,6 +659,22 @@ footer {
       #thankYouMsg {
         margin: 0 auto;
         width: 50%;
+      }
+      ol {
+        line-height: 1.5;
+        margin: 20px auto 0 auto;
+        width: 90%;
+        li {
+          font-weight: bold;
+          font-size: 1.2em;
+          margin-top: 15px;
+        }
+        ul {
+          color: $lightGreen;
+        }
+      }
+      #faqOk {
+        margin: 50px auto;
       }
       .emailForm {
         margin: 10px auto;

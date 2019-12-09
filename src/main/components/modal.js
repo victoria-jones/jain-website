@@ -86,7 +86,31 @@ class Modal extends Component {
             />
             <h2 id="modalHead">FAQ</h2>
             <section id="modalBody">
-            <p>FAQ goes here</p>
+              <ol>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+                <li>FAQ number one goes here</li>
+                  <ul>number one follow up answer goes here</ul>
+              </ol>
+              <button id="faqOk" onClick={() => this.props.showModal('close', 'na')}>
+                ok
+              </button>
             </section>
           </section>
         </div>

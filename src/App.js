@@ -20,6 +20,7 @@ class App extends Component {
       fillModalWith: {
         thankYou: false,
         form: false,
+        faq: false,
         empty: true
       },
       displayMobileMenu: false
@@ -108,6 +109,7 @@ class App extends Component {
           fillModalWith: {
             thankYou: false,
             form: false,
+            faq: false,
             empty: true
           }
         });
@@ -118,6 +120,7 @@ class App extends Component {
           fillModalWith: {
             thankYou: false,
             form: true,
+            faq: false,
             empty: false
           }
         });
@@ -128,6 +131,18 @@ class App extends Component {
           fillModalWith: {
             thankYou: true,
             form: false,
+            faq: false,
+            empty: false
+          }
+        });
+        break;
+      case 'faq':
+        console.log("fill modal with faq info");
+        this.setState({
+          fillModalWith: {
+            thankYou: false,
+            form: false,
+            faq: true,
             empty: false
           }
         });
