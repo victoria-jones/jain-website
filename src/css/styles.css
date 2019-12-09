@@ -659,39 +659,39 @@ footer {
   margin-top: 10em; }
 
 /*** contact page ***/
-#contactForm {
+.contactForm {
   margin-bottom: 10em; }
-  #contactForm h3 {
+  .contactForm h3 {
     color: #FFF;
     text-transform: lowercase;
     font-weight: 100;
     font-size: 1.5em;
     font-family: "Montserrat", sans-serif; }
-  #contactForm #contactReason {
+  .contactForm #contactReason {
     margin-left: 20px; }
-    #contactForm #contactReason button {
+    .contactForm #contactReason button {
       border: 3px solid #9ce6b3;
       background-color: transparent;
       margin-right: 100px;
       color: #9ce6b3; }
-      #contactForm #contactReason button:hover {
+      .contactForm #contactReason button:hover {
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s;
         background-color: #9ce6b3;
         color: #0b1114; }
-  #contactForm #emailForm {
+  .contactForm .emailForm {
     width: 100%;
     background-image: -webkit-linear-gradient(320deg, #60b585, #1f323b);
     background-image: -o-linear-gradient(320deg, #60b585, #1f323b);
     background-image: linear-gradient(130deg, #60b585, #1f323b);
     padding: 20px;
     margin-top: 3em; }
-    #contactForm #emailForm h3 {
+    .contactForm .emailForm h3 {
       color: #0b1114; }
-    #contactForm #emailForm input, #contactForm #emailForm button, #contactForm #emailForm textarea {
+    .contactForm .emailForm input, .contactForm .emailForm button, .contactForm .emailForm textarea {
       display: block; }
-    #contactForm #emailForm input, #contactForm #emailForm textarea {
+    .contactForm .emailForm input, .contactForm .emailForm textarea {
       margin-bottom: 20px;
       margin-top: 5px;
       width: 80%;
@@ -701,12 +701,12 @@ footer {
       color: #1f323b;
       font-size: 1em;
       padding: 10px; }
-    #contactForm #emailForm textarea {
+    .contactForm .emailForm textarea {
       height: 6em;
       font-family: "Montserrat", sans-serif; }
-    #contactForm #emailForm label {
+    .contactForm .emailForm label {
       margin-left: 3px; }
-    #contactForm #emailForm #emailFormBg {
+    .contactForm .emailForm #emailFormBg {
       width: 50%;
       background-color: #9ce6b3;
       padding: 20px;
@@ -779,7 +779,28 @@ footer {
     .modalWrapper #modal #modalBody {
       display: inline-block;
       text-align: left;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      width: 100%; }
+      .modalWrapper #modal #modalBody #advised {
+        font-size: .8em;
+        width: 90%;
+        margin: 0 auto; }
+      .modalWrapper #modal #modalBody #thankYouMsg {
+        margin: 0 auto;
+        width: 50%; }
+      .modalWrapper #modal #modalBody .emailForm {
+        margin: 10px auto;
+        width: 90%; }
+        .modalWrapper #modal #modalBody .emailForm form {
+          width: 50%;
+          background-color: #9ce6b3;
+          padding: 20px;
+          padding-top: 2px;
+          text-align: left;
+          max-width: 500px;
+          color: #0b1114; }
+          .modalWrapper #modal #modalBody .emailForm form button {
+            margin: 0; }
       .modalWrapper #modal #modalBody button {
         display: block;
         margin: 40vh auto 0 auto; }

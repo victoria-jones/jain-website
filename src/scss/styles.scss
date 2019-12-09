@@ -506,7 +506,7 @@ footer {
   margin-top: 10em;
 }
 /*** contact page ***/
-#contactForm {
+.contactForm {
   margin-bottom: 10em;
   h3 {
     color: $white;
@@ -529,7 +529,7 @@ footer {
       }
     }
   }
-  #emailForm {
+  .emailForm {
     width: 100%;
     background-image: $greenToBlue;
     padding: 20px;
@@ -643,6 +643,33 @@ footer {
       display: inline-block;
       text-align: left;
       font-size: 1.2em;
+      width: 100%;
+      #advised {
+        font-size: .8em;
+        //font-weight: bold;
+        width: 90%;
+        margin: 0 auto;
+      }
+      #thankYouMsg {
+        margin: 0 auto;
+        width: 50%;
+      }
+      .emailForm {
+        margin: 10px auto;
+        width: 90%;
+        form {
+          width: 50%;
+          background-color: $lightGreen;
+          padding: 20px;
+          padding-top: 2px;
+          text-align: left;
+          max-width: 500px;
+          color: $blackBlue;
+          button {
+            margin: 0;
+          }
+        }
+      }
       button {
         display: block;
         margin: 40vh auto 0 auto;

@@ -13,7 +13,7 @@ class ContactPage extends Component {
         </div>
       </Slide>
 
-      <section id="contactForm">
+      <section className="contactForm">
         <form>
           <section id="contactReason">
             <h3>Reason for contact:</h3>
@@ -22,7 +22,7 @@ class ContactPage extends Component {
             <button type="button">Booking</button>
           </section>
 
-          <section id="emailForm">
+          <section className="emailForm">
             <div id="emailFormBg">
               <h3>Email me:</h3>
               <label htmlFor="name">Name</label>

@@ -39,7 +39,7 @@ class Modal extends Component {
             />
             <h2 id="modalHead">Thank You</h2>
             <section id="modalBody">
-              <p>Your message has been sent. I will be in touch through email soon!</p>
+              <p id="thankYouMsg">Your message has been sent. I will be in touch through email soon!</p>
               <button onClick={() => this.props.showModal('close', 'na')}>
                 ok
               </button>
@@ -55,13 +55,38 @@ class Modal extends Component {
                 onClick={() => this.props.showModal('close', 'na')}
             />
             <h2 id="modalHead">Request A Booking</h2>
+            <section id="modalBody" className="contactForm">
+                <p id="advised"><u>*please be advised</u>: I will  only travel to locations that allow the carry and use of
+                  medical marijuana.</p>
+                <section className="emailForm">
+                  <form>
+                    <h3>selected calendar date goes here</h3>
+                    <label htmlFor="name">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Name" />
+                    <label htmlFor="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email" />
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" name="message" placeholder ="Please include information about the booking"></textarea>
+                    <button type="button" id="contactFormSend"
+                            onClick={() => this.props.showModal('open', 'contact')}>
+                            Send
+                    </button>
+                  </form>
+                </section>
+            </section>
+          </section>
+        </div>
+      );
+    } else if (this.props.fillModal.faq) {
+      return(
+        <div className="modalWrapper">
+          <section id="modal">
+            <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
+                onClick={() => this.props.showModal('close', 'na')}
+            />
+            <h2 id="modalHead">FAQ</h2>
             <section id="modalBody">
-              <h3>selected day goes here</h3>
-              <section id="formWrapper">
-                <form>
-                  <p>form goes here</p>
-                </form>
-              </section>
+            <p>FAQ goes here</p>
             </section>
           </section>
         </div>
