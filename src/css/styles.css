@@ -792,7 +792,8 @@ footer {
         margin: 0 auto; }
       .modalWrapper #modal #modalBody #thankYouMsg {
         margin: 0 auto;
-        width: 50%; }
+        width: 50%;
+        padding: 10% 0; }
       .modalWrapper #modal #modalBody ol {
         line-height: 1.5;
         margin: 20px auto 0 auto;
@@ -807,20 +808,20 @@ footer {
         margin: 50px auto; }
       .modalWrapper #modal #modalBody .emailForm {
         margin: 10px auto;
-        width: 90%; }
+        width: 90%;
+        margin-bottom: -200px; }
         .modalWrapper #modal #modalBody .emailForm form {
-          width: 50%;
+          width: 500px;
           background-color: #9ce6b3;
           padding: 20px;
           padding-top: 2px;
           text-align: left;
-          max-width: 500px;
           color: #0b1114; }
           .modalWrapper #modal #modalBody .emailForm form button {
             margin: 0; }
       .modalWrapper #modal #modalBody button {
         display: block;
-        margin: 40vh auto 0 auto; }
+        margin: 0 auto; }
 
 /**** media query start ****/
 @media only screen and (max-width: 1350px) and (min-width: 825px) {
@@ -886,9 +887,7 @@ footer {
       height: 5em; }
   /*** modal ***/
   .modalWrapper #modal {
-    margin: 0 auto; }
-    .modalWrapper #modal #modalBody button {
-      margin: 40% auto 0 auto; } }
+    margin: 0 auto; } }
 
 /*** mobile styles ***/
 @media only screen and (max-width: 825px) and (min-width: 500px) {
@@ -1074,6 +1073,12 @@ footer {
     height: 85%;
     margin-top: -25px;
     overflow-y: scroll; }
+    .modalWrapper #modal #modalBody .emailForm {
+      padding-top: 80px; }
+      .modalWrapper #modal #modalBody .emailForm form {
+        margin: auto; }
+        .modalWrapper #modal #modalBody .emailForm form button {
+          margin: 0; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; } }
 
@@ -1308,10 +1313,17 @@ footer {
     margin-bottom: 0; }
   /*** modal ***/
   .modalWrapper #modal {
-    height: 89%;
+    height: 87%;
     width: 90%;
-    margin: -40px auto;
+    margin: -16px auto;
     overflow-y: scroll; }
+    .modalWrapper #modal #modalBody .emailForm {
+      padding-top: 120px; }
+      .modalWrapper #modal #modalBody .emailForm form {
+        margin: auto;
+        width: 90%; }
+        .modalWrapper #modal #modalBody .emailForm form button {
+          margin: 0; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; }
   /*** 404 page ***/

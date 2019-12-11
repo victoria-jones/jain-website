@@ -58,7 +58,7 @@ class Modal extends Component {
             <section id="modalBody" className="contactForm">
                 <p id="advised"><u>*please be advised</u>: I will  only travel to locations that allow the carry and use of
                   medical marijuana.</p>
-                <section className="emailForm">
+                <section id="bookingForm" className="emailForm">
                   <form>
                     <h3>selected calendar date goes here</h3>
                     <label htmlFor="name">Name</label>
