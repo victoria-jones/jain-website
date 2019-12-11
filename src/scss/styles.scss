@@ -681,7 +681,7 @@ footer {
         margin: 10px auto;
         width: 90%;
         margin-bottom: -200px;
-        form {
+        #modalForm {
           width: 500px;
           background-color: $lightGreen;
           padding: 20px;
@@ -1464,7 +1464,7 @@ footer {
       #modalBody {
         .emailForm {
           padding-top: 80px;
-          form {
+          #modalForm {
             margin: auto;
             button {
               margin: 0;
@@ -1858,7 +1858,7 @@ footer {
         .emailForm {
           padding-top: 120px;
 
-          form {
+          #modalForm {
             margin: auto;
             width: 90%;
             button {

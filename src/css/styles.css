@@ -810,14 +810,14 @@ footer {
         margin: 10px auto;
         width: 90%;
         margin-bottom: -200px; }
-        .modalWrapper #modal #modalBody .emailForm form {
+        .modalWrapper #modal #modalBody .emailForm #modalForm {
           width: 500px;
           background-color: #9ce6b3;
           padding: 20px;
           padding-top: 2px;
           text-align: left;
           color: #0b1114; }
-          .modalWrapper #modal #modalBody .emailForm form button {
+          .modalWrapper #modal #modalBody .emailForm #modalForm button {
             margin: 0; }
       .modalWrapper #modal #modalBody button {
         display: block;
@@ -1075,9 +1075,9 @@ footer {
     overflow-y: scroll; }
     .modalWrapper #modal #modalBody .emailForm {
       padding-top: 80px; }
-      .modalWrapper #modal #modalBody .emailForm form {
+      .modalWrapper #modal #modalBody .emailForm #modalForm {
         margin: auto; }
-        .modalWrapper #modal #modalBody .emailForm form button {
+        .modalWrapper #modal #modalBody .emailForm #modalForm button {
           margin: 0; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; } }
@@ -1319,10 +1319,10 @@ footer {
     overflow-y: scroll; }
     .modalWrapper #modal #modalBody .emailForm {
       padding-top: 120px; }
-      .modalWrapper #modal #modalBody .emailForm form {
+      .modalWrapper #modal #modalBody .emailForm #modalForm {
         margin: auto;
         width: 90%; }
-        .modalWrapper #modal #modalBody .emailForm form button {
+        .modalWrapper #modal #modalBody .emailForm #modalForm button {
           margin: 0; }
     .modalWrapper #modal #modalBody button {
       margin: 40% auto 0 auto; }
