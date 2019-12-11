@@ -677,7 +677,7 @@ footer {
       #faqOk {
         margin: 50px auto;
       }
-      .emailForm {
+      #bookingForm {
         margin: 10px auto;
         width: 90%;
         margin-bottom: -200px;
@@ -935,7 +935,7 @@ footer {
   }
 
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     //margin-bottom: 10em;
     //margin-left: 90px; margin-right: 90px;
     width: 100%;
@@ -958,7 +958,7 @@ footer {
         }
       }
     }
-    #emailForm {
+    .emailForm {
       input, textarea {
         //margin-bottom: 20px;
         //width: 70%;
@@ -1107,6 +1107,12 @@ footer {
         //display: inline-block;
         //text-align: left;
         //font-size: 1.2em;
+        #bookingForm {
+          #modalForm {
+            //not working
+              //try now might work
+          }
+        }
         button {
           //display: block;
         }
@@ -1399,7 +1405,7 @@ footer {
   }
 
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     width: 100%;
     h3 {
     }
@@ -1421,7 +1427,7 @@ footer {
         }
       }
     }
-    #emailForm {
+    .emailForm {
       padding-left: 0; padding-right: 0;
       padding-top: 150px;
       input, textarea {
@@ -1462,10 +1468,13 @@ footer {
         //font-weight: 100; font-size: 1.8em;
       }
       #modalBody {
-        .emailForm {
+        width: 100%;
+        #bookingForm {
           padding-top: 80px;
+          width: 99%;
           #modalForm {
             margin: auto;
+            width: 80%;
             button {
               margin: 0;
             }
@@ -1724,7 +1733,7 @@ footer {
     }
 
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     width: 100%;
     h3 {
     }
@@ -1747,7 +1756,7 @@ footer {
         }
       }
     }
-    #emailForm {
+    .emailForm {
       padding-left: 0; padding-right: 0;
       padding-top: 150px;
       input, textarea {
@@ -1855,12 +1864,13 @@ footer {
       h2 {
       }
       #modalBody {
-        .emailForm {
+        width: 100%;
+        #bookingForm {
           padding-top: 120px;
-
+          width: 100%;
           #modalForm {
             margin: auto;
-            width: 90%;
+            width: 85%;
             button {
               margin: 0;
             }

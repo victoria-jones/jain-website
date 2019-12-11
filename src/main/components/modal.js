@@ -21,10 +21,12 @@ class Modal extends Component {
       return(
         <div className="modalWrapper">
           <section id="modal">
-            <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
-                onClick={() => this.props.showModal('close', 'na')}
-            />
-            <h2 id="modalHead">Modal Header</h2>
+          <div className="modalHeader">
+              <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
+                  onClick={() => this.props.showModal('close', 'na')}
+              />
+              <h2 id="modalHead">Modal Header</h2>
+            </div>
             <section id="modalBody">
             </section>
           </section>
@@ -34,10 +36,12 @@ class Modal extends Component {
       return(
         <div className="modalWrapper">
           <section id="modal">
-            <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
-                onClick={() => this.props.showModal('close', 'na')}
-            />
-            <h2 id="modalHead">Thank You</h2>
+          <div className="modalHeader">
+              <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
+                  onClick={() => this.props.showModal('close', 'na')}
+              />
+              <h2 id="modalHead">Thank You</h2>
+            </div>
             <section id="modalBody">
               <p id="thankYouMsg">Your message has been sent. I will be in touch through email soon!</p>
               <button onClick={() => this.props.showModal('close', 'na')}>
@@ -51,10 +55,12 @@ class Modal extends Component {
       return(
         <div className="modalWrapper">
           <section id="modal">
-            <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
-                onClick={() => this.props.showModal('close', 'na')}
-            />
-            <h2 id="modalHead">Request A Booking</h2>
+            <div className="modalHeader">
+              <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
+                  onClick={() => this.props.showModal('close', 'na')}
+              />
+              <h2 id="modalHead">Request A Booking</h2>
+            </div>
             <section id="modalBody" className="contactForm">
                 <p id="advised"><u>*please be advised</u>: I will  only travel to locations that allow the carry and use of
                   medical marijuana.</p>
@@ -81,10 +87,12 @@ class Modal extends Component {
       return(
         <div className="modalWrapper">
           <section id="modal">
-            <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
-                onClick={() => this.props.showModal('close', 'na')}
-            />
-            <h2 id="modalHead">FAQ</h2>
+            <div className="modalHeader">
+              <img src="images/icons/close_icon.svg" className="closeBtn" alt="close window button" title="close button"
+                  onClick={() => this.props.showModal('close', 'na')}
+              />
+              <h2 id="modalHead">FAQ</h2>
+            </div>
             <section id="modalBody">
               <ol>
                 <li>FAQ number one goes here</li>

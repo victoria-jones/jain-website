@@ -23,8 +23,8 @@ class BookPage extends Component {
             <li>such as types of photo shoots you take</li>
             <li>maybe something saying what countries you will/can work in</li>
           </ul>
-          <p>Need to know more? Check out my <div class="bounceAnchor"><a onClick={() => this.props.sendModal('open', 'faq')}>FAQ</a></div> about booking.</p>
-          <p>If you have any questions about booking please <div class="bounceAnchor"><Link to="/contact">contact me</Link></div>.</p>
+          <p>Need to know more? Check out my <span className="bounceAnchor"><a onClick={() => this.props.sendModal('open', 'faq')}>FAQ</a></span> about booking.</p>
+          <p>If you have any questions about booking please <span className="bounceAnchor"><Link to="/contact">contact me</Link></span>.</p>
         </section>
 
         <section id="calendar">

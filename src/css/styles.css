@@ -806,18 +806,18 @@ footer {
           color: #9ce6b3; }
       .modalWrapper #modal #modalBody #faqOk {
         margin: 50px auto; }
-      .modalWrapper #modal #modalBody .emailForm {
+      .modalWrapper #modal #modalBody #bookingForm {
         margin: 10px auto;
         width: 90%;
         margin-bottom: -200px; }
-        .modalWrapper #modal #modalBody .emailForm #modalForm {
+        .modalWrapper #modal #modalBody #bookingForm #modalForm {
           width: 500px;
           background-color: #9ce6b3;
           padding: 20px;
           padding-top: 2px;
           text-align: left;
           color: #0b1114; }
-          .modalWrapper #modal #modalBody .emailForm #modalForm button {
+          .modalWrapper #modal #modalBody #bookingForm #modalForm button {
             margin: 0; }
       .modalWrapper #modal #modalBody button {
         display: block;
@@ -872,9 +872,9 @@ footer {
     max-width: 620px;
     margin-right: 90px; }
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     width: 100%; }
-    #contactForm #contactReason button {
+    .contactForm #contactReason button {
       margin-right: 80px;
       width: 170px; }
   /*** Booking page ***/
@@ -1045,27 +1045,27 @@ footer {
         font-size: 0;
         visibility: hidden; }
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     width: 100%; }
-    #contactForm #contactReason {
+    .contactForm #contactReason {
       width: 100%;
       margin: 0;
       text-align: center; }
-      #contactForm #contactReason h3 {
+      .contactForm #contactReason h3 {
         text-align: left;
         margin-left: 15%; }
-      #contactForm #contactReason button {
+      .contactForm #contactReason button {
         display: inline-block;
         width: 150px;
         margin-right: 10px;
         padding-left: 0;
         padding-right: 0;
         text-align: center; }
-    #contactForm #emailForm {
+    .contactForm .emailForm {
       padding-left: 0;
       padding-right: 0;
       padding-top: 150px; }
-      #contactForm #emailForm #emailFormBg {
+      .contactForm .emailForm #emailFormBg {
         margin: 0 auto;
         width: 80%; }
   /*** modal ***/
@@ -1073,14 +1073,18 @@ footer {
     height: 85%;
     margin-top: -25px;
     overflow-y: scroll; }
-    .modalWrapper #modal #modalBody .emailForm {
-      padding-top: 80px; }
-      .modalWrapper #modal #modalBody .emailForm #modalForm {
-        margin: auto; }
-        .modalWrapper #modal #modalBody .emailForm #modalForm button {
-          margin: 0; }
-    .modalWrapper #modal #modalBody button {
-      margin: 40% auto 0 auto; } }
+    .modalWrapper #modal #modalBody {
+      width: 100%; }
+      .modalWrapper #modal #modalBody #bookingForm {
+        padding-top: 80px;
+        width: 99%; }
+        .modalWrapper #modal #modalBody #bookingForm #modalForm {
+          margin: auto;
+          width: 80%; }
+          .modalWrapper #modal #modalBody #bookingForm #modalForm button {
+            margin: 0; }
+      .modalWrapper #modal #modalBody button {
+        margin: 40% auto 0 auto; } }
 
 /*** mobile styles smaller***/
 @media only screen and (max-width: 500px) {
@@ -1250,28 +1254,28 @@ footer {
     margin: 0;
     display: block; }
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     width: 100%; }
-    #contactForm #contactReason {
+    .contactForm #contactReason {
       margin: 0;
       text-align: center; }
-      #contactForm #contactReason h3 {
+      .contactForm #contactReason h3 {
         margin-left: 10px;
         text-align: left; }
-      #contactForm #contactReason button {
+      .contactForm #contactReason button {
         width: 100px;
         padding-left: 0;
         padding-right: 0;
         font-size: 10pt;
         margin: 0 auto; }
-        #contactForm #contactReason button:nth-child(3) {
+        .contactForm #contactReason button:nth-child(3) {
           margin-left: 10px;
           margin-right: 10px; }
-    #contactForm #emailForm {
+    .contactForm .emailForm {
       padding-left: 0;
       padding-right: 0;
       padding-top: 150px; }
-      #contactForm #emailForm #emailFormBg {
+      .contactForm .emailForm #emailFormBg {
         margin: 0 auto;
         width: 80%; }
   #socialMedia {
@@ -1317,15 +1321,18 @@ footer {
     width: 90%;
     margin: -16px auto;
     overflow-y: scroll; }
-    .modalWrapper #modal #modalBody .emailForm {
-      padding-top: 120px; }
-      .modalWrapper #modal #modalBody .emailForm #modalForm {
-        margin: auto;
-        width: 90%; }
-        .modalWrapper #modal #modalBody .emailForm #modalForm button {
-          margin: 0; }
-    .modalWrapper #modal #modalBody button {
-      margin: 40% auto 0 auto; }
+    .modalWrapper #modal #modalBody {
+      width: 100%; }
+      .modalWrapper #modal #modalBody #bookingForm {
+        padding-top: 120px;
+        width: 100%; }
+        .modalWrapper #modal #modalBody #bookingForm #modalForm {
+          margin: auto;
+          width: 85%; }
+          .modalWrapper #modal #modalBody #bookingForm #modalForm button {
+            margin: 0; }
+      .modalWrapper #modal #modalBody button {
+        margin: 40% auto 0 auto; }
   /*** 404 page ***/
   #error404 {
     width: 90%; } }
