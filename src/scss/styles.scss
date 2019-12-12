@@ -616,23 +616,13 @@ footer {
     position: relative;
     bottom: -10000px;
     //top: 10%;
-    width: 90%; height: 80%;
+    width: 90%; height: 85%;
     margin: 0 auto;
-    padding: 20px;
+    //padding: 20px;
     background-color: $blackBlue;
     box-shadow: 20px 20px 20px $blackBlueT;
     color: $white;
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-      width: 10px;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: $mainGreen;
-      border: 2px solid $blackBlue;
-    }
+    overflow:  hidden;
     .closeBtn {
       width: 35px; height: 35px;
       float: right;
@@ -645,11 +635,26 @@ footer {
       text-transform: uppercase;
       font-weight: 100; font-size: 1.8em;
     }
+    .modalHeader {
+      padding: 20px;
+    }
     #modalBody {
       display: inline-block;
       text-align: left;
       font-size: 1.2em;
       width: 100%;
+      height: 80%;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $mainGreen;
+        border: 2px solid $blackBlue;
+      }
       #advised {
         font-size: .8em;
         //font-weight: bold;
@@ -1462,7 +1467,7 @@ footer {
       //width: 90%; height: 80%;
       height: 85%;
       margin-top: -25px;
-      overflow-y: scroll;
+      //overflow-y: scroll;
       //margin: 10vh auto;
       //padding: 20px;
       .closeBtn {
@@ -1865,15 +1870,23 @@ footer {
       height: 87%;
       width: 90%;
       margin: -16px auto;
-      overflow-y: scroll;
       .closeBtn {
+        width: 25px; height: 25px;
         &:hover {
         }
       }
       h2 {
+        font-size: 1.5em;
+      }
+      .modalHeader {
+        //padding-bottom: 0px;
+        padding: 10px 10px 0px 10px
       }
       #modalBody {
         width: 100%;
+        height: 90%;
+        //margin-bottom: 350px;
+        overflow-x: hidden;
         #bookingForm {
           padding-top: 120px;
           width: 100%;
@@ -1896,4 +1909,42 @@ footer {
     width: 90%;
   }
 
+}
+
+//modal fix for mobile
+@media only screen and (max-height: 570px) {
+  /*** modal ***/
+  .modalWrapper {
+    #modal {
+      //margin: 10px auto;
+      height: 90%;
+      //width: 90%;
+      //margin: -16px auto;
+      .closeBtn {
+        &:hover {
+        }
+      }
+      h2 {
+      }
+      #modalBody {
+        //width: 100%;
+        height: 85%;
+        //margin-bottom: 350px;
+        #bookingForm {
+          //padding-top: 120px;
+          //width: 100%;
+          #modalForm {
+            //margin: auto;
+            //width: 85%;
+            button {
+              //margin: 0;
+            }
+          }
+        }
+        button {
+          //margin: 40% auto 0 auto;
+        }
+      }
+    }
+  }
 }
