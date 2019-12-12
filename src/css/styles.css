@@ -1020,7 +1020,16 @@ footer {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    float: none; }
+    float: none;
+    margin-top: 17em; }
+  .aboutOval {
+    top: -60px;
+    height: 43%;
+    width: 1600px;
+    right: 0;
+    left: 0;
+    margin-right: 50%;
+    margin-left: -400px; }
   #specialties ul {
     padding: 0; }
     #specialties ul li {
