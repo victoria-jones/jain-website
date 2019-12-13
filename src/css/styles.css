@@ -553,18 +553,28 @@ footer {
 
 .cta {
   width: 100%;
-  background-color: #9ce6b3;
   padding: 20px;
-  margin-bottom: 10em; }
+  margin-bottom: -8em;
+  margin-top: 15em; }
   .cta p {
     display: inline-block;
     width: 50%;
-    max-width: 700px; }
+    max-width: 700px;
+    font-size: 1.2em; }
+    .cta p .ctaSpan {
+      font-weight: bold;
+      color: #02424e; }
   .cta button {
     display: inline-block;
     vertical-align: middle;
     margin-left: 10vw;
     margin-bottom: 25px; }
+  .cta .bgcta {
+    z-index: -99999;
+    width: 120%;
+    position: relative;
+    left: -20%;
+    top: -170px; }
 
 /*** booking page ***/
 #bookingInfo {
@@ -874,6 +884,11 @@ footer {
   #aboutMe {
     max-width: 620px;
     margin-right: 90px; }
+  .cta button {
+    margin-left: 40px; }
+  .cta .bgcta {
+    width: 110%;
+    min-width: 1100px; }
   /*** Contact page ***/
   .contactForm {
     width: 100%; }
@@ -1042,6 +1057,16 @@ footer {
         padding-right: 8%; }
       #specialties ul li:last-child {
         padding-left: 8%; }
+  .cta p {
+    width: 70%;
+    display: block; }
+  .cta button {
+    text-decoration: none;
+    margin: 0; }
+  .cta .bgcta {
+    width: 110%;
+    min-width: 1100px;
+    left: -390px; }
   /*** Booking page ***/
   #bookingInfo {
     margin-right: 90px;
@@ -1221,12 +1246,12 @@ footer {
       right: -50px;
       top: -340px;
       width: 580px;
-      margin-bottom: 6em; }
+      margin-bottom: 4em; }
   /*** donations ***/
   .donations {
     text-align: center;
     padding: 30px 0;
-    margin: 0 auto; }
+    margin: 5em auto 0 auto; }
     .donations #donationInfo {
       max-width: 80%;
       display: inline-block;
@@ -1259,14 +1284,23 @@ footer {
         padding: 0; }
       #specialties ul li:last-child {
         padding: 0; }
-  .cta p {
-    width: 80%; }
-  .cta button {
-    margin: 0;
-    display: block; }
+  .cta {
+    margin-bottom: -15em !important;
+    margin-top: 0 !important; }
+    .cta p {
+      width: 80%;
+      display: block; }
+    .cta button {
+      margin: 0; }
+    .cta .bgcta {
+      width: 250%;
+      min-width: 1200px;
+      left: -600px;
+      top: -190px; }
   /*** Contact page ***/
   .contactForm {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 8em; }
     .contactForm #contactReason {
       margin: 0;
       text-align: center; }
@@ -1297,33 +1331,35 @@ footer {
     margin-right: 10px; }
     #bookingInfo h3, #bookingInfo h4 {
       line-height: normal; }
-  #calendar #cal {
-    width: 100%; }
-    #calendar #cal #arrowWrap #prev {
-      margin-left: 10px;
-      width: 60px;
-      height: 60px; }
-      #calendar #cal #arrowWrap #prev i {
-        margin: 0; }
-    #calendar #cal #arrowWrap #next {
-      margin-right: 10px;
-      width: 60px;
-      height: 60px; }
-      #calendar #cal #arrowWrap #next i {
-        margin: 0; }
-    #calendar #cal caption {
-      font-size: 1.5em; }
-    #calendar #cal th {
-      font-size: 1em; }
-    #calendar #cal td {
-      height: 8em;
-      font-size: 1em;
-      padding: 2px;
-      height: 3em;
-      overflow: hidden; }
-      #calendar #cal td p:nth-child(1) {
-        font-size: 0;
-        visibility: hidden; }
+  #calendar {
+    margin-bottom: 3em; }
+    #calendar #cal {
+      width: 100%; }
+      #calendar #cal #arrowWrap #prev {
+        margin-left: 10px;
+        width: 60px;
+        height: 60px; }
+        #calendar #cal #arrowWrap #prev i {
+          margin: 0; }
+      #calendar #cal #arrowWrap #next {
+        margin-right: 10px;
+        width: 60px;
+        height: 60px; }
+        #calendar #cal #arrowWrap #next i {
+          margin: 0; }
+      #calendar #cal caption {
+        font-size: 1.5em; }
+      #calendar #cal th {
+        font-size: 1em; }
+      #calendar #cal td {
+        height: 8em;
+        font-size: 1em;
+        padding: 2px;
+        height: 3em;
+        overflow: hidden; }
+        #calendar #cal td p:nth-child(1) {
+          font-size: 0;
+          visibility: hidden; }
   #contactForQuestions {
     margin-bottom: 0; }
   /*** modal ***/

@@ -389,19 +389,29 @@ footer {
 }
 .cta {
   width: 100%;
-  background-color: $lightGreen;
+  //background-color: $lightGreen;
   padding: 20px;
-  margin-bottom: 10em;
-  //replace background with single leaf image
+  margin-bottom: -8em; margin-top: 15em;
   p {
     display: inline-block;
     width: 50%; max-width: 700px;
+    font-size: 1.2em;
+    .ctaSpan {
+      font-weight: bold;
+      color: $blue;
+    }
   }
   button {
     display: inline-block;
     vertical-align: middle; //not really working, only sortof... its weird
     margin-left: 10vw;
     margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+  }
+  .bgcta {
+    z-index: -99999;
+    width: 120%;
+    position: relative;
+    left: -20%; top: -170px;
   }
 }
 
@@ -935,7 +945,12 @@ footer {
       //display: inline-block;
       //vertical-align: middle; //not really working, only sortof... its weird
       //margin-left: 10vw;
+      margin-left: 40px;
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+    }
+    .bgcta {
+      width: 110%;
+      min-width: 1100px;
     }
   }
 
@@ -1354,10 +1369,21 @@ footer {
   }
   .cta {
     p {
+      width: 70%;
+      display: block;
     }
     button {
       //vertical-align: middle; //not really working, only sortof... its weird
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+      //margin-left: 20px;
+      //display: block;
+      text-decoration: none;
+      margin: 0;
+    }
+    .bgcta {
+      width: 110%;
+      min-width: 1100px;
+      left: -390px;
     }
   }
 
@@ -1682,7 +1708,7 @@ footer {
       #bgPlantBottom {
         right: -50px; top: -340px;
         width: 580px;
-        margin-bottom: 6em;
+        margin-bottom: 4em;
       }
     }
 
@@ -1690,7 +1716,7 @@ footer {
     .donations {
       text-align: center;
       padding: 30px 0;
-      margin: 0 auto;
+      margin: 5em auto 0 auto;
       #donationInfo {
         max-width: 80%;
         display: inline-block;
@@ -1736,19 +1762,27 @@ footer {
       }
     }
     .cta {
+      margin-bottom: -15em !important;
+      margin-top: 0 !important;
       p {
         width: 80%;
+        display: block;
       }
       button {
-        //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
         margin: 0;
-        display: block;
+      }
+      .bgcta {
+        width: 250%;
+        min-width: 1200px;
+        left: -600px;
+        top: -190px;
       }
     }
 
   /*** Contact page ***/
   .contactForm {
     width: 100%;
+    margin-bottom: 8em;
     h3 {
     }
     #contactReason {
@@ -1801,6 +1835,7 @@ footer {
     }
   }
   #calendar {
+    margin-bottom: 3em;
     #cal {
       width: 100%;
       #arrowWrap{

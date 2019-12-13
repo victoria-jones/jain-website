@@ -41,12 +41,14 @@ class ContactPage extends Component {
       </section>
 
       <section className="cta" id="socialMedia">
-      <p>Check me out on social media too!</p>
+      <p><span className="ctaSpan">You can find me on social media too! </span>
+      Get in the know, stay up to date:</p>
         <ul>
           <li><img src="images/icons/fb_icon.svg" alt="facebook icon"/></li>
           <li><img src="images/icons/insta_icon.svg" alt="instagram icon"/></li>
           <li><img src="images/icons/mm_icon.svg" alt="model mayhem icon"/></li>
         </ul>
+        <img src="images/icons/bg_longleaf.svg" className="bgcta" alt="Sarah Jain leaf logo"/>
       </section>
       </div>
     )
