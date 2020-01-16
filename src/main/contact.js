@@ -13,7 +13,7 @@ class ContactPage extends Component {
         </div>
       </Slide>
 
-      <section id="contactForm">
+      <section className="contactForm">
         <form>
           <section id="contactReason">
             <h3>Reason for contact:</h3>
@@ -22,31 +22,33 @@ class ContactPage extends Component {
             <button type="button">Booking</button>
           </section>
 
-          <section id="emailForm">
-          <h3>Email me:</h3>
-          <div id="emailFormBg">
-            <label htmlFor="name">Name</label>
-            <input id="name" type="text" placeholder="Name" />
-            <label htmlFor="email">Email</label>
-            <input id="email" type="email" placeholder="Email" />
-            <label htmlFor="message">Message</label>
-            <textarea id="message" placeholder ="Message"></textarea>
-            <button type="button" id="contactFormSend"
-                    onClick={() => this.props.showModal('open', 'contact')}>
-                    Send
-            </button>
-          </div>
+          <section className="emailForm">
+            <div id="emailFormBg">
+              <h3>Email me:</h3>
+              <label htmlFor="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Name" />
+              <label htmlFor="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Email" />
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" placeholder ="Message"></textarea>
+              <button type="button" id="contactFormSend"
+                      onClick={() => this.props.showModal('open', 'contact')}>
+                      Send
+              </button>
+            </div>
           </section>
         </form>
       </section>
 
       <section className="cta" id="socialMedia">
-      <p>Check me out on social media too!</p>
+      <p><span className="ctaSpan">You can find me on social media too! </span>
+      Get in the know, stay up to date:</p>
         <ul>
           <li><img src="images/icons/fb_icon.svg" alt="facebook icon"/></li>
           <li><img src="images/icons/insta_icon.svg" alt="instagram icon"/></li>
           <li><img src="images/icons/mm_icon.svg" alt="model mayhem icon"/></li>
         </ul>
+        <img src="images/icons/bg_longleaf.svg" className="bgcta" alt="Sarah Jain leaf logo"/>
       </section>
       </div>
     )

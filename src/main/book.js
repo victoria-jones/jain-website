@@ -17,14 +17,14 @@ class BookPage extends Component {
 
         <section id="bookingInfo">
           <h3>My photo shoot booking and availability:</h3>
-          <h4>Click on a day you are interested in booking!</h4>
+          <h4>Select a day you are interested in booking!</h4>
           <ul>
             <li>a couple quick "rules" for booking</li>
             <li>such as types of photo shoots you take</li>
             <li>maybe something saying what countries you will/can work in</li>
           </ul>
-          <p>Need to know more? Check out my <div class="bounceAnchor"><a>FAQ</a></div> about booking.</p>
-          <p>If you have any questions about booking please <div class="bounceAnchor"><Link to="/contact">contact me</Link></div>.</p>
+          <p>Need to know more? Check out my <span className="bounceAnchor"><a onClick={() => this.props.sendModal('open', 'faq')}>FAQ</a></span> about booking.</p>
+          <p>If you have any questions about booking please <span className="bounceAnchor"><Link to="/contact">contact me</Link></span>.</p>
         </section>
 
         <section id="calendar">
@@ -32,9 +32,10 @@ class BookPage extends Component {
         </section>
 
         <section className="cta" id="contactForQuestions">
-        <p>the book me CTA and area.the book me CTA and area.the book me CTA and area.
-        the book me CTA and area.the book me CTA and area.</p>
-        <Link to="/contact"><button>contact me</button></Link>
+          <p><span className="ctaSpan">Have any additional questions about booking that are not covered
+            in the FAQ?</span> Please to contact me!</p>
+          <Link to="/contact"><button>contact me</button></Link>
+          <img src="images/icons/bg_longleaf.svg" className="bgcta" alt="Sarah Jain leaf logo"/>
         </section>
       </div>
     )

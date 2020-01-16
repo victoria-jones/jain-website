@@ -45,9 +45,11 @@ class AboutPage extends Component {
         </section>
 
         <section className="cta" id="bookMe">
-          <p>the book me CTA and area.the book me CTA and area.the book me CTA and area.
-          the book me CTA and area.the book me CTA and area.</p>
+        <p><span className="ctaSpan">Interested in booking a shoot? </span>
+            Check out my calendar to pick out a day you are interested in, it's as
+            easy as that!</p>
           <Link to="/booking"><button>book me</button></Link>
+          <img src="images/icons/bg_longleaf.svg" className="bgcta" alt="Sarah Jain leaf logo"/>
         </section>
 
         <Donations />

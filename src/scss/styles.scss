@@ -9,8 +9,12 @@ body {
 }
 a {
   color: $lightGreen;
+  text-decoration: underline;
   &:visited {
     color: $lightGreen;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 .bounceAnchor {
@@ -158,7 +162,9 @@ footer {
     border-radius: 50%;
     position: absolute;
     bottom: -650px;
-    left: -800px;
+    //left: -800px;
+    left: 50%;
+    margin-left: -85%;
     z-index: -100;
   }
   small {
@@ -341,7 +347,8 @@ footer {
   border-radius: 50%;
   position: absolute;
   top: -70vh;
-  right: -80vh;
+  right: 50%;
+  margin-right: -85%;
   z-index: -100;
   //set background image for oval based on page
 }
@@ -382,19 +389,29 @@ footer {
 }
 .cta {
   width: 100%;
-  background-color: $lightGreen;
+  //background-color: $lightGreen;
   padding: 20px;
-  margin-bottom: 10em;
-  //replace background with single leaf image
+  margin-bottom: -8em; margin-top: 15em;
   p {
     display: inline-block;
     width: 50%; max-width: 700px;
+    font-size: 1.2em;
+    .ctaSpan {
+      font-weight: bold;
+      color: $blue;
+    }
   }
   button {
     display: inline-block;
     vertical-align: middle; //not really working, only sortof... its weird
     margin-left: 10vw;
     margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+  }
+  .bgcta {
+    z-index: -99999;
+    width: 120%;
+    position: relative;
+    left: -20%; top: -170px;
   }
 }
 
@@ -503,7 +520,7 @@ footer {
   margin-top: 10em;
 }
 /*** contact page ***/
-#contactForm {
+.contactForm {
   margin-bottom: 10em;
   h3 {
     color: $white;
@@ -513,6 +530,7 @@ footer {
     font-family: $montserrat;
   }
   #contactReason {
+    margin-left: 20px;
     button {
       border: 3px solid $lightGreen;
       background-color: transparent;
@@ -525,27 +543,46 @@ footer {
       }
     }
   }
-  #emailForm {
+  .emailForm {
+    width: 100%;
+    background-image: $greenToBlue;
+    padding: 20px;
+    //text-align: right;      //for box info
+    margin-top: 3em;
+    h3 {
+      //text-align: left;
+      color: $blackBlue;
+    }
     input, button, textarea {
       display: block;
     }
     input, textarea {
       margin-bottom: 20px;
-      width: 70%;
-      border-bottom: 3px solid $darkBlue;
-      border-top: none; border-right: none; border-left: none;
-      background-color: transparent;
+      margin-top: 5px;
+      width: 80%;
+      //border-bottom: 3px solid $darkBlue;
+      //border-top: none; border-right: none; border-left: none;
+      border: 1px $white solid;
+      border-radius: 30px;
+      background-color: $white;
       color: $darkBlue;
       font-size: 1em;
-      padding: 5px;
+      padding: 10px;
     }
     textarea {
-      height: 10em;
+      height: 6em;
       font-family: $montserrat;
     }
+    label {
+      margin-left: 3px;
+    }
     #emailFormBg {
+      width: 50%;
       background-color: $lightGreen;
       padding: 20px;
+      padding-top: 5px;
+      text-align: left;
+      max-width: 500px;
     }
   }
 }
@@ -581,15 +618,21 @@ footer {
   width: 100%; height: 100%;
   top: 0;
   right: 0;
-  background-color: $mainGreenT;
+  //background-color: $mainGreenT;
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
+  transition: .4s ease-out;
   #modal {
-    width: 90%; height: 80%;
-    margin: 10vh auto;
-    padding: 20px;
+    position: relative;
+    bottom: -10000px;
+    //top: 10%;
+    width: 90%; height: 85%;
+    margin: 0 auto;
+    //padding: 20px;
     background-color: $blackBlue;
     box-shadow: 20px 20px 20px $blackBlueT;
     color: $white;
+    overflow:  hidden;
     .closeBtn {
       width: 35px; height: 35px;
       float: right;
@@ -602,13 +645,72 @@ footer {
       text-transform: uppercase;
       font-weight: 100; font-size: 1.8em;
     }
+    .modalHeader {
+      padding: 20px;
+    }
     #modalBody {
       display: inline-block;
       text-align: left;
       font-size: 1.2em;
+      width: 100%;
+      height: 80%;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $mainGreen;
+        border: 2px solid $blackBlue;
+      }
+      #advised {
+        font-size: .8em;
+        //font-weight: bold;
+        width: 90%;
+        margin: 0 auto;
+      }
+      #thankYouMsg {
+        margin: 0 auto;
+        width: 50%;
+        padding: 10% 0;
+      }
+      ol {
+        line-height: 1.5;
+        margin: 20px auto 0 auto;
+        width: 90%;
+        li {
+          font-weight: bold;
+          font-size: 1.2em;
+          margin-top: 15px;
+        }
+        ul {
+          color: $lightGreen;
+        }
+      }
+      #faqOk {
+        margin: 50px auto;
+      }
+      #bookingForm {
+        margin: 10px auto;
+        width: 90%;
+        margin-bottom: -200px;
+        #modalForm {
+          width: 500px;
+          background-color: $lightGreen;
+          padding: 20px;
+          padding-top: 2px;
+          text-align: left;
+          color: $blackBlue;
+          button {
+            margin: 0;
+          }
+        }
+      }
       button {
         display: block;
-        margin: 40vh auto 0 auto;
+        margin: 0 auto;
       }
     }
   }
@@ -625,7 +727,8 @@ footer {
     //position: absolute;
     //top: -70vh;
     top: -230px;
-    right: -500px;
+    //right: 50%;
+    //margin-right: -85%;
     //right: -80vh;
     //z-index: -100;
     //set background image for oval based on page
@@ -710,7 +813,7 @@ footer {
       //bottom: -650px;
       //left: -800px;
       height: 700px;
-      left: -50%; bottom: -450px;
+      bottom: -450px;
     }
     small {
       //font-size: 1.5em;
@@ -842,14 +945,20 @@ footer {
       //display: inline-block;
       //vertical-align: middle; //not really working, only sortof... its weird
       //margin-left: 10vw;
+      margin-left: 40px;
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+    }
+    .bgcta {
+      width: 110%;
+      min-width: 1100px;
     }
   }
 
   /*** Contact page ***/
-  #contactForm {
+  .contactForm {
     //margin-bottom: 10em;
-    margin-left: 90px; margin-right: 90px;
+    //margin-left: 90px; margin-right: 90px;
+    width: 100%;
     h3 {
       //font-weight: 100;
       //font-size: 1.5em;
@@ -860,6 +969,8 @@ footer {
         //background-color: transparent;
         //margin-right: 100px;
         //color: $lightGreen;
+        margin-right: 80px;
+        width: 170px;
         &:hover {
           //transition: $colorTransition;
           //background-color: $lightGreen;
@@ -867,7 +978,7 @@ footer {
         }
       }
     }
-    #emailForm {
+    .emailForm {
       input, textarea {
         //margin-bottom: 20px;
         //width: 70%;
@@ -999,7 +1110,7 @@ footer {
     #modal {
       //width: 90%; height: 80%;
       //margin: 10vh auto;
-      margin: 90px auto;
+      margin: 0 auto;
       //padding: 20px;
       .closeBtn {
         //width: 35px; height: 35px;
@@ -1016,10 +1127,14 @@ footer {
         //display: inline-block;
         //text-align: left;
         //font-size: 1.2em;
+        #bookingForm {
+          #modalForm {
+            //not working
+              //try now might work
+          }
+        }
         button {
           //display: block;
-          //margin: 40vh auto 0 auto;
-          margin: 40% auto 0 auto;
         }
       }
     }
@@ -1034,7 +1149,8 @@ footer {
   .pageOval {
     height: 500px;
     top: -230px;
-    right: -300px;
+    //right: -300px;
+    //set margin-right based on width
     //set background image for oval based on page
   }
   .pageTitle {
@@ -1057,7 +1173,6 @@ footer {
     right: -500px;
     top: -500px;
     width: 100%;
-    //animation: bounce 1s;
     transition: .4s ease-out;
   }
   .mobileNavBtns {
@@ -1131,7 +1246,7 @@ footer {
     }
     .footerOval {
       height: 700px;
-      left: -35%; bottom: -500px;
+      bottom: -500px;
     }
     small {
       font-size: 2em;
@@ -1225,8 +1340,17 @@ footer {
     margin-right: auto;
     margin-left: auto;
     float: none;
+    margin-top: 17em;
     p {
     }
+  }
+  .aboutOval {
+    top: -60px;
+    height: 43%;
+    width: 1600px;
+    right: 0; left: 0;
+    margin-right: 50%;
+    margin-left: -400px;
   }
   #specialties {
     ul {
@@ -1245,10 +1369,21 @@ footer {
   }
   .cta {
     p {
+      width: 70%;
+      display: block;
     }
     button {
       //vertical-align: middle; //not really working, only sortof... its weird
       //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
+      //margin-left: 20px;
+      //display: block;
+      text-decoration: none;
+      margin: 0;
+    }
+    .bgcta {
+      width: 110%;
+      min-width: 1100px;
+      left: -390px;
     }
   }
 
@@ -1308,6 +1443,92 @@ footer {
       }
     }
   }
+
+  /*** Contact page ***/
+  .contactForm {
+    width: 100%;
+    h3 {
+    }
+    #contactReason {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      h3{
+        text-align: left;
+        margin-left: 15%;
+      }
+      button {
+        display: inline-block;
+        width: 150px;
+        margin-right: 10px;
+        padding-left: 0; padding-right: 0;
+        text-align: center;
+        &:hover {
+        }
+      }
+    }
+    .emailForm {
+      padding-left: 0; padding-right: 0;
+      padding-top: 150px;
+      input, textarea {
+      }
+      textarea {
+      }
+      #emailFormBg {
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+  }
+  #socialMedia{
+    ul {
+      li {
+      }
+    }
+  }
+
+  /*** modal ***/
+  .modalWrapper {
+    #modal {
+      //width: 90%; height: 80%;
+      height: 85%;
+      margin-top: -25px;
+      //overflow-y: scroll;
+      //margin: 10vh auto;
+      //padding: 20px;
+      .closeBtn {
+        //width: 35px; height: 35px;
+        //float: right;
+        &:hover {
+          //cursor: pointer;
+        }
+      }
+      h2 {
+        //text-align: center;
+        //font-weight: 100; font-size: 1.8em;
+      }
+      #modalBody {
+        width: 100%;
+        #bookingForm {
+          padding-top: 80px;
+          width: 99%;
+          #modalForm {
+            margin: auto;
+            width: 80%;
+            button {
+              margin: 0;
+            }
+          }
+        }
+        button {
+          //display: block;
+          //margin: 40vh auto 0 auto;
+          margin: 40% auto 0 auto;
+        }
+      }
+    }
+  }
+
 }
 
   /*** mobile styles smaller***/
@@ -1340,7 +1561,9 @@ footer {
     .mobileNavWrap {
       position: absolute;
       right: -500px;
+      top: -500px;
       width: 100%;
+      transition: .4s ease-out;
     }
     .mobileNavBtns {
       display: block;
@@ -1406,7 +1629,7 @@ footer {
       }
       .footerOval {
         height: 250px;
-        left: -35%; bottom: -100px;
+        bottom: -100px;
       }
       small {
         font-size: 2em;
@@ -1485,7 +1708,7 @@ footer {
       #bgPlantBottom {
         right: -50px; top: -340px;
         width: 580px;
-        margin-bottom: 6em;
+        margin-bottom: 4em;
       }
     }
 
@@ -1493,7 +1716,7 @@ footer {
     .donations {
       text-align: center;
       padding: 30px 0;
-      margin: 0 auto;
+      margin: 5em auto 0 auto;
       #donationInfo {
         max-width: 80%;
         display: inline-block;
@@ -1539,35 +1762,58 @@ footer {
       }
     }
     .cta {
+      margin-bottom: -15em !important;
+      margin-top: 0 !important;
       p {
         width: 80%;
+        display: block;
       }
       button {
-        //margin-bottom: 25px; //this will need to be changed/fixed (used in place of vertical align)
         margin: 0;
-        display: block;
+      }
+      .bgcta {
+        width: 250%;
+        min-width: 1200px;
+        left: -600px;
+        top: -190px;
       }
     }
 
   /*** Contact page ***/
-  #contactForm {
-    margin-left: 10px;
-    margin-right: 10px;
+  .contactForm {
+    width: 100%;
+    margin-bottom: 8em;
     h3 {
     }
     #contactReason {
+      margin: 0;
+      text-align: center;
+      h3 {
+        margin-left: 10px;
+        text-align: left;
+      }
       button {
-        margin-right: 30px;
+        width: 100px;
+        padding-left: 0; padding-right: 0;
+        font-size: 10pt;
+        margin: 0 auto;
+        &:nth-child(3) {
+          margin-left: 10px; margin-right: 10px;
+        }
         &:hover {
         }
       }
     }
-    #emailForm {
+    .emailForm {
+      padding-left: 0; padding-right: 0;
+      padding-top: 150px;
       input, textarea {
       }
       textarea {
       }
       #emailFormBg {
+        margin: 0 auto;
+        width: 80%;
       }
     }
   }
@@ -1589,6 +1835,7 @@ footer {
     }
   }
   #calendar {
+    margin-bottom: 3em;
     #cal {
       width: 100%;
       #arrowWrap{
@@ -1654,14 +1901,38 @@ footer {
   /*** modal ***/
   .modalWrapper {
     #modal {
-      margin: 10px auto;
+      //margin: 10px auto;
+      height: 87%;
+      width: 90%;
+      margin: -16px auto;
       .closeBtn {
+        width: 25px; height: 25px;
         &:hover {
         }
       }
       h2 {
+        font-size: 1.5em;
+      }
+      .modalHeader {
+        //padding-bottom: 0px;
+        padding: 10px 10px 0px 10px
       }
       #modalBody {
+        width: 100%;
+        height: 90%;
+        //margin-bottom: 350px;
+        overflow-x: hidden;
+        #bookingForm {
+          padding-top: 120px;
+          width: 100%;
+          #modalForm {
+            margin: auto;
+            width: 85%;
+            button {
+              margin: 0;
+            }
+          }
+        }
         button {
           margin: 40% auto 0 auto;
         }
@@ -1675,28 +1946,40 @@ footer {
 
 }
 
-/*** extra media query fixes (in between sizes) ***/
-//homepage photo title fix
-//i plan on removing these soon
-//I'm going to change some styles so that these are not necessary
-@media only screen and (max-width: 1217px) and (min-width: 825px) {
-  #photos {
-    //margin-top: 190px;
-    #bgPlant {
-      //width: 600px;
-      //top: 13%;
-      //top: 450px;
-      //left: -120px;
-    }
-  }
-}
-@media only screen and (max-width: 1005px) and (min-width: 825px) {
-  #photos {
-    //margin-top: 215px;
-    #bgPlant {
-      //width: 600px;
-      //top: 14%;
-      //left: -120px;
+//modal fix for mobile
+@media only screen and (max-height: 570px) {
+  /*** modal ***/
+  .modalWrapper {
+    #modal {
+      //margin: 10px auto;
+      height: 90%;
+      //width: 90%;
+      //margin: -16px auto;
+      .closeBtn {
+        &:hover {
+        }
+      }
+      h2 {
+      }
+      #modalBody {
+        //width: 100%;
+        height: 85%;
+        //margin-bottom: 350px;
+        #bookingForm {
+          //padding-top: 120px;
+          //width: 100%;
+          #modalForm {
+            //margin: auto;
+            //width: 85%;
+            button {
+              //margin: 0;
+            }
+          }
+        }
+        button {
+          //margin: 40% auto 0 auto;
+        }
+      }
     }
   }
 }
