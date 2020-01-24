@@ -29,12 +29,11 @@
     <script type="text/javascript" src="../config.js"></script>
     <script src="https://kit.fontawesome.com/cd2e652c15.js" crossorigin="anonymous"></script>
     <!--emailJS-->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
+      var userId = window.config.MY_ID;
        (function(){
-         var myID = config.MY_ID;
-          emailjs.init(myID); // Obtain your user ID at the dashboard https://dashboard.emailjs.com/integration
+          emailjs.init(userId);
        })();
     </script>
   </head>

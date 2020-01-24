@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 
 class ContactPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: 'testemail@email.com',
+      name: 'testName',
+      message: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
   render() {
     return (
@@ -30,9 +40,12 @@ class ContactPage extends Component {
               <label htmlFor="email">Email</label>
               <input id="email" name="email" type="email" placeholder="Email" />
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" placeholder ="Message"></textarea>
+              <textarea id="message" name="message" placeholder ="Message"
+                onChange={this.handleChange}
+                value={this.state.message}></textarea>
               <button type="button" id="contactFormSend"
-                      onClick={() => this.props.showModal('open', 'contact')}>
+                      //onClick={() => this.props.showModal('open', 'contact')}>  move this to happen after submission
+                      onClick={this.handleSubmit}>
                       Send
               </button>
             </div>
@@ -53,6 +66,30 @@ class ContactPage extends Component {
       </div>
     )
   }
+
+  handleChange(e) {
+    this.setState({
+      message: e.target.value
+    });
+  }
+
+  handleSubmit(e) {
+    const templateId = 'template_FZWn50bz';
+    const serviceId = "default_service";
+    const template_params = {
+      reply_to: this.state.email,
+      from_name: this.state.name,
+      message_html: this.state.message
+    };
+    this.sendFeedback(templateId, serviceId, template_params);
+  }
+
+  sendFeedback(templateId, serviceId, template_params) {
+    window.emailjs.send(serviceId, templateId, template_params)
+        .then(res => { console.log('email has successfully sent') })
+        .catch(err => console.error('uh oh. email failed: ', err));
+  }
+
 }
 
 export default ContactPage;
